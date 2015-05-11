@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gdje_mi_je_auto1", "Gdje_mi_je_auto1\Gdje_mi_je_auto1.csproj", "{223A07D6-94FD-4170-9AF5-040636ED56EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gdje_mi_je_auto1.UITests", "Gdje_mi_je_auto1.UITests\Gdje_mi_je_auto1.UITests.csproj", "{F6F5CDBE-3EA1-4164-A963-9DF6FAE36D49}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{223A07D6-94FD-4170-9AF5-040636ED56EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{223A07D6-94FD-4170-9AF5-040636ED56EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{223A07D6-94FD-4170-9AF5-040636ED56EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{223A07D6-94FD-4170-9AF5-040636ED56EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6F5CDBE-3EA1-4164-A963-9DF6FAE36D49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6F5CDBE-3EA1-4164-A963-9DF6FAE36D49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6F5CDBE-3EA1-4164-A963-9DF6FAE36D49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6F5CDBE-3EA1-4164-A963-9DF6FAE36D49}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

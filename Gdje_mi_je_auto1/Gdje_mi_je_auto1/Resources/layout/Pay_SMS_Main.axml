@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ZONA:" />
+    <EditText
+        android:id="@+id/editText_number"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="20dp"
+        android:maxLines="1"
+        android:text="[ Zona nije odabrana ]"
+        android:inputType="number"
+        android:textColor="@android:color/darker_gray"
+        android:focusable="false" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Upišite registracijsku oznaku:" />
+    <EditText
+        android:id="@+id/editText_message"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/ociscena_rega"
+        android:textColor="@android:color/background_dark"
+        style="@style/registration_view"
+        android:layout_marginBottom="10dp" />
+    <Button
+        android:id="@+id/sendSMS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pošalji poruku"
+        android:background="@drawable/collor_button" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Odaberite zonu:"
+        android:layout_marginTop="15dp" />
+<!--	START [Odabir zona]	-->
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp">
+        <Button
+            android:text="ZONA 1"
+            android:id="@+id/zona1_btn"
+            android:layout_width="110dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/collor_button" />
+        <Button
+            android:text="ZONA 2"
+            android:id="@+id/zona2_btn"
+            android:layout_width="110dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/collor_button" />
+        <Button
+            android:text="ZONA 3"
+            android:id="@+id/zona3_btn"
+            android:layout_width="110dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/collor_button" />
+    </TableRow>
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <Button
+            android:text="ZONA 4.1"
+            android:id="@+id/zona4_1_btn"
+            android:layout_width="115dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_marginRight="5.5dp"
+            android:background="@drawable/collor_button" />
+        <Button
+            android:text="ZONA 4.2"
+            android:id="@+id/zona4_2_btn"
+            android:layout_width="115dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@drawable/collor_button" />
+        <Button
+            android:text="VUKI"
+            android:id="@+id/vuki_btn"
+            android:layout_width="110dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="5.5dp"
+            android:background="@drawable/collor_button" />
+    </TableRow>
+<!--	END [Odabir zona]	-->
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#808080"
+        android:layout_marginTop="30dp" />
+    <ListView
+        android:id="@+id/List_SMS_Main_History"
+        android:minWidth="20px"
+        android:minHeight="20px"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:clickable="true" />
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#808080"
+        android:layout_marginTop="5dp" />
+</LinearLayout>

@@ -1,0 +1,21 @@
+﻿<Properties StartupItem="Gdje_mi_je_auto1\Gdje_mi_je_auto1.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.0ad52474" />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Gdje_mi_je_auto1" expanded="True">
+            <Node name="Gdje_mi_je_auto1" expanded="True">
+              <Node name="Start_Main.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Gdje__mi__je__auto1 AndroidDesignerPreferredDevice="Nexus 4" />
+</Properties>
