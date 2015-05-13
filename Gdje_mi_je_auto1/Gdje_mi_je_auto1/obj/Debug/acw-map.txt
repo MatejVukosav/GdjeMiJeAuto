@@ -1,7 +1,3 @@
-Gdje_mi_je_auto1.alert, Gdje_mi_je_auto1;md5cd61a8e1f9f2291d7d02a5b72739b7e4.alert
-Gdje_mi_je_auto1.alert, Gdje_mi_je_auto1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5cd61a8e1f9f2291d7d02a5b72739b7e4.alert
-Gdje_mi_je_auto1.alert;md5cd61a8e1f9f2291d7d02a5b72739b7e4.alert
-gdje_mi_je_auto1.alert;md5cd61a8e1f9f2291d7d02a5b72739b7e4.alert
 Gdje_mi_je_auto1.ListViewAdapter, Gdje_mi_je_auto1;md5cd61a8e1f9f2291d7d02a5b72739b7e4.ListViewAdapter
 Gdje_mi_je_auto1.ListViewAdapter, Gdje_mi_je_auto1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5cd61a8e1f9f2291d7d02a5b72739b7e4.ListViewAdapter
 Gdje_mi_je_auto1.ListViewAdapter;md5cd61a8e1f9f2291d7d02a5b72739b7e4.ListViewAdapter

@@ -14,7 +14,6 @@ namespace Gdje_mi_je_auto1
 	public class ListViewAdapter:BaseAdapter<string>
 	{
 		string[] items;
-		string poruka;
 		Activity context;
 		int viewId=0;
 

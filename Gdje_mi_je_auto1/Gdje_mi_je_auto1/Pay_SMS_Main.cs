@@ -68,7 +68,7 @@ namespace Gdje_mi_je_auto1
 				duljina = new FileInfo (message_Data).Length;
 			}catch(Exception e){
 
-				Log.Debug ("Pay_SMS_Main","FILE INFO krivo učitava ");
+				Log.Debug ("Pay_SMS_Main","FILE INFO krivo učitava "+e.ToString ());
 			}
 
 
@@ -95,9 +95,6 @@ namespace Gdje_mi_je_auto1
 			}
 
 			#endregion
-
-
-
 
 
 
@@ -164,13 +161,11 @@ namespace Gdje_mi_je_auto1
 				Enable_message_update=false;
 			}
 			#endregion
+		
+				
 
-
-
-
-
-			var tuple=LoadZoneNumbersAssetsData ();
 			try{
+				var tuple=ParseZoneNumbers.LoadZoneNumbersAssetsData (this);
 				zone = tuple.Item1; //zone
 				zoneDictionary = tuple.Item2; // zone i pripadni stringovi
 			}catch(Exception e){
@@ -180,11 +175,6 @@ namespace Gdje_mi_je_auto1
 
 			//dodavanje metode EventHandler delegatu iz OnReceiveSMS
 			//OnReceiveSMS.ReceiveSMSmessage += new OnReceiveSMS.ReceiveSMSdelegate (EventHandler);
-
-
-
-
-
 
 
 
@@ -402,38 +392,7 @@ namespace Gdje_mi_je_auto1
 		}
 
 
-		/*
-		 * Metoda koja ucitava brojeve iz Zone_Numbers_Assets u listu
-		 * Return multiple value
-		 * */
-		private Tuple<List<string>, Dictionary<string,string>>   LoadZoneNumbersAssetsData(){
-			string content;
-			string[] value;
-			Dictionary<string,string> zoneDict=new Dictionary<string,string>();
-			List<string> numbers = new List<string> ();
 
-			//otvara datoteku s brojevima
-			using (StreamReader sr = new StreamReader (Assets.Open ("Zone_Numbers_Assets.xml")))
-			{
-				content = sr.ReadToEnd ();
-			}
-
-			XmlDocument doc = new XmlDocument();
-			doc.LoadXml (content);
-			//izvlaci linije u kojima su brojevi
-			XmlNodeList x = doc.SelectNodes ("//string");	
-
-			foreach (XmlNode node in x) {
-				numbers.Add (node.InnerText);
-				value=node.OuterXml.Split ('"');
-				zoneDict.Add (node.InnerText,value[1]);
-			}
-
-			//			foreach (KeyValuePair<string,string>pair in zoneDictionary)
-			//				Log.Debug ("dictionary", pair.Key + pair.Value);
-
-			return new Tuple<List<string>, Dictionary<string,string>>(numbers,zoneDict);
-		}
 
 		public string ConvertTimeFromMillseconds(long value){
 			TimeSpan t = TimeSpan.FromMilliseconds( value );
