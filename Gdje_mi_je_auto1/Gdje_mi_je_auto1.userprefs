@@ -1,8 +1,15 @@
 ﻿<Properties StartupItem="Gdje_mi_je_auto1\Gdje_mi_je_auto1.csproj" GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.0ad52474" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Gdje_mi_je_auto1\Pay_Automat_Main.cs">
+    <Files>
+      <File FileName="Gdje_mi_je_auto1\Pay_Automat_Main.cs" Line="27" Column="42" />
+      <File FileName="Gdje_mi_je_auto1\Pay_SMS_Main.cs" Line="257" Column="4" />
+      <File FileName="Gdje_mi_je_auto1\GPS_Main.cs" Line="176" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Gdje__mi__je__auto1 AndroidDesignerPreferredDevice="Nexus 4" />
 </Properties>

@@ -41,6 +41,7 @@ C:\Users\Matej\Documents\Projects\Gdje_mi_je_auto1\Gdje_mi_je_auto1\bin\Debug\ma
 C:\Users\Matej\Documents\Projects\Gdje_mi_je_auto1\Gdje_mi_je_auto1\bin\Debug\maptest.maptest-Signed.apk
 C:\Users\Matej\Documents\Projects\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\android\bin\maptest.maptest.apk
 C:\Users\Matej\Documents\Projects\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\Gdje_mi_je_auto1.csprojResolveAssemblyReference.cache
+C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\Gdje_mi_je_auto1.csprojResolveAssemblyReference.cache
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\bin\Debug\Gdje_mi_je_auto1.dll
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\bin\Debug\Gdje_mi_je_auto1.pdb
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\bin\Debug\Gdje_mi_je_auto1.dll.mdb
@@ -52,7 +53,6 @@ C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\bin\Debug\Xama
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\bin\Debug\Xamarin.Android.Support.v7.AppCompat.dll
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\bin\Debug\Xamarin.Android.Support.v7.MediaRouter.dll
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\bin\Debug\Newtonsoft.Json.xml
-C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\Gdje_mi_je_auto1.csprojResolveAssemblyReference.cache
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\Gdje_mi_je_auto1.dll
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\Gdje_mi_je_auto1.pdb
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\android\bin\maptest.maptest.apk
@@ -82,5 +82,8 @@ C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\layout\locations.xml
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\layout\mainlayout.xml
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\layout\maplayout.xml
+C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\layout\customdialog.xml
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\R.cs.flag
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\uploadflags.txt
+C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\layout\mainfragment.xml
+C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\drawable-hdpi\custom_dialog.png

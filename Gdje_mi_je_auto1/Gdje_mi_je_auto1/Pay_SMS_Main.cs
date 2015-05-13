@@ -33,6 +33,7 @@ namespace Gdje_mi_je_auto1
 		EditText messageEditText;
 		EditText numberEditText;
 		bool valid_check=false;
+		private readonly int registrationLength=9;
 
 		static Dictionary<string,string> zoneDictionary=new Dictionary<string,string>();
 		static List<string> zone = new List<string> ();
@@ -55,8 +56,8 @@ namespace Gdje_mi_je_auto1
 			listView = FindViewById<ListView> (Resource.Id.List_SMS_Main_History);
 			messageEditText = FindViewById<EditText> (Resource.Id.editText_message);
 
-			//prikazuje sva slova kao velika.(upper)
-			messageEditText.SetFilters (new IInputFilter[] { new InputFilterAllCaps () });
+			//prikazuje sva slova kao velika.(upper) i ogranicava velicinu registracije na registrationLength
+			messageEditText.SetFilters (new IInputFilter[] { new InputFilterAllCaps (),new InputFilterLengthFilter (registrationLength) });
 
 
 			#region Ucitava podatke iz datoteke svaki put kad se otvori layout Pay_SMS_Main
@@ -179,7 +180,6 @@ namespace Gdje_mi_je_auto1
 
 
 				if (valid_check) {
-
 					smsManager.SendTextMessage (zone_number, null, sms_message, null, null);
 					Toast.MakeText (ApplicationContext, "SMS poruka je poslana.", ToastLength.Short).Show ();
 
@@ -249,12 +249,23 @@ namespace Gdje_mi_je_auto1
 		 * Metoda koja uređuje ispis history-a
 		 * */
 		public String MessageDisplay(string smsSender,string smsBody,string smsTime,string smsDate){
-			//return DetermineZone(smsSender)+" < " +"Vrijeme Od : Do" +" >" + " Datum ";
+			//return DetermineZone(smsSender)+" < " +"Vrijeme Od : Do" +" >"+" Datum " ;
 			string[] satOD=smsTime.Split (':');
-			int satDO = int.Parse (satOD[0]) + 1;
-			String smsTimeDO = satDO +":"+ satOD [1];
+			//string format = "{ 0, 10 }"; // 
+			string editedDate =smsDate.PadLeft (10,'_'); //string.Format (format, smsDate);
 
-			return smsDate+"  "+DetermineZone(smsSender)+ " OD "+smsTime+" DO "+smsTimeDO+" "+ " [ " +smsBody +" ]"; 
+			string smsTimeDO=satOD[0];
+			int smsTimeDOInt=Int32.Parse (satOD[0]);
+
+			if (smsTimeDO.Equals ("23")) {
+				smsTimeDO = "00";
+			} else {
+				smsTimeDO=string.Format("{0:D2}",(smsTimeDOInt+1));
+			}
+			 smsTimeDO = smsTimeDO +":"+ satOD [1];
+
+			return editedDate+"  "+DetermineZone(smsSender)+ " < "+smsTime+" - "+smsTimeDO+" > "+ " [ " +smsBody +" ]"; 
+			//return editedDate+"  "+DetermineZone(smsSender)+ " OD "+smsTime+" DO "+smsTimeDO+" "+ " [ " +smsBody +" ]"; 
 		}
 
 
@@ -276,7 +287,7 @@ namespace Gdje_mi_je_auto1
 		public string ConvertTimeFromMillseconds(long value){
 			TimeSpan t = TimeSpan.FromMilliseconds( value );
 
-			string normalTime = string.Format("{0}:{1}", t.Hours, t.Minutes);
+			string normalTime = string.Format("{0:D2}:{1:D2}", t.Hours, t.Minutes);
 			//return t.Hours.ToString ("HH")+":"+t.Minutes.ToString ("mm");
 			return normalTime;
 		}

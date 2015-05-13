@@ -69,6 +69,7 @@ namespace Gdje_mi_je_auto1
 //								Log.Debug ("kefir","if receive");
 //								ReceiveSMSmessage (smsSender, smsBody, smsTime);
 //							}
+
 						} else {
 							Log.Debug ("kefir","elseeeee");
 

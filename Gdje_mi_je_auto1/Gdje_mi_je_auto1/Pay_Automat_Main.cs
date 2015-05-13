@@ -29,7 +29,7 @@ namespace Gdje_mi_je_auto1
 		private Button btn_change_time;
 		private EditText text_time_screen;
 		private Button btn_save_time;
-		private string[] items;
+		//private string[] items;
 		ListView listView;
 
 		private int hour;
@@ -61,7 +61,8 @@ namespace Gdje_mi_je_auto1
 			spinnerArrayAdapter.SetDropDownViewResource (Android.Resource.Layout.SimpleSpinnerDropDownItem);
 			spinnerPayA.Adapter = spinnerArrayAdapter;
 
-			//spinner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs> (spinner_ItemSelected);
+			//TODO kad se klikne izvan dialoga, da se dialog ugasi
+			
 
 			#region PuniListu
 			//Log.Debug ("ON CREATE","DULJINA"+new FileInfo(message_Data).Length+" -- "+Enable_message_update);
@@ -101,7 +102,7 @@ namespace Gdje_mi_je_auto1
 		
 			#endregion
 
-
+			listView.ItemClick += OnListItemClick;
 
 			UpdateTime();
 			UpdateDisplay ();
@@ -120,7 +121,7 @@ namespace Gdje_mi_je_auto1
 			 * UPALI ALARM I SPREMI VRIJEME PLACANJA U HISTORY
 			 * */
 			btn_save_time.Click+=delegate {
-				//TODO klikom na save se pokrece alarm
+				//TODO klikom na save se pokrece alarm ako je upisano vrijeme i odabrana zona
 				if(valid_check_automat){
 					var activity_pay_main=new Intent (this,typeof(Pay_Main));
 					StartActivity (activity_pay_main);
@@ -128,7 +129,10 @@ namespace Gdje_mi_je_auto1
 					Toast.MakeText (this,"Odaberite zonu!",ToastLength.Short).Show ();
 				};
 				
-		}
+	}
+		
+
+
 
 		public List<string> FillSpinnerWithData(){
 			Dictionary<string,string> spinnerDict=new Dictionary<string,string>();
@@ -140,29 +144,8 @@ namespace Gdje_mi_je_auto1
 				Log.Debug ("Greska prilikom ucitavanja!",e.ToString ());
 			}
 			return spinnerDict.Values.ToList ();
-
 		}
 
-		private void spinner_ItemSelected (object sender, AdapterView.ItemSelectedEventArgs e)
-		{
-			Spinner spinner = (Spinner)sender;
-			string MapType = (string) spinner.GetItemAtPosition (e.Position);
-
-			switch (MapType) {
-			case "Normal":
-				
-				break;
-			case "Satellite":
-				
-				break;
-			case "Hybrid":
-				
-				break;
-			default:
-				
-				break;
-			}
-		}
 
 
 		private void UpdateDisplay ()
@@ -190,6 +173,9 @@ namespace Gdje_mi_je_auto1
 		 * */
 		void OnListItemClick(object sender, AdapterView.ItemClickEventArgs e)
 		{
+			
+
+
 			var listview = sender as ListView;
 			FragmentTransaction ftr = FragmentManager.BeginTransaction ();
 			try{
@@ -203,39 +189,6 @@ namespace Gdje_mi_je_auto1
 		}
 	
 
-		public void FillListWithData(List<string> itemsOpt){
-
-			if (itemsOpt.Count != 0) {
-				itemsOpt.Reverse ();  
-				Log.Debug ("duljina itemsOpt u FillListWithData",itemsOpt.Count.ToString ());
-
-				string[] data = itemsOpt.ToArray ();
-
-				if (this == null) {
-					Log.Debug ("this je null", "this");
-				}
-
-				try {
-
-					listView.Adapter = new ListViewAdapter (this, data);
-				} catch (Exception e) {
-					Log.Debug ("ListVier Adapter error.", e.ToString ());
-				}
-
-			}
-			//			else if(poljeOpt.Length !=0){
-			//				try{
-			//				poljeOpt.Reverse ();
-			//				listView.Adapter = new ListViewAdapter (this, poljeOpt);
-			//				}catch(Exception e){
-			//					Log.Debug ("poljeee",e.ToString ());
-			//				}
-			//			}
-			else {
-				Log.Debug ("FillListWithData Method", "Both arguments are null.");
-			}
-
-		}
 
 	}
 }

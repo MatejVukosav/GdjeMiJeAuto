@@ -2024,11 +2024,12 @@ containing a value of this type.
         public static int zone_btn_style=0x7f020084;
     }
     public static final class id {
-        public static int FILIPB=0x7f0c009b;
-        public static int List_SMS_Main_History=0x7f0c008a;
-        public static int Pay_Automat_Main=0x7f0c008c;
-        public static int Pay_SMS_Main=0x7f0c008b;
-        public static int VUKIB=0x7f0c009a;
+        public static int Button_Dismiss=0x7f0c0064;
+        public static int FILIPB=0x7f0c009f;
+        public static int List_SMS_Main_History=0x7f0c008e;
+        public static int Pay_Automat_Main=0x7f0c0090;
+        public static int Pay_SMS_Main=0x7f0c008f;
+        public static int VUKIB=0x7f0c009e;
         public static int action_bar=0x7f0c0054;
         public static int action_bar_activity_content=0x7f0c0000;
         public static int action_bar_container=0x7f0c0053;
@@ -2047,16 +2048,16 @@ containing a value of this type.
         public static int adjust_width=0x7f0c0024;
         public static int alertTitle=0x7f0c0044;
         public static int always=0x7f0c0016;
-        public static int art=0x7f0c007f;
+        public static int art=0x7f0c0080;
         public static int beginning=0x7f0c0013;
         public static int book_now=0x7f0c0030;
-        public static int btnLocations=0x7f0c0078;
-        public static int btnZones=0x7f0c0077;
-        public static int btn_change_time=0x7f0c0088;
-        public static int btn_save_time=0x7f0c0089;
-        public static int button1=0x7f0c0065;
+        public static int btnLocations=0x7f0c0079;
+        public static int btnZones=0x7f0c0078;
+        public static int btn_change_time=0x7f0c0089;
+        public static int btn_save_time=0x7f0c008d;
+        public static int button1=0x7f0c0066;
         public static int buttonPanel=0x7f0c004a;
-        public static int buttons=0x7f0c0083;
+        public static int buttons=0x7f0c0084;
         public static int buyButton=0x7f0c002d;
         public static int buy_now=0x7f0c0031;
         public static int buy_with_google=0x7f0c0032;
@@ -2068,17 +2069,17 @@ containing a value of this type.
         public static int customPanel=0x7f0c0048;
         public static int decor_content_parent=0x7f0c0052;
         public static int default_activity_button=0x7f0c003d;
-        public static int default_control_frame=0x7f0c007e;
+        public static int default_control_frame=0x7f0c007f;
         public static int dialog=0x7f0c001b;
-        public static int dialog_btn=0x7f0c0064;
+        public static int dialog_btn=0x7f0c0065;
         public static int disableHome=0x7f0c000c;
-        public static int disconnect=0x7f0c0084;
+        public static int disconnect=0x7f0c0085;
         public static int donate_with_google=0x7f0c0033;
         public static int dropdown=0x7f0c001c;
-        public static int editText_message=0x7f0c0092;
-        public static int editText_number=0x7f0c0091;
+        public static int editText_message=0x7f0c0096;
+        public static int editText_number=0x7f0c0095;
         public static int edit_query=0x7f0c0056;
-        public static int edit_time_automat=0x7f0c0087;
+        public static int edit_time_automat=0x7f0c0088;
         public static int end=0x7f0c0014;
         public static int expand_activities_button=0x7f0c003b;
         public static int expanded_menu=0x7f0c004b;
@@ -2093,23 +2094,23 @@ containing a value of this type.
         public static int image=0x7f0c003c;
         public static int listMode=0x7f0c0009;
         public static int list_item=0x7f0c003e;
-        public static int locationsClear=0x7f0c0066;
-        public static int mainLocation=0x7f0c006a;
-        public static int mainMap=0x7f0c0069;
-        public static int mainSpinner=0x7f0c006d;
-        public static int mainStartLocationUpdates=0x7f0c006b;
-        public static int mainStopLocationUpdates=0x7f0c006c;
-        public static int mainTextLatitude=0x7f0c0071;
-        public static int mainTextLongitude=0x7f0c0072;
-        public static int mainTextProvider=0x7f0c006f;
-        public static int mainTextSpeed=0x7f0c0073;
-        public static int mainTextStatus=0x7f0c006e;
-        public static int mainTextTime=0x7f0c0070;
-        public static int mainTextZone=0x7f0c0074;
-        public static int map=0x7f0c0075;
+        public static int locationsClear=0x7f0c0067;
+        public static int mainLocation=0x7f0c006b;
+        public static int mainMap=0x7f0c006a;
+        public static int mainSpinner=0x7f0c006e;
+        public static int mainStartLocationUpdates=0x7f0c006c;
+        public static int mainStopLocationUpdates=0x7f0c006d;
+        public static int mainTextLatitude=0x7f0c0072;
+        public static int mainTextLongitude=0x7f0c0073;
+        public static int mainTextProvider=0x7f0c0070;
+        public static int mainTextSpeed=0x7f0c0074;
+        public static int mainTextStatus=0x7f0c006f;
+        public static int mainTextTime=0x7f0c0071;
+        public static int mainTextZone=0x7f0c0075;
+        public static int map=0x7f0c0076;
         public static int match_parent=0x7f0c002f;
-        public static int media_route_control_frame=0x7f0c007d;
-        public static int media_route_list=0x7f0c0079;
+        public static int media_route_control_frame=0x7f0c007e;
+        public static int media_route_list=0x7f0c007a;
         public static int middle=0x7f0c0015;
         public static int monochrome=0x7f0c0036;
         public static int multiply=0x7f0c001e;
@@ -2117,17 +2118,17 @@ containing a value of this type.
         public static int none=0x7f0c000e;
         public static int normal=0x7f0c000a;
         public static int parentPanel=0x7f0c0041;
-        public static int play_pause=0x7f0c0080;
+        public static int play_pause=0x7f0c0081;
         public static int production=0x7f0c002a;
         public static int progress_circular=0x7f0c0005;
         public static int progress_horizontal=0x7f0c0006;
         public static int radio=0x7f0c004e;
-        public static int route_name=0x7f0c007b;
+        public static int route_name=0x7f0c007c;
         public static int sandbox=0x7f0c002b;
         public static int satellite=0x7f0c0026;
         public static int screen=0x7f0c001f;
         public static int scrollView=0x7f0c0046;
-        public static int scrollView1=0x7f0c0067;
+        public static int scrollView1=0x7f0c0068;
         public static int search_badge=0x7f0c0058;
         public static int search_bar=0x7f0c0057;
         public static int search_button=0x7f0c0059;
@@ -2140,46 +2141,49 @@ containing a value of this type.
         public static int search_voice_btn=0x7f0c0061;
         public static int select_dialog_listview=0x7f0c0062;
         public static int selectionDetails=0x7f0c002e;
-        public static int sendSMS=0x7f0c0093;
-        public static int settings=0x7f0c007c;
+        public static int sendSMS=0x7f0c0097;
+        public static int settings=0x7f0c007d;
         public static int shortcut=0x7f0c004d;
         public static int showCustom=0x7f0c000f;
         public static int showHome=0x7f0c0010;
         public static int showTitle=0x7f0c0011;
-        public static int spinner1=0x7f0c0076;
+        public static int spinner1=0x7f0c0077;
         public static int split_action_bar=0x7f0c0007;
         public static int src_atop=0x7f0c0020;
         public static int src_in=0x7f0c0021;
         public static int src_over=0x7f0c0022;
-        public static int stop=0x7f0c0085;
+        public static int stop=0x7f0c0086;
         public static int strict_sandbox=0x7f0c002c;
         public static int submit_area=0x7f0c005f;
-        public static int subtitle=0x7f0c0082;
+        public static int subtitle=0x7f0c0083;
         public static int tabMode=0x7f0c000b;
-        public static int tableRow1=0x7f0c008d;
+        public static int tableRow1=0x7f0c0091;
+        public static int tableRow3=0x7f0c008a;
         public static int terrain=0x7f0c0027;
-        public static int textLocations=0x7f0c0068;
+        public static int textLocations=0x7f0c0069;
         public static int textSpacerNoButtons=0x7f0c0047;
-        public static int textView=0x7f0c0090;
+        public static int textView=0x7f0c0094;
         public static int textView1=0x7f0c0063;
-        public static int text_view1=0x7f0c0086;
-        public static int text_wrapper=0x7f0c0081;
+        public static int textView2=0x7f0c008b;
+        public static int text_view1=0x7f0c0087;
+        public static int text_wrapper=0x7f0c0082;
         public static int title=0x7f0c0040;
-        public static int title_bar=0x7f0c007a;
+        public static int title_bar=0x7f0c007b;
         public static int title_template=0x7f0c0043;
-        public static int toggleButton1=0x7f0c008e;
-        public static int toggleButton2=0x7f0c008f;
+        public static int toggleButton1=0x7f0c0092;
+        public static int toggleButton2=0x7f0c0093;
         public static int topPanel=0x7f0c0042;
         public static int up=0x7f0c0008;
         public static int useLogo=0x7f0c0012;
-        public static int vuki_btn=0x7f0c0099;
+        public static int vuki_btn=0x7f0c009d;
         public static int withText=0x7f0c001a;
         public static int wrap_content=0x7f0c001d;
-        public static int zona1_btn=0x7f0c0094;
-        public static int zona2_btn=0x7f0c0095;
-        public static int zona3_btn=0x7f0c0096;
-        public static int zona4_1_btn=0x7f0c0097;
-        public static int zona4_2_btn=0x7f0c0098;
+        public static int zona1_btn=0x7f0c0098;
+        public static int zona2_btn=0x7f0c0099;
+        public static int zona3_btn=0x7f0c009a;
+        public static int zona4_1_btn=0x7f0c009b;
+        public static int zona4_2_btn=0x7f0c009c;
+        public static int zoneSpinner=0x7f0c008c;
     }
     public static final class integer {
         public static int abc_config_activityDefaultDur=0x7f0d0000;
@@ -2213,23 +2217,24 @@ containing a value of this type.
         public static int abc_search_view=0x7f030016;
         public static int abc_select_dialog_material=0x7f030017;
         public static int abc_simple_dropdown_hint=0x7f030018;
-        public static int dialog_fragment_layout=0x7f030019;
-        public static int list_represent=0x7f03001a;
-        public static int locations=0x7f03001b;
-        public static int mainlayout=0x7f03001c;
-        public static int maplayout=0x7f03001d;
-        public static int mr_media_route_chooser_dialog=0x7f03001e;
-        public static int mr_media_route_controller_material_dialog_b=0x7f03001f;
-        public static int mr_media_route_list_item=0x7f030020;
-        public static int pay_automat_main_enter=0x7f030021;
-        public static int pay_main=0x7f030022;
-        public static int pay_sms_main=0x7f030023;
-        public static int select_dialog_item_material=0x7f030024;
-        public static int select_dialog_multichoice_material=0x7f030025;
-        public static int select_dialog_singlechoice_material=0x7f030026;
-        public static int start=0x7f030027;
-        public static int support_simple_spinner_dropdown_item=0x7f030028;
-        public static int testnepostavke=0x7f030029;
+        public static int customdialog=0x7f030019;
+        public static int dialog_fragment_layout=0x7f03001a;
+        public static int list_represent=0x7f03001b;
+        public static int locations=0x7f03001c;
+        public static int mainlayout=0x7f03001d;
+        public static int maplayout=0x7f03001e;
+        public static int mr_media_route_chooser_dialog=0x7f03001f;
+        public static int mr_media_route_controller_material_dialog_b=0x7f030020;
+        public static int mr_media_route_list_item=0x7f030021;
+        public static int pay_automat_main_enter=0x7f030022;
+        public static int pay_main=0x7f030023;
+        public static int pay_sms_main=0x7f030024;
+        public static int select_dialog_item_material=0x7f030025;
+        public static int select_dialog_multichoice_material=0x7f030026;
+        public static int select_dialog_singlechoice_material=0x7f030027;
+        public static int start=0x7f030028;
+        public static int support_simple_spinner_dropdown_item=0x7f030029;
+        public static int testnepostavke=0x7f03002a;
     }
     public static final class raw {
         public static int gtm_analytics=0x7f050000;
@@ -2238,162 +2243,161 @@ containing a value of this type.
         public static int Pay_Automat_Main=0x7f060006;
         public static int Pay_SMS_Main=0x7f060005;
         public static int SMS=0x7f060001;
-        public static int abc_action_bar_home_description=0x7f06001b;
-        public static int abc_action_bar_home_description_format=0x7f06001c;
-        public static int abc_action_bar_home_subtitle_description_format=0x7f06001d;
-        public static int abc_action_bar_up_description=0x7f06001e;
-        public static int abc_action_menu_overflow_description=0x7f06001f;
-        public static int abc_action_mode_done=0x7f060020;
-        public static int abc_activity_chooser_view_see_all=0x7f060021;
-        public static int abc_activitychooserview_choose_application=0x7f060022;
-        public static int abc_search_hint=0x7f060023;
-        public static int abc_searchview_description_clear=0x7f060024;
-        public static int abc_searchview_description_query=0x7f060025;
-        public static int abc_searchview_description_search=0x7f060026;
-        public static int abc_searchview_description_submit=0x7f060027;
-        public static int abc_searchview_description_voice=0x7f060028;
-        public static int abc_shareactionprovider_share_with=0x7f060029;
-        public static int abc_shareactionprovider_share_with_application=0x7f06002a;
-        public static int abc_toolbar_collapse_description=0x7f06002b;
-        public static int accept=0x7f06002e;
+        public static int abc_action_bar_home_description=0x7f06001a;
+        public static int abc_action_bar_home_description_format=0x7f06001b;
+        public static int abc_action_bar_home_subtitle_description_format=0x7f06001c;
+        public static int abc_action_bar_up_description=0x7f06001d;
+        public static int abc_action_menu_overflow_description=0x7f06001e;
+        public static int abc_action_mode_done=0x7f06001f;
+        public static int abc_activity_chooser_view_see_all=0x7f060020;
+        public static int abc_activitychooserview_choose_application=0x7f060021;
+        public static int abc_search_hint=0x7f060022;
+        public static int abc_searchview_description_clear=0x7f060023;
+        public static int abc_searchview_description_query=0x7f060024;
+        public static int abc_searchview_description_search=0x7f060025;
+        public static int abc_searchview_description_submit=0x7f060026;
+        public static int abc_searchview_description_voice=0x7f060027;
+        public static int abc_shareactionprovider_share_with=0x7f060028;
+        public static int abc_shareactionprovider_share_with_application=0x7f060029;
+        public static int abc_toolbar_collapse_description=0x7f06002a;
+        public static int accept=0x7f06002d;
         public static int app_name=0x7f060007;
         /**   Text for notification shown when the Android Wear apps needs to be updated. Only shown on the wearable. [CHAR LIMIT=NONE] 
          */
-        public static int common_android_wear_notification_needs_update_text=0x7f060035;
+        public static int common_android_wear_notification_needs_update_text=0x7f060034;
         /**  Message in confirmation dialog informing user that they need to update
         the Android Wear app [CHAR LIMIT=NONE] 
          */
-        public static int common_android_wear_update_text=0x7f060042;
+        public static int common_android_wear_update_text=0x7f060041;
         /**  Title of confirmation dialog informing user that they need to update
         the Android Wear app (from Play Store) [CHAR LIMIT=40] 
          */
-        public static int common_android_wear_update_title=0x7f060040;
+        public static int common_android_wear_update_title=0x7f06003f;
         /**  Button in confirmation dialog to enable Google Play services.  Clicking it
         will direct user to application settings of Google Play services where they
         can enable it [CHAR LIMIT=40] 
          */
-        public static int common_google_play_services_enable_button=0x7f06003e;
+        public static int common_google_play_services_enable_button=0x7f06003d;
         /**  Message in confirmation dialog informing user they need to enable
         Google Play services in application settings [CHAR LIMIT=NONE] 
          */
-        public static int common_google_play_services_enable_text=0x7f06003d;
+        public static int common_google_play_services_enable_text=0x7f06003c;
         /**  Title of confirmation dialog informing user they need to enable
         Google Play services in application settings [CHAR LIMIT=40] 
          */
-        public static int common_google_play_services_enable_title=0x7f06003c;
+        public static int common_google_play_services_enable_title=0x7f06003b;
         /**   Requested by string saying which app requested the notification. [CHAR LIMIT=42] 
          */
-        public static int common_google_play_services_error_notification_requested_by_msg=0x7f060037;
+        public static int common_google_play_services_error_notification_requested_by_msg=0x7f060036;
         /**  Button in confirmation dialog for installing Google Play services [CHAR LIMIT=40] 
          */
-        public static int common_google_play_services_install_button=0x7f06003b;
+        public static int common_google_play_services_install_button=0x7f06003a;
         /**  (For phones) Message in confirmation dialog informing user that
         they need to install Google Play services (from Play Store) [CHAR LIMIT=NONE] 
          */
-        public static int common_google_play_services_install_text_phone=0x7f060039;
+        public static int common_google_play_services_install_text_phone=0x7f060038;
         /**  (For tablets) Message in confirmation dialog informing user that
         they need to install Google Play services (from Play Store) [CHAR LIMIT=NONE] 
          */
-        public static int common_google_play_services_install_text_tablet=0x7f06003a;
+        public static int common_google_play_services_install_text_tablet=0x7f060039;
         /**  Title of confirmation dialog informing user that they need to install
         Google Play services (from Play Store) [CHAR LIMIT=40] 
          */
-        public static int common_google_play_services_install_title=0x7f060038;
+        public static int common_google_play_services_install_title=0x7f060037;
         /**  Message in confirmation dialog informing the user that they provided an invalid account. [CHAR LIMIT=NONE] 
          */
-        public static int common_google_play_services_invalid_account_text=0x7f060046;
+        public static int common_google_play_services_invalid_account_text=0x7f060045;
         /**  Title of confirmation dialog informing the user that they provided an invalid account. [CHAR LIMIT=40] 
          */
-        public static int common_google_play_services_invalid_account_title=0x7f060045;
+        public static int common_google_play_services_invalid_account_title=0x7f060044;
         /**   Title for notification shown when GooglePlayServices needs to be enabled for an
         application to work. [CHAR LIMIT=70] 
          */
-        public static int common_google_play_services_needs_enabling_title=0x7f060036;
+        public static int common_google_play_services_needs_enabling_title=0x7f060035;
         /**  Message in confirmation dialog informing the user that a network error occurred. [CHAR LIMIT=NONE] 
          */
-        public static int common_google_play_services_network_error_text=0x7f060044;
+        public static int common_google_play_services_network_error_text=0x7f060043;
         /**  Title of confirmation dialog informing the user that a network error occurred. [CHAR LIMIT=40] 
          */
-        public static int common_google_play_services_network_error_title=0x7f060043;
+        public static int common_google_play_services_network_error_title=0x7f060042;
         /**   Title for notification shown when GooglePlayServices needs to be installed
         for an application to work. [CHAR LIMIT=70] 
          */
-        public static int common_google_play_services_notification_needs_installation_title=0x7f060033;
+        public static int common_google_play_services_notification_needs_installation_title=0x7f060032;
         /**   Title for notification shown when GooglePlayServices needs to be updated for an
         application to work. [CHAR LIMIT=70] 
          */
-        public static int common_google_play_services_notification_needs_update_title=0x7f060034;
+        public static int common_google_play_services_notification_needs_update_title=0x7f060033;
         /**   Title for notification shown when GooglePlayServices is unavailable [CHAR LIMIT=42] 
          */
-        public static int common_google_play_services_notification_ticker=0x7f060032;
+        public static int common_google_play_services_notification_ticker=0x7f060031;
         /**  Message in confirmation dialog informing user there is an unknown issue in Google Play
         services [CHAR LIMIT=NONE] 
          */
-        public static int common_google_play_services_unknown_issue=0x7f060047;
+        public static int common_google_play_services_unknown_issue=0x7f060046;
         /**  Message in confirmation dialog informing user that Google Play services is not supported on their device [CHAR LIMIT=NONE] 
          */
-        public static int common_google_play_services_unsupported_text=0x7f060049;
+        public static int common_google_play_services_unsupported_text=0x7f060048;
         /**  Title of confirmation dialog informing user that Google Play services is not supported on their device [CHAR LIMIT=40] 
          */
-        public static int common_google_play_services_unsupported_title=0x7f060048;
+        public static int common_google_play_services_unsupported_title=0x7f060047;
         /**  Button in confirmation dialog for updating Google Play services [CHAR LIMIT=40] 
          */
-        public static int common_google_play_services_update_button=0x7f06004a;
+        public static int common_google_play_services_update_button=0x7f060049;
         /**  Message in confirmation dialog informing user that they need to update
         Google Play services (from Play Store) [CHAR LIMIT=NONE] 
          */
-        public static int common_google_play_services_update_text=0x7f060041;
+        public static int common_google_play_services_update_text=0x7f060040;
         /**  Title of confirmation dialog informing user that they need to update
         Google Play services (from Play Store) [CHAR LIMIT=40] 
          */
-        public static int common_google_play_services_update_title=0x7f06003f;
+        public static int common_google_play_services_update_title=0x7f06003e;
         /**  Label for an action to open a notifications content on the phone [CHAR LIMIT=25] 
          */
-        public static int common_open_on_phone=0x7f06004d;
+        public static int common_open_on_phone=0x7f06004c;
         /**  Sign-in button text [CHAR LIMIT=15] 
          */
-        public static int common_signin_button_text=0x7f06004b;
+        public static int common_signin_button_text=0x7f06004a;
         /**  Long form sign-in button text [CHAR LIMIT=30] 
          */
-        public static int common_signin_button_text_long=0x7f06004c;
-        public static int create_calendar_message=0x7f060031;
-        public static int create_calendar_title=0x7f060030;
-        public static int decline=0x7f06002f;
+        public static int common_signin_button_text_long=0x7f06004b;
+        public static int create_calendar_message=0x7f060030;
+        public static int create_calendar_title=0x7f06002f;
+        public static int decline=0x7f06002e;
         public static int editText_message=0x7f060002;
         public static int editText_number=0x7f060003;
         /**   sakky  
          */
-        public static int hello=0x7f060008;
-        public static int map_prompt=0x7f060009;
-        public static int mr_media_route_button_content_description=0x7f060011;
-        public static int mr_media_route_chooser_searching=0x7f060012;
-        public static int mr_media_route_chooser_title=0x7f060013;
-        public static int mr_media_route_controller_disconnect=0x7f060014;
-        public static int mr_media_route_controller_pause=0x7f060015;
-        public static int mr_media_route_controller_play=0x7f060016;
-        public static int mr_media_route_controller_settings_description=0x7f060017;
-        public static int mr_media_route_controller_stop=0x7f060018;
-        public static int mr_system_route_name=0x7f060019;
-        public static int mr_user_route_category_name=0x7f06001a;
-        public static int provider_prompt=0x7f06000a;
+        public static int map_prompt=0x7f060008;
+        public static int mr_media_route_button_content_description=0x7f060010;
+        public static int mr_media_route_chooser_searching=0x7f060011;
+        public static int mr_media_route_chooser_title=0x7f060012;
+        public static int mr_media_route_controller_disconnect=0x7f060013;
+        public static int mr_media_route_controller_pause=0x7f060014;
+        public static int mr_media_route_controller_play=0x7f060015;
+        public static int mr_media_route_controller_settings_description=0x7f060016;
+        public static int mr_media_route_controller_stop=0x7f060017;
+        public static int mr_system_route_name=0x7f060018;
+        public static int mr_user_route_category_name=0x7f060019;
+        public static int provider_prompt=0x7f060009;
         /**   Vuki  
          */
         public static int sendSMS=0x7f060000;
-        public static int store_picture_message=0x7f06002d;
-        public static int store_picture_title=0x7f06002c;
+        public static int store_picture_message=0x7f06002c;
+        public static int store_picture_title=0x7f06002b;
         public static int valid_check=0x7f060004;
-        public static int vuki_number=0x7f060010;
+        public static int vuki_number=0x7f06000f;
         /**  Text on a placeholder buy button when Google Play services is not
          available or up-to-date 
          */
-        public static int wallet_buy_button_place_holder=0x7f06004e;
+        public static int wallet_buy_button_place_holder=0x7f06004d;
         /**  Add also reference in Zone_Numbers_Assets when changing
          */
-        public static int zona1_number=0x7f06000b;
-        public static int zona2_number=0x7f06000c;
-        public static int zona3_number=0x7f06000d;
-        public static int zona4_1_number=0x7f06000e;
-        public static int zona4_2_number=0x7f06000f;
+        public static int zona1_number=0x7f06000a;
+        public static int zona2_number=0x7f06000b;
+        public static int zona3_number=0x7f06000c;
+        public static int zona4_1_number=0x7f06000d;
+        public static int zona4_2_number=0x7f06000e;
     }
     public static final class style {
         public static int AlertDialog_AppCompat=0x7f080009;

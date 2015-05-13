@@ -14,7 +14,6 @@
 
 
 	<!--  sakky  -->
-	<string name="hello">Hello World, Click Me!</string>
 
 	<string name="map_prompt">Map type</string>
     <string-array name="maps_array">
