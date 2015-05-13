@@ -20,7 +20,7 @@ namespace Gdje_mi_je_auto1
 		{
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.Start);
-
+			//komentar testni
 
 			Button VUKIB = FindViewById<Button> (Resource.Id.VUKIB);
 			Button FILIPB = FindViewById<Button> (Resource.Id.FILIPB);
