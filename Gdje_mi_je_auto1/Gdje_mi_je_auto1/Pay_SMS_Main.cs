@@ -33,7 +33,6 @@ namespace Gdje_mi_je_auto1
 		EditText messageEditText;
 		EditText numberEditText;
 		bool valid_check=false;
-		bool update_inbox_messages=false;
 
 		static Dictionary<string,string> zoneDictionary=new Dictionary<string,string>();
 		static List<string> zone = new List<string> ();
@@ -45,7 +44,6 @@ namespace Gdje_mi_je_auto1
 
 		static String message_Path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
 		String message_Data = System.IO.Path.Combine(message_Path, "Message_data.txt");
-		public static bool Enable_message_update=false;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -61,7 +59,7 @@ namespace Gdje_mi_je_auto1
 			messageEditText.SetFilters (new IInputFilter[] { new InputFilterAllCaps () });
 
 
-
+			#region Ucitava podatke iz datoteke svaki put kad se otvori layout Pay_SMS_Main
 			//Log.Debug ("ON CREATE","DULJINA"+new FileInfo(message_Data).Length+" -- "+Enable_message_update);
 			long duljina=0;
 			try{
@@ -70,10 +68,8 @@ namespace Gdje_mi_je_auto1
 
 				Log.Debug ("Pay_SMS_Main","FILE INFO krivo učitava "+e.ToString ());
 			}
-
-
-			#region Ucitava podatke iz datoteke svaki put kad se otvori layout Pay_SMS_Main
-			if (duljina != 0 || update_inbox_messages==true) {
+				
+			if (duljina != 0 || Fill_ListView_With_Data.update_inbox_messages==true) {
 				List<string> data = new List<string> ();
 				String line;
 
@@ -83,85 +79,25 @@ namespace Gdje_mi_je_auto1
 				}
 
 				reader.Close ();
-				update_inbox_messages=false;
 				try{
-					FillListWithData (data);
+					Fill_ListView_With_Data.FillListWithData (data,this,listView);
 				}
 				catch(NullReferenceException e){
 					Log.Debug ("FillListWithData:Na pocetku Pay_SMS_Main",	e.ToString ());
 				}
 			}else{
-				DeleteHistory ();
+				Fill_ListView_With_Data.DeleteHistory ();
 			}
 
 			#endregion
 
 
-
-
-			#region ucitavanje inboxa
-			if(Enable_message_update){
-
-				update_inbox_messages = true;
-				List<String> items=new List<String>();
-
-				String[] projection = new String[]{ "address", "body","date" };
-				CursorLoader loader=new CursorLoader(this);
-				try{
-					//slaže podatke obrnutim redom,tj od najstarijeg do najmlađeg tako da kad dodajem novi podatak na kraj da bude poredano
-					loader = new CursorLoader( this,Android.Net.Uri.Parse ("content://sms/inbox"), projection, null, null, null);
-				}catch(Exception e){
-					Log.Debug ("Problem kod loadera",e.ToString ());
-				}
-				ICursor  cursor =  (ICursor)loader.LoadInBackground ();
-
-
-				if (cursor.MoveToFirst ()) { // must check the result to prevent exception
-					do {
-						try {
-							//Ako je broj iz datoteke Zone_Numbers_Assets, odnosno ako je broj iz raspona dozvoljenih
-							if (CheckSMSNumbers(cursor.GetString (cursor.GetColumnIndexOrThrow (projection [0])))) 
-							{
-								String smsSender = cursor.GetString (cursor.GetColumnIndexOrThrow (projection [0]));
-								String smsBody = cursor.GetString (cursor.GetColumnIndexOrThrow (projection [1]));
-								String smsTime = cursor.GetString (cursor.GetColumnIndexOrThrow (projection [2]));
-								long smsTimeLong=long.Parse (smsTime);
-								String smsDate=ConvertDateFromMillseconds (smsTimeLong);
-								smsTime=ConvertTimeFromMillseconds (smsTimeLong);
-								String msgData = MessageDisplay (smsSender, smsBody,smsTime,smsDate);
-								//punim Listu podacima iz poruke
-								items.Add (msgData);
-							}
-						} catch (Exception e) {
-							Log.Debug ("UCITAVANJE SMS-a u Pay_SMS_Main", e.ToString ());  
-						}
-					} while (cursor.MoveToNext ());
-				} else { // empty box, no SMS
-					cursor.Close ();
-				}
-				//okrecem podatke u descending nacin,tako da je najnoviji podatak na pocetku
-				items.Reverse ();
-				DeleteHistory ();
-				using(StreamWriter writer = new StreamWriter(message_Data)){
-
-					foreach(String data in items ){
-						writer.Write (data+"\n");
-					};
-				}
-
-				string[] ite=items.ToArray ();
-
-				try{
-					FillListWithData(items);
-				}catch(NullReferenceException e){
-					Log.Debug ("FillListWithData:U ucitavanju inboxa",	e.ToString ());
-				}
-
-
-				Enable_message_update=false;
+			//if user enabled Inbox messages
+			if(Fill_ListView_With_Data.Enable_message_update==true){
+				Fill_ListView_With_Data.Fill_With_Inbox_Data (this,listView);
 			}
-			#endregion
-		
+
+
 				
 
 			try{
@@ -283,52 +219,13 @@ namespace Gdje_mi_je_auto1
 		}
 
 
-		//		private void AddIncomingMessageToView(String poruka){
-		//		}
-
+	
 		/*
 		 * Metoda koju koristi delegat u obradi poruke.
 		 * */
 		//		protected void EventHandler(string smsSender,string smsBody,string smsTime){ }
 
-		/*
-		 * Puni list view s podacima .Koristi se ako je omogućeno ucitavanje poruka iz inboxa
-		 * */
-		//private void FillListWithData([Optional]List<string> itemsOpt,[Optional]string[] poljeOpt){
-		private void FillListWithData(List<string> itemsOpt){
 
-			if(itemsOpt.Count!=0){
-				itemsOpt.Reverse ();  
-				//Log.Debug ("duljina itemsopt",itemsOpt.Count.ToString ());
-
-				string[] data = itemsOpt.ToArray () ;
-
-				if (this == null) {
-					Log.Debug ("this je null","this");
-				}
-
-				try{
-
-					listView.Adapter = new ListViewAdapter (this, data);
-				}catch(Exception e){
-					Log.Debug ("listaaa",e.ToString ());
-				}
-
-			}
-			//			else if(poljeOpt.Length !=0){
-			//				try{
-			//				poljeOpt.Reverse ();
-			//				listView.Adapter = new ListViewAdapter (this, poljeOpt);
-			//				}catch(Exception e){
-			//					Log.Debug ("poljeee",e.ToString ());
-			//				}
-			//			}
-			else{
-				Log.Debug ("FillListWithData Method","Both arguments are null.");
-			}
-
-
-		}
 
 		/* 
 		 * Metoda koja provjerava za (value),nalazi li se u rasponu dopuštenih brojeva. 
@@ -351,7 +248,7 @@ namespace Gdje_mi_je_auto1
 		/*
 		 * Metoda koja uređuje ispis history-a
 		 * */
-		private String MessageDisplay(string smsSender,string smsBody,string smsTime,string smsDate){
+		public String MessageDisplay(string smsSender,string smsBody,string smsTime,string smsDate){
 			//return DetermineZone(smsSender)+" < " +"Vrijeme Od : Do" +" >" + " Datum ";
 			string[] satOD=smsTime.Split (':');
 			int satDO = int.Parse (satOD[0]) + 1;
@@ -373,24 +270,6 @@ namespace Gdje_mi_je_auto1
 			}
 			return "Number not found.";
 		}
-
-
-
-
-		/*
-		 * Brise sve podatke iz datoteke za spremanje poruka.
-		 * */
-		public void DeleteHistory(){
-			try{
-				File.WriteAllText(message_Data, String.Empty);
-			}
-			catch(FileNotFoundException e) {
-				Log.Debug ("DeleteHistory",e.ToString ());
-			}
-			update_inbox_messages = false;
-
-		}
-
 
 
 

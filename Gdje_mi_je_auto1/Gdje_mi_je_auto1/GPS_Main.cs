@@ -19,7 +19,7 @@ using System.Threading.Tasks;
 
 namespace Gdje_mi_je_auto1
 {
-	[Activity (Label = "Map & Location", Icon = "@drawable/icon",ScreenOrientation = ScreenOrientation.Portrait)]
+	[Activity (Label = "Map & Location", Icon = "@drawable/icon",ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
 //	public class Main : Activity, ILocationListener
 	public class GPS_Main : Activity
 	{

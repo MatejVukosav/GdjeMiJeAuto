@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace Gdje_mi_je_auto1
 {
-	[Activity (Label = "Start_Main",MainLauncher = true)]			
+	[Activity (Label = "Start_Main")]			
 	public class Start_Main : Activity
 	{
 		protected override void OnCreate (Bundle bundle)

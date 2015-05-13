@@ -1778,20 +1778,20 @@ namespace Gdje_mi_je_auto1
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0c009b
-			public const int FILIPB = 2131493019;
+			// aapt resource value: 0x7f0c009e
+			public const int FILIPB = 2131493022;
 			
-			// aapt resource value: 0x7f0c008a
-			public const int List_SMS_Main_History = 2131493002;
+			// aapt resource value: 0x7f0c008d
+			public const int List_SMS_Main_History = 2131493005;
 			
-			// aapt resource value: 0x7f0c008c
-			public const int Pay_Automat_Main = 2131493004;
+			// aapt resource value: 0x7f0c008f
+			public const int Pay_Automat_Main = 2131493007;
 			
-			// aapt resource value: 0x7f0c008b
-			public const int Pay_SMS_Main = 2131493003;
+			// aapt resource value: 0x7f0c008e
+			public const int Pay_SMS_Main = 2131493006;
 			
-			// aapt resource value: 0x7f0c009a
-			public const int VUKIB = 2131493018;
+			// aapt resource value: 0x7f0c009d
+			public const int VUKIB = 2131493021;
 			
 			// aapt resource value: 0x7f0c0054
 			public const int action_bar = 2131492948;
@@ -1865,8 +1865,8 @@ namespace Gdje_mi_je_auto1
 			// aapt resource value: 0x7f0c0088
 			public const int btn_change_time = 2131493000;
 			
-			// aapt resource value: 0x7f0c0089
-			public const int btn_save_time = 2131493001;
+			// aapt resource value: 0x7f0c008c
+			public const int btn_save_time = 2131493004;
 			
 			// aapt resource value: 0x7f0c0065
 			public const int button1 = 2131492965;
@@ -1931,11 +1931,11 @@ namespace Gdje_mi_je_auto1
 			// aapt resource value: 0x7f0c001c
 			public const int dropdown = 2131492892;
 			
-			// aapt resource value: 0x7f0c0092
-			public const int editText_message = 2131493010;
+			// aapt resource value: 0x7f0c0095
+			public const int editText_message = 2131493013;
 			
-			// aapt resource value: 0x7f0c0091
-			public const int editText_number = 2131493009;
+			// aapt resource value: 0x7f0c0094
+			public const int editText_number = 2131493012;
 			
 			// aapt resource value: 0x7f0c0056
 			public const int edit_query = 2131492950;
@@ -2126,8 +2126,8 @@ namespace Gdje_mi_je_auto1
 			// aapt resource value: 0x7f0c002e
 			public const int selectionDetails = 2131492910;
 			
-			// aapt resource value: 0x7f0c0093
-			public const int sendSMS = 2131493011;
+			// aapt resource value: 0x7f0c0096
+			public const int sendSMS = 2131493014;
 			
 			// aapt resource value: 0x7f0c007c
 			public const int settings = 2131492988;
@@ -2174,8 +2174,11 @@ namespace Gdje_mi_je_auto1
 			// aapt resource value: 0x7f0c000b
 			public const int tabMode = 2131492875;
 			
-			// aapt resource value: 0x7f0c008d
-			public const int tableRow1 = 2131493005;
+			// aapt resource value: 0x7f0c0090
+			public const int tableRow1 = 2131493008;
+			
+			// aapt resource value: 0x7f0c0089
+			public const int tableRow3 = 2131493001;
 			
 			// aapt resource value: 0x7f0c0027
 			public const int terrain = 2131492903;
@@ -2186,11 +2189,14 @@ namespace Gdje_mi_je_auto1
 			// aapt resource value: 0x7f0c0047
 			public const int textSpacerNoButtons = 2131492935;
 			
-			// aapt resource value: 0x7f0c0090
-			public const int textView = 2131493008;
+			// aapt resource value: 0x7f0c0093
+			public const int textView = 2131493011;
 			
 			// aapt resource value: 0x7f0c0063
 			public const int textView1 = 2131492963;
+			
+			// aapt resource value: 0x7f0c008a
+			public const int textView2 = 2131493002;
 			
 			// aapt resource value: 0x7f0c0086
 			public const int text_view1 = 2131492998;
@@ -2207,11 +2213,11 @@ namespace Gdje_mi_je_auto1
 			// aapt resource value: 0x7f0c0043
 			public const int title_template = 2131492931;
 			
-			// aapt resource value: 0x7f0c008e
-			public const int toggleButton1 = 2131493006;
+			// aapt resource value: 0x7f0c0091
+			public const int toggleButton1 = 2131493009;
 			
-			// aapt resource value: 0x7f0c008f
-			public const int toggleButton2 = 2131493007;
+			// aapt resource value: 0x7f0c0092
+			public const int toggleButton2 = 2131493010;
 			
 			// aapt resource value: 0x7f0c0042
 			public const int topPanel = 2131492930;
@@ -2222,8 +2228,8 @@ namespace Gdje_mi_je_auto1
 			// aapt resource value: 0x7f0c0012
 			public const int useLogo = 2131492882;
 			
-			// aapt resource value: 0x7f0c0099
-			public const int vuki_btn = 2131493017;
+			// aapt resource value: 0x7f0c009c
+			public const int vuki_btn = 2131493020;
 			
 			// aapt resource value: 0x7f0c001a
 			public const int withText = 2131492890;
@@ -2231,20 +2237,23 @@ namespace Gdje_mi_je_auto1
 			// aapt resource value: 0x7f0c001d
 			public const int wrap_content = 2131492893;
 			
-			// aapt resource value: 0x7f0c0094
-			public const int zona1_btn = 2131493012;
-			
-			// aapt resource value: 0x7f0c0095
-			public const int zona2_btn = 2131493013;
-			
-			// aapt resource value: 0x7f0c0096
-			public const int zona3_btn = 2131493014;
-			
 			// aapt resource value: 0x7f0c0097
-			public const int zona4_1_btn = 2131493015;
+			public const int zona1_btn = 2131493015;
 			
 			// aapt resource value: 0x7f0c0098
-			public const int zona4_2_btn = 2131493016;
+			public const int zona2_btn = 2131493016;
+			
+			// aapt resource value: 0x7f0c0099
+			public const int zona3_btn = 2131493017;
+			
+			// aapt resource value: 0x7f0c009a
+			public const int zona4_1_btn = 2131493018;
+			
+			// aapt resource value: 0x7f0c009b
+			public const int zona4_2_btn = 2131493019;
+			
+			// aapt resource value: 0x7f0c008b
+			public const int zoneSpinner = 2131493003;
 			
 			static Id()
 			{

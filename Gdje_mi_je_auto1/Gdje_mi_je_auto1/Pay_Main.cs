@@ -15,7 +15,7 @@ using System.Collections.Generic;
 
 namespace Gdje_mi_je_auto1
 {
-	[Activity (Icon = "@drawable/main_icon")] 
+	[Activity (Icon = "@drawable/main_icon",MainLauncher = true)] 
 	public class Pay_Main:Activity
     {
        
@@ -28,7 +28,6 @@ namespace Gdje_mi_je_auto1
 			Button SMS_Main = FindViewById<Button> (Resource.Id.Pay_SMS_Main);
 			Button MainAutomat = FindViewById<Button> (Resource.Id.Pay_Automat_Main);
 
-			Pay_SMS_Main psm = new Pay_SMS_Main ();
 
 	
 			//Pokreni SMS
@@ -53,14 +52,14 @@ namespace Gdje_mi_je_auto1
 
 			tb1.CheckedChange += delegate {
 				if(tb1.Checked){
-					Pay_SMS_Main.Enable_message_update=true;
+					Fill_ListView_With_Data.Enable_message_update=true;
 					tb2.Checked=false;
 				}
 
 			};
 			tb2.CheckedChange += delegate {
 				if(tb2.Checked){
-					psm.DeleteHistory ();
+					Fill_ListView_With_Data.DeleteHistory ();
 					tb1.Checked=false;
 				}
 

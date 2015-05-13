@@ -31,7 +31,7 @@ namespace Gdje_mi_je_auto1
 		 *	static List<string> zone = new List<string> ();
 		 * try{
 				var tuple=ParseZoneNumbers.LoadZoneNumbersAssetsData (this);
-				zone = tuple.Item1; //zone [ ZONA 1 ],[ ZONA 2 ]...
+				zone = tuple.Item1; //zone 700101,700102...
 				zoneDictionary = tuple.Item2; // zone i pripadni stringovi -> key 700101 value[ ZONA 1 ]
 			}catch(Exception e){
 				Log.Debug ("Greska prilikom ucitavanja zone i zoneDictionary u Pay_SMS_Main",e.ToString ());

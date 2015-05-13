@@ -80,6 +80,7 @@
     <Compile Include="Zoner.cs" />
     <Compile Include="GPS_Main.cs" />
     <Compile Include="ParseZoneNumbers.cs" />
+    <Compile Include="Fill_ListView_With_Data.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

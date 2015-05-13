@@ -33,9 +33,29 @@
         android:layout_gravity="center"
         android:layout_marginTop="5dp"
         android:background="@drawable/collor_button" />
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:id="@+id/textView2"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Odaberite zonu:" />
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/zoneSpinner"
+            android:spinnerMode="dialog"
+            android:prompt="@string/map_prompt" />
+    </TableRow>
     <Button
         android:id="@+id/btn_save_time"
-        android:layout_width="130dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SPREMI"
         android:layout_gravity="right"

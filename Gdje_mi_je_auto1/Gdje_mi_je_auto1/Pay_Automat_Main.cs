@@ -10,6 +10,12 @@ using Android.Views;
 using Android.Widget;
 using System.Threading;
 using Android.Util;
+using System.IO;
+using Android.Telephony;
+using Android.Database;
+using System.Windows;
+using System.Runtime.InteropServices;
+
 
 /*
  * Klasa u kojoj se sprema vrijeme plaćanja parking karte na automatu. 
@@ -24,14 +30,18 @@ namespace Gdje_mi_je_auto1
 		private EditText text_time_screen;
 		private Button btn_save_time;
 		private string[] items;
-		ListView listview;
+		ListView listView;
 
 		private int hour;
 		private int minute;
+		private bool valid_check_automat=false;
 
 		ListViewAdapter ls = new ListViewAdapter ();
 
+		private static List<string> spinnerList = new List<string> ();
 
+		static String message_Path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+		String message_Data = System.IO.Path.Combine(message_Path, "Message_data.txt");
 
 		protected override void  OnCreate (Bundle bundle)
 		{
@@ -42,13 +52,55 @@ namespace Gdje_mi_je_auto1
 			btn_save_time = FindViewById<Button> (Resource.Id.btn_save_time);
 			btn_change_time = FindViewById<Button> (Resource.Id.btn_change_time);
 
+			listView = FindViewById<ListView> (Resource.Id.List_SMS_Main_History);
 
-			items = List_Data.List_Data_Fill ();
+			Spinner spinnerPayA = FindViewById<Spinner> (Resource.Id.zoneSpinner);
+			spinnerList=FillSpinnerWithData ();
 
-			//List_Automat_Main_History
-			listview = FindViewById<ListView> (Resource.Id.List_SMS_Main_History);
-			listview.Adapter = new ListViewAdapter (this,items);
-			listview.ItemClick += OnListItemClick;
+			ArrayAdapter<string> spinnerArrayAdapter = new ArrayAdapter<string> (this, Android.Resource.Layout.SimpleSpinnerItem, spinnerList);
+			spinnerArrayAdapter.SetDropDownViewResource (Android.Resource.Layout.SimpleSpinnerDropDownItem);
+			spinnerPayA.Adapter = spinnerArrayAdapter;
+
+			//spinner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs> (spinner_ItemSelected);
+
+			#region PuniListu
+			//Log.Debug ("ON CREATE","DULJINA"+new FileInfo(message_Data).Length+" -- "+Enable_message_update);
+			long duljina=0;
+			try{
+				duljina = new FileInfo (message_Data).Length;
+			}catch(Exception e){
+
+				Log.Debug ("Pay_SMS_Main","FILE INFO krivo učitava "+e.ToString ());
+			}
+			Pay_SMS_Main psm = new Pay_SMS_Main ();
+
+			if (duljina != 0 || Fill_ListView_With_Data.update_inbox_messages==true) {
+				List<string> data = new List<string> ();
+				String line;
+
+				StreamReader reader = new StreamReader (message_Data);
+				while ((line=reader.ReadLine ()) != null) {
+					data.Add (line);
+				}
+				reader.Close ();
+				Log.Debug ("Puni","puni listuuu");
+				try{
+					Fill_ListView_With_Data.FillListWithData (data,this,listView);
+				}
+				catch(NullReferenceException e){
+					Log.Debug ("FillListWithData:Na pocetku Pay_SMS_Main",	e.ToString ());
+				}
+			}else{
+				Fill_ListView_With_Data.DeleteHistory ();
+			}
+
+			//if user enabled Inbox messages
+			if(Fill_ListView_With_Data.Enable_message_update==true){
+				Fill_ListView_With_Data.Fill_With_Inbox_Data (this,listView);
+			}
+		
+			#endregion
+
 
 
 			UpdateTime();
@@ -68,12 +120,49 @@ namespace Gdje_mi_je_auto1
 			 * UPALI ALARM I SPREMI VRIJEME PLACANJA U HISTORY
 			 * */
 			btn_save_time.Click+=delegate {
-				var activity_pay_main=new Intent (this,typeof(Pay_Main));
-				StartActivity (activity_pay_main);
+				//TODO klikom na save se pokrece alarm
+				if(valid_check_automat){
+					var activity_pay_main=new Intent (this,typeof(Pay_Main));
+					StartActivity (activity_pay_main);
+				}else 
+					Toast.MakeText (this,"Odaberite zonu!",ToastLength.Short).Show ();
 				};
 				
 		}
 
+		public List<string> FillSpinnerWithData(){
+			Dictionary<string,string> spinnerDict=new Dictionary<string,string>();
+			List<string> zoneList = new List<string> ();
+			try{
+				var tuple=ParseZoneNumbers.LoadZoneNumbersAssetsData (this);
+				spinnerDict = tuple.Item2; //zone [ ZONA 1 ],[ ZONA 2 ]...
+			}catch(Exception e){
+				Log.Debug ("Greska prilikom ucitavanja!",e.ToString ());
+			}
+			return spinnerDict.Values.ToList ();
+
+		}
+
+		private void spinner_ItemSelected (object sender, AdapterView.ItemSelectedEventArgs e)
+		{
+			Spinner spinner = (Spinner)sender;
+			string MapType = (string) spinner.GetItemAtPosition (e.Position);
+
+			switch (MapType) {
+			case "Normal":
+				
+				break;
+			case "Satellite":
+				
+				break;
+			case "Hybrid":
+				
+				break;
+			default:
+				
+				break;
+			}
+		}
 
 
 		private void UpdateDisplay ()
@@ -113,6 +202,40 @@ namespace Gdje_mi_je_auto1
 			//Android.Widget.Toast.MakeText (this,"ispisaoaooa",Android.Widget.ToastLength.Short).Show ();
 		}
 	
+
+		public void FillListWithData(List<string> itemsOpt){
+
+			if (itemsOpt.Count != 0) {
+				itemsOpt.Reverse ();  
+				Log.Debug ("duljina itemsOpt u FillListWithData",itemsOpt.Count.ToString ());
+
+				string[] data = itemsOpt.ToArray ();
+
+				if (this == null) {
+					Log.Debug ("this je null", "this");
+				}
+
+				try {
+
+					listView.Adapter = new ListViewAdapter (this, data);
+				} catch (Exception e) {
+					Log.Debug ("ListVier Adapter error.", e.ToString ());
+				}
+
+			}
+			//			else if(poljeOpt.Length !=0){
+			//				try{
+			//				poljeOpt.Reverse ();
+			//				listView.Adapter = new ListViewAdapter (this, poljeOpt);
+			//				}catch(Exception e){
+			//					Log.Debug ("poljeee",e.ToString ());
+			//				}
+			//			}
+			else {
+				Log.Debug ("FillListWithData Method", "Both arguments are null.");
+			}
+
+		}
 
 	}
 }

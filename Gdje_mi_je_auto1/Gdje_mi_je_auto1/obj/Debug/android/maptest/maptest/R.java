@@ -2024,11 +2024,11 @@ containing a value of this type.
         public static final int zone_btn_style=0x7f020084;
     }
     public static final class id {
-        public static final int FILIPB=0x7f0c009b;
-        public static final int List_SMS_Main_History=0x7f0c008a;
-        public static final int Pay_Automat_Main=0x7f0c008c;
-        public static final int Pay_SMS_Main=0x7f0c008b;
-        public static final int VUKIB=0x7f0c009a;
+        public static final int FILIPB=0x7f0c009e;
+        public static final int List_SMS_Main_History=0x7f0c008d;
+        public static final int Pay_Automat_Main=0x7f0c008f;
+        public static final int Pay_SMS_Main=0x7f0c008e;
+        public static final int VUKIB=0x7f0c009d;
         public static final int action_bar=0x7f0c0054;
         public static final int action_bar_activity_content=0x7f0c0000;
         public static final int action_bar_container=0x7f0c0053;
@@ -2053,7 +2053,7 @@ containing a value of this type.
         public static final int btnLocations=0x7f0c0078;
         public static final int btnZones=0x7f0c0077;
         public static final int btn_change_time=0x7f0c0088;
-        public static final int btn_save_time=0x7f0c0089;
+        public static final int btn_save_time=0x7f0c008c;
         public static final int button1=0x7f0c0065;
         public static final int buttonPanel=0x7f0c004a;
         public static final int buttons=0x7f0c0083;
@@ -2075,8 +2075,8 @@ containing a value of this type.
         public static final int disconnect=0x7f0c0084;
         public static final int donate_with_google=0x7f0c0033;
         public static final int dropdown=0x7f0c001c;
-        public static final int editText_message=0x7f0c0092;
-        public static final int editText_number=0x7f0c0091;
+        public static final int editText_message=0x7f0c0095;
+        public static final int editText_number=0x7f0c0094;
         public static final int edit_query=0x7f0c0056;
         public static final int edit_time_automat=0x7f0c0087;
         public static final int end=0x7f0c0014;
@@ -2140,7 +2140,7 @@ containing a value of this type.
         public static final int search_voice_btn=0x7f0c0061;
         public static final int select_dialog_listview=0x7f0c0062;
         public static final int selectionDetails=0x7f0c002e;
-        public static final int sendSMS=0x7f0c0093;
+        public static final int sendSMS=0x7f0c0096;
         public static final int settings=0x7f0c007c;
         public static final int shortcut=0x7f0c004d;
         public static final int showCustom=0x7f0c000f;
@@ -2156,30 +2156,33 @@ containing a value of this type.
         public static final int submit_area=0x7f0c005f;
         public static final int subtitle=0x7f0c0082;
         public static final int tabMode=0x7f0c000b;
-        public static final int tableRow1=0x7f0c008d;
+        public static final int tableRow1=0x7f0c0090;
+        public static final int tableRow3=0x7f0c0089;
         public static final int terrain=0x7f0c0027;
         public static final int textLocations=0x7f0c0068;
         public static final int textSpacerNoButtons=0x7f0c0047;
-        public static final int textView=0x7f0c0090;
+        public static final int textView=0x7f0c0093;
         public static final int textView1=0x7f0c0063;
+        public static final int textView2=0x7f0c008a;
         public static final int text_view1=0x7f0c0086;
         public static final int text_wrapper=0x7f0c0081;
         public static final int title=0x7f0c0040;
         public static final int title_bar=0x7f0c007a;
         public static final int title_template=0x7f0c0043;
-        public static final int toggleButton1=0x7f0c008e;
-        public static final int toggleButton2=0x7f0c008f;
+        public static final int toggleButton1=0x7f0c0091;
+        public static final int toggleButton2=0x7f0c0092;
         public static final int topPanel=0x7f0c0042;
         public static final int up=0x7f0c0008;
         public static final int useLogo=0x7f0c0012;
-        public static final int vuki_btn=0x7f0c0099;
+        public static final int vuki_btn=0x7f0c009c;
         public static final int withText=0x7f0c001a;
         public static final int wrap_content=0x7f0c001d;
-        public static final int zona1_btn=0x7f0c0094;
-        public static final int zona2_btn=0x7f0c0095;
-        public static final int zona3_btn=0x7f0c0096;
-        public static final int zona4_1_btn=0x7f0c0097;
-        public static final int zona4_2_btn=0x7f0c0098;
+        public static final int zona1_btn=0x7f0c0097;
+        public static final int zona2_btn=0x7f0c0098;
+        public static final int zona3_btn=0x7f0c0099;
+        public static final int zona4_1_btn=0x7f0c009a;
+        public static final int zona4_2_btn=0x7f0c009b;
+        public static final int zoneSpinner=0x7f0c008b;
     }
     public static final class integer {
         public static final int abc_config_activityDefaultDur=0x7f0d0000;
