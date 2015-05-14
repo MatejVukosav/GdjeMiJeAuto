@@ -78,11 +78,13 @@
     <Compile Include="LocationsActivity.cs" />
     <Compile Include="MapActivity.cs" />
     <Compile Include="Zoner.cs" />
-    <Compile Include="GPS_Main.cs" />
     <Compile Include="ParseZoneNumbers.cs" />
     <Compile Include="Fill_ListView_With_Data.cs" />
     <Compile Include="CustomDialogFragment.cs" />
     <Compile Include="MainFragmentActivity.cs" />
+    <Compile Include="SeeSettings.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="SettingsRecord.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -585,7 +587,6 @@
     <None Include="packages\Xamarin.GooglePlayServices.22.0.0.0\lib\MonoAndroid41\22.0.0\embedded\res\values-zh-rHK\common_strings.xml" />
     <None Include="packages\Xamarin.GooglePlayServices.22.0.0.0\lib\MonoAndroid41\22.0.0\embedded\res\values-zh-rTW\common_strings.xml" />
     <None Include="packages\Xamarin.GooglePlayServices.22.0.0.0\lib\MonoAndroid41\22.0.0\embedded\res\values-zu\common_strings.xml" />
-    <None Include="packages.config" />
     <None Include="GoogleMap\bin\Debug\Newtonsoft.Json.dll" />
     <None Include="GoogleMap\bin\Debug\Newtonsoft.Json.xml" />
   </ItemGroup>
@@ -612,13 +613,14 @@
     <AndroidResource Include="Resources\drawable-hdpi\zone_btn_style.xml" />
     <AndroidResource Include="Resources\values\styles.axml" />
     <AndroidResource Include="Resources\values\Zet_zone_numbers.xml" />
-    <AndroidResource Include="Resources\layout\Start.axml" />
     <AndroidResource Include="Resources\layout\Locations.axml" />
-    <AndroidResource Include="Resources\layout\MainLayout.axml" />
     <AndroidResource Include="Resources\layout\MapLayout.axml" />
     <AndroidResource Include="Resources\layout\CustomDialog.axml" />
     <AndroidResource Include="Resources\layout\MainFragment.axml" />
     <AndroidResource Include="Resources\drawable-hdpi\custom_dialog.png" />
+    <AndroidResource Include="Resources\layout\MainLayout.axml" />
+    <AndroidResource Include="Resources\layout\packages.config" />
+    <AndroidResource Include="Resources\layout\Start.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

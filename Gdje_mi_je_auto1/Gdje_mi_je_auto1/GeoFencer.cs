@@ -3,12 +3,22 @@ using Android.Gms.Maps;
 using Android.Gms.Maps.Model;
 using System.Collections.Generic;
 using System.Globalization;
+using Android.Locations;
+using Android.App;
+using Android.Content;
+using System.IO;
+
+
 
 namespace Gdje_mi_je_auto1
 {
 	public static class GeoFencer 
 	{
 		private static bool isInitialized = false;
+
+		private static Context mContext;
+
+		private static LocationManager locMgr;
 
 		private static PolygonOptions[] zones = new PolygonOptions[34];
 		private const int red = unchecked((int) 0x60FF0000);
@@ -20,7 +30,7 @@ namespace Gdje_mi_je_auto1
 		private const int white = unchecked((int) 0x60FFFFFF);
 		private static readonly int[] zoneColors = {cyan,cyan,cyan,red,green,green,green,green,green,yellow,green,green,green,green,green,yellow,yellow,yellow,yellow,yellow,yellow,yellow,yellow,yellow,green,blue,blue,blue,red,darkRed,green,yellow,darkRed,darkRed};
 
-		private static void Initialize()
+		public static void Initialize(Context inContext)
 		{
 			#region xlist
 			String[] xList = {
@@ -121,12 +131,16 @@ namespace Gdje_mi_je_auto1
 				i++;
 			}
 
+			mContext = inContext;
+			locMgr = (LocationManager)mContext.GetSystemService (Context.LocationService);
+
 			isInitialized = true;
 		}
 
-		public static int inZone (double latitude, double longitude){
+		public static string inZone (double latitude, double longitude){
 			if (!isInitialized) {
-				Initialize ();
+				return "not initialized";
+				//Initialize ();
 			}
 
 			LatLng point = new LatLng (latitude, longitude);
@@ -141,7 +155,7 @@ namespace Gdje_mi_je_auto1
 			}
 
 			if (zonesPointIsIn.Count == 0) {
-				return 1000;
+				return "unknown";
 			} else if (zonesPointIsIn.Count == 1) {
 				targetZone = zonesPointIsIn [0];
 			} else if (zonesPointIsIn.Count == 2) {
@@ -161,7 +175,22 @@ namespace Gdje_mi_je_auto1
 				}
 			}
 						
-			return targetZone;
+			return zoneName(targetZone);
+		}
+
+		public static string inZone (){
+			Location locationNetwork = locMgr.GetLastKnownLocation (LocationManager.NetworkProvider);
+			Location locationGPS = locMgr.GetLastKnownLocation (LocationManager.GpsProvider);
+			Location location;
+			if (locationGPS == null) {
+				location = locationNetwork;
+			} else if (locationNetwork == null) {
+				location = locationGPS;
+			} else {
+				location = locationNetwork.Time > locationGPS.Time ? locationNetwork : locationGPS;
+			}
+				
+			return inZone (location.Latitude, location.Longitude);		
 		}
 
 		private static bool Contains(LatLng position, PolygonOptions polygon) 

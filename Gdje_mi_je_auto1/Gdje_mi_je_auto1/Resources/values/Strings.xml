@@ -28,4 +28,27 @@
         <item>Network</item>
     </string-array>
 
+    <string name="normal_density_prompt">Map type</string>
+    <string-array name="normal_density_array">
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+    </string-array>
+
+    <string name="high_density_prompt">Map type</string>
+    <string-array name="high_density_array">
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+    </string-array>
+
+    <string name="speed_prompt">Map type</string>
+    <string-array name="speed_array">
+   		<item>10 kmh</item>
+        <item>15 kmh</item>
+        <item>30 kmh</item>
+        <item>40 kmh</item>
+        <item>50 kmh</item>
+    </string-array>
+
 </resources>

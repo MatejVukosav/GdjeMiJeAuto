@@ -33,6 +33,11 @@ namespace Gdje_mi_je_auto1
 
 			locationsFile = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
 			locationsFile = Path.Combine(locationsFile, "locations.txt");
+
+			if (!File.Exists(locationsFile))
+				File.Create(locationsFile);
+
+
 			textLocations.Text = File.ReadAllText(locationsFile);
 
 		}

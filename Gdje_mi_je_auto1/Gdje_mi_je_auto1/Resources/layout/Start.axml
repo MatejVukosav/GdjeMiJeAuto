@@ -9,8 +9,13 @@
         android:layout_height="wrap_content"
         android:id="@+id/VUKIB" />
     <Button
-        android:text="FILIP"
+        android:text="MAP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/FILIPB" />
+        android:id="@+id/startMap" />
+    <Button
+        android:text="SETTINGS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/startSettings" />
 </LinearLayout>
