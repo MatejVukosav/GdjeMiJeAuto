@@ -54,6 +54,14 @@
         android:layout_marginRight="20dp"
         android:layout_marginTop="10dp">
         <Button
+            android:text="ZONA 1#30"
+            android:id="@+id/zona01_btn"
+            android:layout_width="110dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="5.5dp"
+            android:background="@drawable/collor_button" />
+        <Button
             android:text="ZONA 1"
             android:id="@+id/zona1_btn"
             android:layout_width="110dp"
@@ -70,14 +78,6 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:background="@drawable/collor_button" />
-        <Button
-            android:text="ZONA 3"
-            android:id="@+id/zona3_btn"
-            android:layout_width="110dp"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp"
-            android:background="@drawable/collor_button" />
     </TableRow>
     <TableRow
         android:id="@+id/tableRow1"
@@ -86,6 +86,14 @@
         android:layout_marginTop="15dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp">
+        <Button
+            android:text="ZONA 3"
+            android:id="@+id/zona3_btn"
+            android:layout_width="110dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/collor_button" />
         <Button
             android:text="ZONA 4.1"
             android:id="@+id/zona4_1_btn"
@@ -100,14 +108,6 @@
             android:layout_width="115dp"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:background="@drawable/collor_button" />
-        <Button
-            android:text="VUKI"
-            android:id="@+id/vuki_btn"
-            android:layout_width="110dp"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:layout_marginLeft="5.5dp"
             android:background="@drawable/collor_button" />
     </TableRow>
 <!--	END [Odabir zona]	-->

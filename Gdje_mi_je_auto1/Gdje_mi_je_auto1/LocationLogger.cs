@@ -61,7 +61,7 @@ namespace Gdje_mi_je_auto1
 			
 		public override Android.OS.IBinder OnBind (Android.Content.Intent intent)
 		{
-			throw new NotImplementedException ();
+			throw new Exception();
 		}
 
 		public void OnLocationChanged (Location location)

@@ -39,7 +39,7 @@ namespace Gdje_mi_je_auto1
 
 
 			textLocations.Text = File.ReadAllText(locationsFile);
-
+		
 		}
 	}
 }

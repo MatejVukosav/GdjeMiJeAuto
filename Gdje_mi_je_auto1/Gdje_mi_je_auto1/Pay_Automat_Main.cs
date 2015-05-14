@@ -173,9 +173,8 @@ namespace Gdje_mi_je_auto1
 		 * */
 		void OnListItemClick(object sender, AdapterView.ItemClickEventArgs e)
 		{
-			
-
-
+			//TODO onListItemClick must be defined
+			/*
 			var listview = sender as ListView;
 			FragmentTransaction ftr = FragmentManager.BeginTransaction ();
 			try{
@@ -186,6 +185,7 @@ namespace Gdje_mi_je_auto1
 			}
 
 			//Android.Widget.Toast.MakeText (this,"ispisaoaooa",Android.Widget.ToastLength.Short).Show ();
+			*/
 		}
 	
 

@@ -4,15 +4,15 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
     <Button
-        android:text="VUKI"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/VUKIB" />
-    <Button
         android:text="MAP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/startMap" />
+    <Button
+        android:text="VUKI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/VUKIB" />
     <Button
         android:text="SETTINGS"
         android:layout_width="match_parent"

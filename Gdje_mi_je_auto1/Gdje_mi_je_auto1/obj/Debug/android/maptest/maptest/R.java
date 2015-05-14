@@ -2033,7 +2033,7 @@ containing a value of this type.
         public static final int List_SMS_Main_History=0x7f0c008c;
         public static final int Pay_Automat_Main=0x7f0c008e;
         public static final int Pay_SMS_Main=0x7f0c008d;
-        public static final int VUKIB=0x7f0c009c;
+        public static final int VUKIB=0x7f0c009d;
         public static final int action_bar=0x7f0c0054;
         public static final int action_bar_activity_content=0x7f0c0000;
         public static final int action_bar_container=0x7f0c0053;
@@ -2150,7 +2150,7 @@ containing a value of this type.
         public static final int src_atop=0x7f0c0020;
         public static final int src_in=0x7f0c0021;
         public static final int src_over=0x7f0c0022;
-        public static final int startMap=0x7f0c009d;
+        public static final int startMap=0x7f0c009c;
         public static final int startSettings=0x7f0c009e;
         public static final int stop=0x7f0c0085;
         public static final int strict_sandbox=0x7f0c002c;
@@ -2178,14 +2178,14 @@ containing a value of this type.
         public static final int topPanel=0x7f0c0042;
         public static final int up=0x7f0c0008;
         public static final int useLogo=0x7f0c0012;
-        public static final int vuki_btn=0x7f0c009b;
         public static final int withText=0x7f0c001a;
         public static final int wrap_content=0x7f0c001d;
-        public static final int zona1_btn=0x7f0c0096;
-        public static final int zona2_btn=0x7f0c0097;
-        public static final int zona3_btn=0x7f0c0098;
-        public static final int zona4_1_btn=0x7f0c0099;
-        public static final int zona4_2_btn=0x7f0c009a;
+        public static final int zona01_btn=0x7f0c0096;
+        public static final int zona1_btn=0x7f0c0097;
+        public static final int zona2_btn=0x7f0c0098;
+        public static final int zona3_btn=0x7f0c0099;
+        public static final int zona4_1_btn=0x7f0c009a;
+        public static final int zona4_2_btn=0x7f0c009b;
         public static final int zoneSpinner=0x7f0c008a;
     }
     public static final class integer {
@@ -2394,18 +2394,20 @@ containing a value of this type.
         public static final int store_picture_message=0x7f06002f;
         public static final int store_picture_title=0x7f06002e;
         public static final int valid_check=0x7f060004;
-        public static final int vuki_number=0x7f060012;
         /**  Text on a placeholder buy button when Google Play services is not
          available or up-to-date 
          */
         public static final int wallet_buy_button_place_holder=0x7f060050;
         /**  Add also reference in Zone_Numbers_Assets when changing
          */
-        public static final int zona1_number=0x7f06000d;
-        public static final int zona2_number=0x7f06000e;
-        public static final int zona3_number=0x7f06000f;
-        public static final int zona4_1_number=0x7f060010;
-        public static final int zona4_2_number=0x7f060011;
+        public static final int zona01_number=0x7f06000d;
+        /**  700101 
+         */
+        public static final int zona1_number=0x7f06000e;
+        public static final int zona2_number=0x7f06000f;
+        public static final int zona3_number=0x7f060010;
+        public static final int zona4_1_number=0x7f060011;
+        public static final int zona4_2_number=0x7f060012;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f080009;

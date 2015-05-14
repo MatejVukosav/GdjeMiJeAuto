@@ -41,7 +41,6 @@ C:\Users\Matej\Documents\Projects\Gdje_mi_je_auto1\Gdje_mi_je_auto1\bin\Debug\ma
 C:\Users\Matej\Documents\Projects\Gdje_mi_je_auto1\Gdje_mi_je_auto1\bin\Debug\maptest.maptest-Signed.apk
 C:\Users\Matej\Documents\Projects\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\android\bin\maptest.maptest.apk
 C:\Users\Matej\Documents\Projects\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\Gdje_mi_je_auto1.csprojResolveAssemblyReference.cache
-C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\Gdje_mi_je_auto1.csprojResolveAssemblyReference.cache
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\bin\Debug\Gdje_mi_je_auto1.dll
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\bin\Debug\Gdje_mi_je_auto1.pdb
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\bin\Debug\Gdje_mi_je_auto1.dll.mdb
@@ -83,7 +82,6 @@ C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\layout\customdialog.xml
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\layout\mainfragment.xml
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\drawable-hdpi\custom_dialog.png
-C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\layout\mainlayout3.xml
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\layout\mainlayout.xml
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\layout\packages.config
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\layout\start.xml

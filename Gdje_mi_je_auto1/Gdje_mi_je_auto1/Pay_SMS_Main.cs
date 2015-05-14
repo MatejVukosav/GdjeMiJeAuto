@@ -33,7 +33,8 @@ namespace Gdje_mi_je_auto1
 		EditText messageEditText;
 		EditText numberEditText;
 		bool valid_check=false;
-		private readonly int registrationLength=9;
+		private readonly int registrationLength=8;
+		private readonly string VukiTestNumber="+385989305003";
 
 		static Dictionary<string,string> zoneDictionary=new Dictionary<string,string>();
 		static List<string> zone = new List<string> ();
@@ -121,48 +122,49 @@ namespace Gdje_mi_je_auto1
 			/*
 			 * Inicijalizacija dugmova zona i postavljanje njihovog rada.
 			 */
-
+			Button vuki_btn = FindViewById<Button> (Resource.Id.zona01_btn);
 			Button zona1_btn = FindViewById<Button> (Resource.Id.zona1_btn);
 			Button zona2_btn = FindViewById<Button> (Resource.Id.zona2_btn);
 			Button zona3_btn = FindViewById<Button> (Resource.Id.zona3_btn);
 			Button zona4_1_btn = FindViewById<Button> (Resource.Id.zona4_1_btn);
 			Button zona4_2_btn = FindViewById<Button> (Resource.Id.zona4_2_btn);
-			Button vuki_btn = FindViewById<Button> (Resource.Id.vuki_btn);
+
 			string zone_number = "";
 
+			vuki_btn.Click += delegate {
+				zone_number=zone[0];
+				//zone_number = Resources.GetString (Resource.String.vuki_number);
+				numberEditText.Text = (zone_number + " [ ZONA 1#30 ] ");
+			};
 
 			zona1_btn.Click += delegate {
-				zone_number=zone[0];
+				zone_number=zone[1];
 				//zone_number = Resources.GetString (Resource.String.zona1_number);
 				numberEditText.Text = (zone_number + " [ ZONA 1 ] ");
 			};
 
 			zona2_btn.Click += delegate {
-				zone_number=zone[1];
+				zone_number=zone[2];
 				//zone_number = Resources.GetString (Resource.String.zona2_number);
 				numberEditText.Text = (zone_number + " [ ZONA 2 ] ");
 			};
 			zona3_btn.Click += delegate {
-				zone_number=zone[2];
+				zone_number=zone[3];
 				//zone_number = Resources.GetString (Resource.String.zona3_number);
 				numberEditText.Text = (zone_number + " [ ZONA 3 ] ");
 			};
 			zona4_1_btn.Click += delegate {
-				zone_number=zone[3];
+				zone_number=zone[4];
 				//zone_number = Resources.GetString (Resource.String.zona4_1_number);
 				numberEditText.Text = (zone_number + " [ ZONA 4.1 ] ");
 			};
 			zona4_2_btn.Click += delegate {
-				zone_number=zone[4];
+				zone_number=zone[5];
 				//zone_number = Resources.GetString (Resource.String.zona4_2_number);
 				numberEditText.Text = (zone_number + " [ ZONA 4.2 ] ");
 			};
 
-			vuki_btn.Click += delegate {
-				zone_number=zone[5];
-				//zone_number = Resources.GetString (Resource.String.vuki_number);
-				numberEditText.Text = (zone_number + " [  ] ");
-			};
+
 
 			#endregion
 
@@ -172,12 +174,18 @@ namespace Gdje_mi_je_auto1
 			 * Dio za slanje SMS poruke.
 			 */
 			sendSMS_btn.Click += delegate {
-				var sms_message = messageEditText.Text;
+				String sms_message="";
+
+				if(zone_number.Equals (VukiTestNumber)){
+					sms_message=messageEditText.Text+"#30";
+				}else{
+					sms_message=messageEditText.Text;
+				}
+
 				if(sms_message.Length>=1 && CheckSMSNumbers (zone_number) )
 				{
 					valid_check = true;
 				}
-
 
 				if (valid_check) {
 					smsManager.SendTextMessage (zone_number, null, sms_message, null, null);

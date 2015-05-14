@@ -54,6 +54,7 @@ namespace Gdje_mi_je_auto1
 						for (int i = 0; i < msgs.Length; i++) {	//obradujem poruku
 							msgs [i] = SmsMessage.CreateFromPdu ((byte[])pdus [i]);
 							smsSender = msgs [i].OriginatingAddress;
+							//TODO parse body to take registration and defined validade of sms, now is always reg#30
 							smsBody = msgs [i].MessageBody;
 							smsTime= DateTime.Now.ToString("HH:mm");
 							smsDate=DateTime.Now.ToString ("d.M.yyyy");

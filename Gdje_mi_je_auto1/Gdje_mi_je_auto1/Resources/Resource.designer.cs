@@ -1805,8 +1805,8 @@ namespace Gdje_mi_je_auto1
 			// aapt resource value: 0x7f0c008d
 			public const int Pay_SMS_Main = 2131493005;
 			
-			// aapt resource value: 0x7f0c009c
-			public const int VUKIB = 2131493020;
+			// aapt resource value: 0x7f0c009d
+			public const int VUKIB = 2131493021;
 			
 			// aapt resource value: 0x7f0c0054
 			public const int action_bar = 2131492948;
@@ -2156,8 +2156,8 @@ namespace Gdje_mi_je_auto1
 			// aapt resource value: 0x7f0c0022
 			public const int src_over = 2131492898;
 			
-			// aapt resource value: 0x7f0c009d
-			public const int startMap = 2131493021;
+			// aapt resource value: 0x7f0c009c
+			public const int startMap = 2131493020;
 			
 			// aapt resource value: 0x7f0c009e
 			public const int startSettings = 2131493022;
@@ -2240,9 +2240,6 @@ namespace Gdje_mi_je_auto1
 			// aapt resource value: 0x7f0c0012
 			public const int useLogo = 2131492882;
 			
-			// aapt resource value: 0x7f0c009b
-			public const int vuki_btn = 2131493019;
-			
 			// aapt resource value: 0x7f0c001a
 			public const int withText = 2131492890;
 			
@@ -2250,19 +2247,22 @@ namespace Gdje_mi_je_auto1
 			public const int wrap_content = 2131492893;
 			
 			// aapt resource value: 0x7f0c0096
-			public const int zona1_btn = 2131493014;
+			public const int zona01_btn = 2131493014;
 			
 			// aapt resource value: 0x7f0c0097
-			public const int zona2_btn = 2131493015;
+			public const int zona1_btn = 2131493015;
 			
 			// aapt resource value: 0x7f0c0098
-			public const int zona3_btn = 2131493016;
+			public const int zona2_btn = 2131493016;
 			
 			// aapt resource value: 0x7f0c0099
-			public const int zona4_1_btn = 2131493017;
+			public const int zona3_btn = 2131493017;
 			
 			// aapt resource value: 0x7f0c009a
-			public const int zona4_2_btn = 2131493018;
+			public const int zona4_1_btn = 2131493018;
+			
+			// aapt resource value: 0x7f0c009b
+			public const int zona4_2_btn = 2131493019;
 			
 			// aapt resource value: 0x7f0c008a
 			public const int zoneSpinner = 2131493002;
@@ -2691,26 +2691,26 @@ namespace Gdje_mi_je_auto1
 			// aapt resource value: 0x7f060004
 			public const int valid_check = 2131099652;
 			
-			// aapt resource value: 0x7f060012
-			public const int vuki_number = 2131099666;
-			
 			// aapt resource value: 0x7f060050
 			public const int wallet_buy_button_place_holder = 2131099728;
 			
 			// aapt resource value: 0x7f06000d
-			public const int zona1_number = 2131099661;
+			public const int zona01_number = 2131099661;
 			
 			// aapt resource value: 0x7f06000e
-			public const int zona2_number = 2131099662;
+			public const int zona1_number = 2131099662;
 			
 			// aapt resource value: 0x7f06000f
-			public const int zona3_number = 2131099663;
+			public const int zona2_number = 2131099663;
 			
 			// aapt resource value: 0x7f060010
-			public const int zona4_1_number = 2131099664;
+			public const int zona3_number = 2131099664;
 			
 			// aapt resource value: 0x7f060011
-			public const int zona4_2_number = 2131099665;
+			public const int zona4_1_number = 2131099665;
+			
+			// aapt resource value: 0x7f060012
+			public const int zona4_2_number = 2131099666;
 			
 			static String()
 			{
