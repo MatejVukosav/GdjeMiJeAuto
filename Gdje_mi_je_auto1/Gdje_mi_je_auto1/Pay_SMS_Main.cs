@@ -17,6 +17,7 @@ using Android.Database;
 using System.Collections.Generic;
 using System.Windows;
 using System.Runtime.InteropServices;
+using System.Collections.Specialized;
 
 /*
  * Klasa u kojoj se izvršava slanje SMS poruke. 
@@ -38,6 +39,7 @@ namespace Gdje_mi_je_auto1
 
 		static Dictionary<string,string> zoneDictionary=new Dictionary<string,string>();
 		static List<string> zone = new List<string> ();
+		String dict="";
 
 		Android.Telephony.SmsManager smsManager = Android.Telephony.SmsManager.Default;
 		ListViewAdapter ls = new ListViewAdapter ();
@@ -100,7 +102,7 @@ namespace Gdje_mi_je_auto1
 			}
 
 
-				
+
 
 			try{
 				var tuple=ParseZoneNumbers.LoadZoneNumbersAssetsData (this);
@@ -114,7 +116,20 @@ namespace Gdje_mi_je_auto1
 			//dodavanje metode EventHandler delegatu iz OnReceiveSMS
 			//OnReceiveSMS.ReceiveSMSmessage += new OnReceiveSMS.ReceiveSMSdelegate (EventHandler);
 
+			//spremanje popisa brojeva zona u memoriju
+			var prefsZone = Application.Context.GetSharedPreferences("MySharedPrefs", FileCreationMode.Private);
+			var prefsZoneEditor = prefsZone.Edit ();
+			prefsZoneEditor.PutStringSet("MyZonePrefs", zone);
+			prefsZoneEditor.Commit();
 
+			//spremanje dictionarya zone-numbers u memoriju
+			var prefsDict = Application.Context.GetSharedPreferences("MySharedPrefs", FileCreationMode.Private);
+			var prefsDictEditor = prefsDict.Edit ();
+			string dict = string.Join (", ", zoneDictionary
+											 .Select (m => m.Key + ":" + m.Value)
+											 .ToArray ());
+			prefsDictEditor.PutString("MyDictPrefs", dict);
+			prefsDictEditor.Commit();
 
 
 			#region Button inicijalizacija zona i Click metoda
@@ -241,9 +256,13 @@ namespace Gdje_mi_je_auto1
 		public bool CheckSMSNumbers(string value){
 			bool valid_number=false;
 
-			foreach (string number in zone)
-			{
+			var prefsZone = Application.Context.GetSharedPreferences("MySharedPrefs", FileCreationMode.Private);
+			ICollection<string> zone2 = prefsZone.GetStringSet("MyZonePrefs", zone);
+
+			foreach (String number in zone2)
+			{ 
 				if(string.Compare(value,number)==0){
+					Log.Debug ("value:"+value,"number:"+number);
 					valid_number=true;
 					break;
 				}
@@ -272,7 +291,7 @@ namespace Gdje_mi_je_auto1
 			}
 			 smsTimeDO = smsTimeDO +":"+ satOD [1];
 
-			return editedDate+"  "+DetermineZone(smsSender)+ " < "+smsTime+" - "+smsTimeDO+" > "+ " [ " +smsBody +" ]"; 
+			return editedDate+"  "+DetermineZone(smsSender)+ " < "+smsTime+" - "+smsTimeDO+" > "+ " [" +smsBody +"]"; 
 			//return editedDate+"  "+DetermineZone(smsSender)+ " OD "+smsTime+" DO "+smsTimeDO+" "+ " [ " +smsBody +" ]"; 
 		}
 
@@ -282,8 +301,13 @@ namespace Gdje_mi_je_auto1
 		 * zoneDictionary (key,value),key is a number of zone, value is a string representing that zone
 		 * */
 		private string DetermineZone(String value){
+			var prefsDict = Application.Context.GetSharedPreferences("MySharedPrefs", FileCreationMode.Private);
+			String dictString = prefsDict.GetString("MyDictPrefs", dict);
+			Dictionary<string, string> prefZoneDict = dictString.Split(',').Select(p => p.Trim()
+																		   .Split(':'))
+																		   .ToDictionary(p => p[0], p => p[1]);
 
-			foreach (KeyValuePair<string,string>pair in zoneDictionary) {
+			foreach (KeyValuePair<string,string>pair in prefZoneDict) {
 				if (value.Equals (pair.Key))
 					return pair.Value;
 			}
@@ -293,10 +317,13 @@ namespace Gdje_mi_je_auto1
 
 
 		public string ConvertTimeFromMillseconds(long value){
-			TimeSpan t = TimeSpan.FromMilliseconds( value );
+			long twoHours=7200000; //because it returns two hours less
+			TimeSpan t = TimeSpan.FromMilliseconds(value +twoHours);
 
 			string normalTime = string.Format("{0:D2}:{1:D2}", t.Hours, t.Minutes);
 			//return t.Hours.ToString ("HH")+":"+t.Minutes.ToString ("mm");
+
+			//Log.Debug ("return",epoch.AddMilliseconds (value).ToString ("d.M.yyyy"));
 			return normalTime;
 		}
 

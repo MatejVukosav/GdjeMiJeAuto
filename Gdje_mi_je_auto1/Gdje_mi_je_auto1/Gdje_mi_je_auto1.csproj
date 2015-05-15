@@ -85,6 +85,7 @@
     <Compile Include="SeeSettings.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="SettingsRecord.cs" />
+    <Compile Include="ParseSMS.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

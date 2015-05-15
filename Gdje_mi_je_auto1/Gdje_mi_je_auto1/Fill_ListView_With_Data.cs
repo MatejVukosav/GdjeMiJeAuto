@@ -77,6 +77,8 @@ namespace Gdje_mi_je_auto1
 
 				update_inbox_messages = true;
 				List<String> items=new List<String>();
+				bool valid_body_check=false;
+				String smsFilteredBody="";
 
 				String[] projection = new String[]{ "address", "body","date" };
 				CursorLoader loader=new CursorLoader(context);
@@ -101,9 +103,20 @@ namespace Gdje_mi_je_auto1
 								long smsTimeLong=long.Parse (smsTime);
 								String smsDate=psm.ConvertDateFromMillseconds (smsTimeLong);
 								smsTime=psm.ConvertTimeFromMillseconds (smsTimeLong);
-								String msgData = psm.MessageDisplay (smsSender, smsBody,smsTime,smsDate);
-								//punim Listu podacima iz poruke
+
+							try{
+								var tuple=ParseSMS.ParseSMSbody (smsBody);
+								valid_body_check = tuple.Item1; //bool true or false
+								smsFilteredBody = tuple.Item2; // car registration
+							}catch(Exception e){
+								Log.Debug ("Greska prilikom filtriranja sms poruke.",e.ToString ());
+							}
+							//check if sms body pass validation
+							if(valid_body_check){
+								String msgData = psm.MessageDisplay (smsSender, smsFilteredBody,smsTime,smsDate);
 								items.Add (msgData);
+							}
+
 							}
 						} catch (Exception e) {
 							Log.Debug ("UCITAVANJE SMS-a u Pay_SMS_Main", e.ToString ());  
@@ -122,7 +135,6 @@ namespace Gdje_mi_je_auto1
 					};
 				}
 
-				string[] ite=items.ToArray ();
 
 				try{
 				FillListWithData(items,context,listView);
@@ -134,6 +146,8 @@ namespace Gdje_mi_je_auto1
 				Enable_message_update=false;
 			}
 			#endregion
+
+
 
 
 
