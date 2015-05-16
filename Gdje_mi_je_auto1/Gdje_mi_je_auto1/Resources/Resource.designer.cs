@@ -1805,8 +1805,8 @@ namespace Gdje_mi_je_auto1
 			// aapt resource value: 0x7f0c008d
 			public const int Pay_SMS_Main = 2131493005;
 			
-			// aapt resource value: 0x7f0c009d
-			public const int VUKIB = 2131493021;
+			// aapt resource value: 0x7f0c009c
+			public const int SettingsList = 2131493020;
 			
 			// aapt resource value: 0x7f0c0054
 			public const int action_bar = 2131492948;
@@ -1912,6 +1912,9 @@ namespace Gdje_mi_je_auto1
 			
 			// aapt resource value: 0x7f0c0017
 			public const int collapseActionView = 2131492887;
+			
+			// aapt resource value: 0x7f0c009d
+			public const int columnHeader1 = 2131493021;
 			
 			// aapt resource value: 0x7f0c0045
 			public const int contentPanel = 2131492933;
@@ -2156,11 +2159,17 @@ namespace Gdje_mi_je_auto1
 			// aapt resource value: 0x7f0c0022
 			public const int src_over = 2131492898;
 			
-			// aapt resource value: 0x7f0c009c
-			public const int startMap = 2131493020;
+			// aapt resource value: 0x7f0c00a0
+			public const int startAlarm = 2131493024;
 			
 			// aapt resource value: 0x7f0c009e
-			public const int startSettings = 2131493022;
+			public const int startMap = 2131493022;
+			
+			// aapt resource value: 0x7f0c009f
+			public const int startPay = 2131493023;
+			
+			// aapt resource value: 0x7f0c00a1
+			public const int startSettings = 2131493025;
 			
 			// aapt resource value: 0x7f0c0085
 			public const int stop = 2131492997;
@@ -2381,64 +2390,70 @@ namespace Gdje_mi_je_auto1
 			public const int abc_simple_dropdown_hint = 2130903064;
 			
 			// aapt resource value: 0x7f030019
-			public const int CustomDialog = 2130903065;
+			public const int Alarm_Main = 2130903065;
 			
 			// aapt resource value: 0x7f03001a
-			public const int dialog_fragment_layout = 2130903066;
+			public const int CustomDialog = 2130903066;
 			
 			// aapt resource value: 0x7f03001b
-			public const int List_Represent = 2130903067;
+			public const int dialog_fragment_layout = 2130903067;
 			
 			// aapt resource value: 0x7f03001c
-			public const int Locations = 2130903068;
+			public const int List_Represent = 2130903068;
 			
 			// aapt resource value: 0x7f03001d
-			public const int MainFragment = 2130903069;
+			public const int Locations = 2130903069;
 			
 			// aapt resource value: 0x7f03001e
-			public const int MainLayout = 2130903070;
+			public const int MainFragment = 2130903070;
 			
 			// aapt resource value: 0x7f03001f
-			public const int MapLayout = 2130903071;
+			public const int MainLayout = 2130903071;
 			
 			// aapt resource value: 0x7f030020
-			public const int mr_media_route_chooser_dialog = 2130903072;
+			public const int MapLayout = 2130903072;
 			
 			// aapt resource value: 0x7f030021
-			public const int mr_media_route_controller_material_dialog_b = 2130903073;
+			public const int mr_media_route_chooser_dialog = 2130903073;
 			
 			// aapt resource value: 0x7f030022
-			public const int mr_media_route_list_item = 2130903074;
+			public const int mr_media_route_controller_material_dialog_b = 2130903074;
 			
 			// aapt resource value: 0x7f030023
-			public const int packages = 2130903075;
+			public const int mr_media_route_list_item = 2130903075;
 			
 			// aapt resource value: 0x7f030024
-			public const int Pay_Automat_Main_Enter = 2130903076;
+			public const int packages = 2130903076;
 			
 			// aapt resource value: 0x7f030025
-			public const int Pay_Main = 2130903077;
+			public const int Pay_Automat_Main_Enter = 2130903077;
 			
 			// aapt resource value: 0x7f030026
-			public const int Pay_SMS_Main = 2130903078;
+			public const int Pay_Main = 2130903078;
 			
 			// aapt resource value: 0x7f030027
-			public const int select_dialog_item_material = 2130903079;
+			public const int Pay_SMS_Main = 2130903079;
 			
 			// aapt resource value: 0x7f030028
-			public const int select_dialog_multichoice_material = 2130903080;
+			public const int select_dialog_item_material = 2130903080;
 			
 			// aapt resource value: 0x7f030029
-			public const int select_dialog_singlechoice_material = 2130903081;
+			public const int select_dialog_multichoice_material = 2130903081;
 			
 			// aapt resource value: 0x7f03002a
-			public const int Start = 2130903082;
+			public const int select_dialog_singlechoice_material = 2130903082;
 			
 			// aapt resource value: 0x7f03002b
-			public const int support_simple_spinner_dropdown_item = 2130903083;
+			public const int Settings_Main = 2130903083;
 			
 			// aapt resource value: 0x7f03002c
-			public const int TestnePostavke = 2130903084;
+			public const int SettingsSeparator = 2130903084;
+			
+			// aapt resource value: 0x7f03002d
+			public const int Start = 2130903085;
+			
+			// aapt resource value: 0x7f03002e
+			public const int support_simple_spinner_dropdown_item = 2130903086;
 			
 			static Layout()
 			{

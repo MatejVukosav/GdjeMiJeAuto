@@ -48,7 +48,8 @@ namespace Gdje_mi_je_auto1
 				//Log.Debug ("Kupili",car_registration);
 				//Log.Debug ("Kupili",car_time);
 				Log.Debug ("Equal Kupili","Kupili");
-				//TODO disable sms ringtone and read sms
+				//TODO disable zvuk dolazne poruke
+				//TODO procitat poruku
 			} 
 			return new Tuple<bool, String,String>(valid_check,car_registration,car_time);
 

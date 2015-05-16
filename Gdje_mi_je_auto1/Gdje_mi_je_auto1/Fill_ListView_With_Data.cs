@@ -27,7 +27,7 @@ namespace Gdje_mi_je_auto1
 		public static bool update_inbox_messages=false;
 
 		/*
-		 * Puni listView s podacima .
+		 * Puni listView s podacima u ListViewAdapter.
 		 * */
 		public static void FillListWithData(List<string> itemsOpt,Activity context,ListView listView){
 			update_inbox_messages = false;

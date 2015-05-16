@@ -48,29 +48,36 @@ namespace Gdje_mi_je_auto1
 			}
 				
 
-			Button VUKIB = FindViewById<Button> (Resource.Id.VUKIB);
-			Button MAP = FindViewById<Button> (Resource.Id.startMap);
-			Button SETTINGS = FindViewById<Button> (Resource.Id.startSettings);
+			Button startPAY = FindViewById<Button> (Resource.Id.startPay);
+			Button startMAP = FindViewById<Button> (Resource.Id.startMap);
+			Button startSETTINGS = FindViewById<Button> (Resource.Id.startSettings);
+			Button startALARM = FindViewById<Button> (Resource.Id.startAlarm);
 
-
-			//Pokreni SMS
-			VUKIB.Click += delegate {
-				var activity_start_sms_main = new Intent (this, typeof(Pay_Main));
-				StartActivity (activity_start_sms_main);
-			};
-
-			MAP.Click += delegate {
+			startMAP.Click += delegate {
 				var activity_start_sms_main = new Intent (this, typeof(MapActivity));
 				StartActivity (activity_start_sms_main);
 			};
 
-			SETTINGS.Click += delegate {
-				var activity_start_sms_main = new Intent (this, typeof(Settings));
+			//Pokreni SMS
+			startPAY.Click += delegate {
+				var activity_start_sms_main = new Intent (this, typeof(Pay_Main));
+				StartActivity (activity_start_sms_main);
+			};
+
+//			startALARM.Click += delegate {
+//				var activity_start_sms_main = new Intent (this, typeof());
+//				StartActivity (activity_start_sms_main);
+//			};
+
+			startSETTINGS.Click += delegate {
+				var activity_start_sms_main = new Intent (this, typeof(Postavke));
 				StartActivity (activity_start_sms_main);
 			};
 
 
 		}
+
+
 
 		private void CreateSettingsFile(){
 			SettingsRecord settings = new SettingsRecord {

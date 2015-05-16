@@ -173,7 +173,7 @@ namespace Gdje_mi_je_auto1
 		 * */
 		void OnListItemClick(object sender, AdapterView.ItemClickEventArgs e)
 		{
-			//TODO onListItemClick must be defined
+			//TODO onListItemClick not defined 
 			/*
 			var listview = sender as ListView;
 			FragmentTransaction ftr = FragmentManager.BeginTransaction ();

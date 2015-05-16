@@ -65,11 +65,7 @@ namespace Gdje_mi_je_auto1
 
 		public static int GetViewId
 		{
-			
-			get{ 
-				ListViewAdapter ada = new ListViewAdapter();
-				return ada.viewId;
-			}
+			get{ ListViewAdapter lwa = new ListViewAdapter(); return lwa.viewId;}
 		}
 
 	}

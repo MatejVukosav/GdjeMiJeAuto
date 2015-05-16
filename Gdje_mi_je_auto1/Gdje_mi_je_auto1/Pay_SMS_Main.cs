@@ -119,6 +119,8 @@ namespace Gdje_mi_je_auto1
 			//dodavanje metode EventHandler delegatu iz OnReceiveSMS
 			//OnReceiveSMS.ReceiveSMSmessage += new OnReceiveSMS.ReceiveSMSdelegate (EventHandler);
 
+			//TODO spremit izbor registracijske slike i spremit registraciju
+
 			//spremanje popisa brojeva zona u memoriju
 			var prefsZone = Application.Context.GetSharedPreferences("MySharedPrefs", FileCreationMode.Private);
 			var prefsZoneEditor = prefsZone.Edit ();

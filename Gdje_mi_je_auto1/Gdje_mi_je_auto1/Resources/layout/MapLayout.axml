@@ -16,6 +16,7 @@
         android:orientation="horizontal"
         android:layout_weight="10">
         <Spinner
+            android:background="@drawable/collor_button"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/spinner1"
@@ -23,11 +24,13 @@
             android:prompt="@string/map_prompt" />
         <Button
             android:text="Zones (off)"
+            android:background="@drawable/collor_button"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/btnZones" />
         <Button
             android:text="Locations (off)"
+            android:background="@drawable/collor_button"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/btnLocations" />
