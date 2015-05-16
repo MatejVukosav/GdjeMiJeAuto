@@ -2401,6 +2401,8 @@ containing a value of this type.
         /**  Add also reference in Zone_Numbers_Assets when changing
          */
         public static int zona01_number=0x7f06000d;
+        /**  700101 
+         */
         public static int zona1_number=0x7f06000e;
         public static int zona2_number=0x7f06000f;
         public static int zona3_number=0x7f060010;

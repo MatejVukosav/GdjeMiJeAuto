@@ -23,7 +23,7 @@ namespace Gdje_mi_je_auto1
 	{
 		
 
-		public static Tuple<bool, String> ParseSMSbody (String smsBody)
+		public static Tuple<bool, String,String> ParseSMSbody (String smsBody)
 		{
 			String car_registration = "";
 
@@ -32,7 +32,7 @@ namespace Gdje_mi_je_auto1
 
 			char[] delimiterChars = { ' ' , ',' ,  '.' };
 			string[] words = smsBody.Split(delimiterChars);
-//			String car_time = "";
+			String car_time = "";
 //			int i = 0;
 //			Log.Debug ("SMS BODY",smsBody);
 //			foreach (String str in words) {
@@ -44,15 +44,14 @@ namespace Gdje_mi_je_auto1
 			if (words[0].Equals ("Kupili")) {
 				car_registration = words [6]; //registration
 				valid_check=true;
-				//car_time=words[13]; // hour:minutes
+				car_time=words[13]; // hour:minutes
 				//Log.Debug ("Kupili",car_registration);
 				//Log.Debug ("Kupili",car_time);
 				Log.Debug ("Equal Kupili","Kupili");
 				//TODO disable sms ringtone and read sms
-				return new Tuple<bool, String>(valid_check,car_registration);
-			} else {
-				return new Tuple<bool, String>(valid_check,car_registration);
-			}
+			} 
+			return new Tuple<bool, String,String>(valid_check,car_registration,car_time);
+
 		}
 
 	

@@ -55,10 +55,13 @@ namespace Gdje_mi_je_auto1
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.Pay_SMS_Main);
 			sendSMS_btn = FindViewById<Button> (Resource.Id.sendSMS);
-			numberEditText = FindViewById<EditText> (Resource.Id.editText_number);
-			listView = FindViewById<ListView> (Resource.Id.List_SMS_Main_History);
-			messageEditText = FindViewById<EditText> (Resource.Id.editText_message);
 
+			numberEditText = FindViewById<EditText> (Resource.Id.editText_number);
+			numberEditText.Text = GeoFencer.inZone ();
+
+			listView = FindViewById<ListView> (Resource.Id.List_SMS_Main_History);
+
+			messageEditText = FindViewById<EditText> (Resource.Id.editText_message);
 			//prikazuje sva slova kao velika.(upper) i ogranicava velicinu registracije na registrationLength
 			messageEditText.SetFilters (new IInputFilter[] { new InputFilterAllCaps (),new InputFilterLengthFilter (registrationLength) });
 
@@ -232,7 +235,7 @@ namespace Gdje_mi_je_auto1
 		public static void AddIncomingMessageToView(string smsSender,string smsBody,string smsTime,string smsDate){
 
 			Pay_SMS_Main psm=new Pay_SMS_Main();
-			string poruka = psm.MessageDisplay (smsSender, smsBody,smsTime,smsDate);
+			string poruka = psm.MessageDisplayIncoming (smsSender, smsBody,smsTime,smsDate);
 			//string poruka=psm.DetermineZone(smsSender)+" [ " +smsBody +" ]" + " "+smsTime; 
 			//zapisuje poruku u datoteku
 			using (StreamWriter sw = File.AppendText (psm.message_Data)) {
@@ -271,6 +274,28 @@ namespace Gdje_mi_je_auto1
 			return valid_number;
 		}
 
+		/*
+		 * Metoda koja uređuje ispis dolazne poruke
+		 * */
+		public String MessageDisplayIncoming(string smsSender,string smsBody,string smsTime,string smsDate){
+			//return DetermineZone(smsSender)+" < " +"Vrijeme Od : Do" +" >"+" Datum " ;
+			string[] satDO=smsTime.Split (':'); //do tad vrijedi,izvuceno iz poruke
+			//string format = "{ 0, 10 }"; // 
+			string editedDate =smsDate.PadLeft (10,'_'); //string.Format (format, smsDate);
+
+			string smsTimeOD=satDO[0];
+			int smsTimeODInt=Int32.Parse (satDO[0]);
+
+			if (smsTimeOD.Equals ("00")) {
+				smsTimeOD = "23";
+			} else {
+				smsTimeOD=string.Format("{0:D2}",(smsTimeODInt+1));
+			}
+			smsTimeOD = smsTimeOD +":"+ satDO [1];
+
+			return editedDate+"  "+DetermineZone(smsSender)+ " < "+smsTimeOD+" - "+smsTime+" > "+ " [" +smsBody +"]"; 
+			//return editedDate+"  "+DetermineZone(smsSender)+ " OD "+smsTime+" DO "+smsTimeDO+" "+ " [ " +smsBody +" ]"; 
+		}
 
 		/*
 		 * Metoda koja uređuje ispis history-a

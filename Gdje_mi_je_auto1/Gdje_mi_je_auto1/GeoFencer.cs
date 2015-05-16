@@ -7,6 +7,7 @@ using Android.Locations;
 using Android.App;
 using Android.Content;
 using System.IO;
+using Android.Util;
 
 
 
@@ -155,7 +156,7 @@ namespace Gdje_mi_je_auto1
 			}
 
 			if (zonesPointIsIn.Count == 0) {
-				return "unknown";
+				return "Zona nepoznata.";
 			} else if (zonesPointIsIn.Count == 1) {
 				targetZone = zonesPointIsIn [0];
 			} else if (zonesPointIsIn.Count == 2) {
@@ -178,10 +179,17 @@ namespace Gdje_mi_je_auto1
 			return zoneName(targetZone);
 		}
 
+		//call  Pay_SMS_Main
 		public static string inZone (){
-			Location locationNetwork = locMgr.GetLastKnownLocation (LocationManager.NetworkProvider);
-			Location locationGPS = locMgr.GetLastKnownLocation (LocationManager.GpsProvider);
 			Location location;
+			Location locationNetwork;
+			Location locationGPS;
+			try{
+		    locationNetwork = locMgr.GetLastKnownLocation (LocationManager.NetworkProvider);
+//			Log.Debug ("locationNetwork",Convert.ToString ( locationNetwork));
+		    locationGPS = locMgr.GetLastKnownLocation (LocationManager.GpsProvider);
+//			Log.Debug ("locationGPS",Convert.ToString (locationGPS));
+			
 			if (locationGPS == null) {
 				location = locationNetwork;
 			} else if (locationNetwork == null) {
@@ -189,8 +197,13 @@ namespace Gdje_mi_je_auto1
 			} else {
 				location = locationNetwork.Time > locationGPS.Time ? locationNetwork : locationGPS;
 			}
-				
-			return inZone (location.Latitude, location.Longitude);		
+//			Log.Debug ("latitude", Convert.ToString ( location.Latitude));	
+//			Log.Debug ("longitude", Convert.ToString (location.Longitude));	
+			return inZone (location.Latitude, location.Longitude);	
+			} catch(Exception ){
+				//Log.Debug ("Lokacija nije ukljucena.",e.ToString ());
+				return "Zona nepoznata.";
+			}
 		}
 
 		private static bool Contains(LatLng position, PolygonOptions polygon) 

@@ -72,7 +72,6 @@ namespace Gdje_mi_je_auto1
 		 * Fill list with message data from user Inbox.
 		 * */
 		public static void Fill_With_Inbox_Data(Activity context,ListView listView){
-			#region ucitavanje inboxa
 			Pay_SMS_Main psm=new Pay_SMS_Main();
 
 				update_inbox_messages = true;
@@ -137,15 +136,14 @@ namespace Gdje_mi_je_auto1
 
 
 				try{
-				FillListWithData(items,context,listView);
+					FillListWithData(items,context,listView);
 				}catch(NullReferenceException e){
 					Log.Debug ("FillListWithData:U ucitavanju inboxa",	e.ToString ());
-				}
-
+					}
 
 				Enable_message_update=false;
 			}
-			#endregion
+
 
 
 

@@ -58,32 +58,29 @@ namespace Gdje_mi_je_auto1
 							msgs [i] = SmsMessage.CreateFromPdu ((byte[])pdus [i]);
 							smsSender = msgs [i].OriginatingAddress;
 							smsBody = msgs [i].MessageBody;
-							//TODO parse body to take registration and defined validade of sms, now is always reg#30
+
 							try{
 								var tuple=ParseSMS.ParseSMSbody (smsBody);
 								valid_body_check = tuple.Item1; //bool true or false
 								smsFilteredBody = tuple.Item2; // car registration
+								smsTime=tuple.Item3;
 							}catch(Exception e){
 								Log.Debug ("Greska prilikom filtriranja sms poruke.",e.ToString ());
 							}
 
-							smsTime= DateTime.Now.ToString("HH:mm");
+							//smsTime= DateTime.Now.ToString("HH:mm");
 							smsDate=DateTime.Now.ToString ("d.M.yyyy");
 
-						Log.Debug ("sender",smsSender);
-						Log.Debug ("evaluation",(smsSender != null).ToString ());
-						Log.Debug ("number",psm.CheckSMSNumbers (smsSender).ToString ());
-						Log.Debug ("check",valid_body_check.ToString ());
+//						Log.Debug ("sender",smsSender);
+//						Log.Debug ("evaluation",(smsSender != null).ToString ());
+//						Log.Debug ("number",psm.CheckSMSNumbers (smsSender).ToString ());
+//						Log.Debug ("check",valid_body_check.ToString ());
 
 						if ((smsSender != null) && psm.CheckSMSNumbers (smsSender) && valid_body_check) {
 							//send sms data to further reproduction
 							Pay_SMS_Main.AddIncomingMessageToView (smsSender, smsFilteredBody, smsTime,smsDate);
-							Log.Debug ("poziva je","tu je");
-
 						} else {
-							
 							Log.Debug ("SMS was not from parking number!","Pass message.");
-
 							//ClearAbortBroadcast ();
 						}
 

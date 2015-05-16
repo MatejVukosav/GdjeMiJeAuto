@@ -23,7 +23,7 @@ namespace Gdje_mi_je_auto1
 		private bool denseUpdates = false;
 		private int slowMesurement = 0;
 
-
+		[Obsolete("Method is deprecated.", false)]
 		public override void OnStart (Android.Content.Intent intent, int startId)
 		{
 			base.OnStart (intent, startId);

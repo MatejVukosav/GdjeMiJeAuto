@@ -150,7 +150,7 @@ namespace Gdje_mi_je_auto1
 
 		private void UpdateDisplay ()
 		{	
-			string time = string.Format ("{0}:{1}", hour, minute.ToString ().PadLeft (2, '0'));
+			string time = string.Format ("{0:D2}:{1:D2}", hour, minute.ToString ().PadLeft (2, '0'));
 			text_time_screen.Text = time;
 		}
 

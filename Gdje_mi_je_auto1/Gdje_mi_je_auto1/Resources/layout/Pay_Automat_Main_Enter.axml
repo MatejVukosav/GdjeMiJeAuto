@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent"
+    tools:actionBarNavMode="tabs">
     <TextView
         android:text="Unesite vrijeme plaćanja karte:"
         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -35,7 +36,7 @@
         android:background="@drawable/collor_button" />
     <TableRow
         android:id="@+id/tableRow3"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp">
         <TextView
@@ -44,14 +45,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Odaberite zonu:" />
+            android:text="Odaberite zonu:"
+            android:layout_marginRight="0.0dp" />
         <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:id="@+id/zoneSpinner"
             android:spinnerMode="dialog"
-            android:prompt="@string/map_prompt" />
+            android:prompt="@string/map_prompt"
+            android:background="@drawable/collor_button"
+            android:layout_marginLeft="40.0dp" />
     </TableRow>
     <Button
         android:id="@+id/btn_save_time"
