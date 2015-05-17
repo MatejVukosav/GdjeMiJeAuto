@@ -97,9 +97,19 @@
     <Compile Include="ChooseReminderSound.cs" />
     <Compile Include="ChooseReminderTime.cs" />
     <Compile Include="MessageFromInboxSettings.cs" />
+    <Compile Include="Alarms.cs" />
+    <Compile Include="AlarmMain.cs" />
+    <Compile Include="AlarmAdapter.cs" />
+    <Compile Include="AddNewAlarm.cs" />
+    <Compile Include="EditExistingAlarm.cs" />
+    <Compile Include="DeviceBootReceiver.cs" />
+    <Compile Include="NotifAlarmBroadcast.cs" />
+    <Compile Include="NotifReminderBroadcast.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AboutResources.txt" />
+    <None Include="Resources\AboutResources.txt">
+      <DependentUpon>Resource.designer.cs</DependentUpon>
+    </None>
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="packages\repositories.config" />
@@ -645,6 +655,10 @@
     <AndroidResource Include="Resources\drawable-hdpi\registracija3.png" />
     <AndroidResource Include="Resources\layout\AlertDialog.axml" />
     <AndroidResource Include="Resources\layout\DialogList.axml" />
+    <AndroidResource Include="Resources\layout\AlarmSeparator.axml" />
+    <AndroidResource Include="Resources\layout\AddNewAlarm.axml" />
+    <AndroidResource Include="Resources\layout\EditExistingAlarm.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\phone_alarm.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

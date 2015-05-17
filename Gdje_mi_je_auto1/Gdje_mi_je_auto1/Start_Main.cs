@@ -64,10 +64,10 @@ namespace Gdje_mi_je_auto1
 				StartActivity (activity_start_sms_main);
 			};
 
-//			startALARM.Click += delegate {
-//				var activity_start_sms_main = new Intent (this, typeof());
-//				StartActivity (activity_start_sms_main);
-//			};
+			startALARM.Click += delegate {
+				var activity_alarmMain = new Intent (this, typeof(AlarmMain));
+				StartActivity (activity_alarmMain);
+			};
 
 			startSETTINGS.Click += delegate {
 				var activity_start_sms_main = new Intent (this, typeof(Postavke));

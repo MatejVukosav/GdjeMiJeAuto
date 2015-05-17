@@ -19,8 +19,8 @@ namespace Gdje_mi_je_auto1
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
-
 			SetContentView (Resource.Layout.ChooseReminderSound);
+			//TODO reminder zvukovi
 		}
 	}
 }

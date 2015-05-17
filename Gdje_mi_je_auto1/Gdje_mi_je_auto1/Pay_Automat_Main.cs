@@ -56,7 +56,7 @@ namespace Gdje_mi_je_auto1
 			listView = FindViewById<ListView> (Resource.Id.List_SMS_Main_History);
 
 			Spinner spinnerPayA = FindViewById<Spinner> (Resource.Id.zoneSpinner);
-			spinnerList=FillSpinnerWithData ();
+			spinnerList = FillSpinnerWithData ();
 
 			ArrayAdapter<string> spinnerArrayAdapter = new ArrayAdapter<string> (this, Android.Resource.Layout.SimpleSpinnerItem, spinnerList);
 			spinnerArrayAdapter.SetDropDownViewResource (Android.Resource.Layout.SimpleSpinnerDropDownItem);
@@ -67,45 +67,44 @@ namespace Gdje_mi_je_auto1
 
 			#region PuniListu
 			//Log.Debug ("ON CREATE","DULJINA"+new FileInfo(message_Data).Length+" -- "+Enable_message_update);
-			long duljina=0;
-			try{
+			long duljina = 0;
+			try {
 				duljina = new FileInfo (message_Data).Length;
-			}catch(Exception e){
+			} catch (Exception e) {
 
-				Log.Debug ("Pay_SMS_Main","FILE INFO krivo učitava "+e.ToString ());
+				Log.Debug ("Pay_SMS_Main", "FILE INFO krivo učitava " + e.ToString ());
 			}
 			Pay_SMS_Main psm = new Pay_SMS_Main ();
 
-			if (duljina != 0 || Fill_ListView_With_Data.update_inbox_messages==true) {
+			if (duljina != 0 || Fill_ListView_With_Data.update_inbox_messages == true) {
 				List<string> data = new List<string> ();
 				String line;
 
 				StreamReader reader = new StreamReader (message_Data);
-				while ((line=reader.ReadLine ()) != null) {
+				while ((line = reader.ReadLine ()) != null) {
 					data.Add (line);
 				}
 				reader.Close ();
-				podaciDialogLista=data;
-				try{
-					Fill_ListView_With_Data.FillListWithData (data,this,listView);
-				}
-				catch(NullReferenceException e){
+				podaciDialogLista = data;
+				try {
+					Fill_ListView_With_Data.FillListWithData (data, this, listView);
+				} catch (NullReferenceException e) {
 					Log.Debug ("Fill_ListView_With_Data.FillListWithData",	e.ToString ());
 				}
-			}else{
+			} else {
 				Fill_ListView_With_Data.DeleteHistory ();
 			}
 
 			//if user enabled Inbox messages
-			if(Fill_ListView_With_Data.Enable_message_update==true){
-				Fill_ListView_With_Data.Fill_With_Inbox_Data (this,listView);
+			if (Fill_ListView_With_Data.Enable_message_update == true) {
+				Fill_ListView_With_Data.Fill_With_Inbox_Data (this, listView);
 			}
 		
 			#endregion
 
 			listView.ItemClick += OnListItemClick;
 
-			UpdateTime();
+			UpdateTime ();
 			UpdateDisplay ();
 
 			TimePickerDialog time_dialog = new TimePickerDialog (this, TimePickerCallback, hour, minute, true);
@@ -113,26 +112,40 @@ namespace Gdje_mi_je_auto1
 
 			//Prikazuje trenutno vrijeme i nudi odabir promjene ili prekid.
 			btn_change_time.Click += delegate {
-				UpdateTime();
+				UpdateTime ();
 				time_dialog = new TimePickerDialog (this, TimePickerCallback, hour, minute, true);
 				time_dialog.Show ();
-				};
+			};
 	
 			/*
 			 * UPALI ALARM I SPREMI VRIJEME PLACANJA U HISTORY
 			 * */
-			btn_save_time.Click+=delegate {
-				//TODO nije omogucen save,klikom na save se pokrece alarm ako je upisano vrijeme i odabrana zona
+			btn_save_time.Click += delegate {
+				CreateAddProjectDialog ();	
+			};
+		}
 
-				if(valid_check_automat){
-					var activity_pay_main=new Intent (this,typeof(Pay_Main));
-					StartActivity (activity_pay_main);
-				}else 
-					Toast.MakeText (this,"Odaberite zonu!",ToastLength.Short).Show ();
-				};
-				
-	}
-		
+		private void CreateAddProjectDialog() { 
+			var alert = new AlertDialog.Builder (this);
+			alert.SetTitle ("Želite li upaliti alarm?");
+			//alert.SetView (layoutProperties);
+			alert.SetCancelable (false);
+			alert.SetPositiveButton("Da", HandlePositiveButtonClick);
+			alert.SetNegativeButton("Ne", HandelNegativeButtonClick);
+			var dialog = alert.Create();
+			dialog.Show();
+		}
+
+		private void HandlePositiveButtonClick (object sender, EventArgs e) {
+			//TODO predat argumente za paljenje alarma
+			Alarms.createAlarm("11", "39", "Zona 1","43312");
+			var activity_pay_main=new Intent (this,typeof(Pay_Main));
+			StartActivity (activity_pay_main);
+		}
+
+		private void HandelNegativeButtonClick (object sender, EventArgs e) {
+				//dialog.Dispose ();
+		}
 
 
 
@@ -178,6 +191,7 @@ namespace Gdje_mi_je_auto1
 			CustomDialogFragment.CreateListDialog (this,podaciDialogLista);
 		}
 	
+
 
 
 	}
