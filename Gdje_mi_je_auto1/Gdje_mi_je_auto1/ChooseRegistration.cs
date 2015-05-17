@@ -33,13 +33,15 @@ namespace Gdje_mi_je_auto1
 
 			prefsEditor = prefs.Edit ();
 			ICollection<string> regColl;
-
+			try{
 				regColl=prefs.GetStringSet("MyRegistrationTextPrefs", null);
 				foreach (String reg in regColl) {
-					Log.Debug ("regtext",reg);
+					//Log.Debug ("regtext",reg);
 					regText.Add (reg);
 				}
-
+			}catch(Exception e){
+				Log.Debug ("Uitavanje registracijske oznake neuspijelo.",e.ToString ());
+			}
 			
 			try{
 				listview.Adapter = new BaseAdapterKlasa (this, regText.ToArray ());

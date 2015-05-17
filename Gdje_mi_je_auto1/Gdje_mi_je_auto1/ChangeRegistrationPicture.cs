@@ -16,7 +16,6 @@ namespace Gdje_mi_je_auto1
 	[Activity (Label = "ChangeRegistrationPicture",NoHistory = true)]			
 	public class ChangeRegistrationPicture : Activity
 	{
-		EditText registrationPicture;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -33,8 +32,6 @@ namespace Gdje_mi_je_auto1
 
 
 			regBtn1.Click += delegate  {
-				//var imageView = FindViewById<ImageView> (Resource.Id.registrationPicture1);
-				//registrationPicture.SetBackgroundResource (Resource.Drawable.ociscena_rega);
 				 int regaPic=Resource.Drawable.ociscena_rega;
 				prefsEditor.PutInt("MyRegistrationPrefs", regaPic);
 				prefsEditor.Commit();
@@ -42,8 +39,6 @@ namespace Gdje_mi_je_auto1
 				StartActivity (activity_P);
 			};
 			regBtn2.Click += delegate  {
-				//var imageView = FindViewById<ImageView> (Resource.Id.registrationPicture1);
-				//registrationPicture.SetBackgroundResource (Resource.Drawable.ociscena_rega);
 				int regaPic=Resource.Drawable.registracija2;
 				prefsEditor.PutInt("MyRegistrationPrefs", regaPic);
 				prefsEditor.Commit();
@@ -51,8 +46,6 @@ namespace Gdje_mi_je_auto1
 				StartActivity (activity_P);
 			};
 			regBtn3.Click += delegate  {
-				//var imageView = FindViewById<ImageView> (Resource.Id.registrationPicture1);
-				//registrationPicture.SetBackgroundResource (Resource.Drawable.ociscena_rega);
 				int regaPic=Resource.Drawable.registracija3;
 				prefsEditor.PutInt("MyRegistrationPrefs", regaPic);
 				prefsEditor.Commit();
@@ -61,11 +54,7 @@ namespace Gdje_mi_je_auto1
 			};
 		
 		}
-
-//		protected void PictureOnClick(){
-//			var imageView =FindViewById<ImageView> (Resource.Drawable.ociscena_rega);
-//			registrationPicture.Background=imageView;
-//		}
+			
 	}
 }
 
