@@ -33,11 +33,11 @@
             android:gravity="fill" />
     </LinearLayout>
     <TextView
-        android:text="Location update density in normal mode"
+        android:text="@string/LocationUpdateDensityNormal"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView2"
+        android:id="@+id/LocationUpdateDensityNormal"
         android:layout_marginTop="50.3dp"
         android:gravity="center" />
     <Spinner

@@ -43,29 +43,7 @@ namespace Gdje_mi_je_auto1
 			};
 
 
-			#region postavke
-			ToggleButton tb1 = FindViewById<ToggleButton> (Resource.Id.toggleButton1);
-			ToggleButton tb2 = FindViewById<ToggleButton> (Resource.Id.toggleButton2);
 
-
-
-
-			tb1.CheckedChange += delegate {
-				if(tb1.Checked){
-					Fill_ListView_With_Data.Enable_message_update=true;
-					tb2.Checked=false;
-				}
-
-			};
-			tb2.CheckedChange += delegate {
-				if(tb2.Checked){
-					Fill_ListView_With_Data.DeleteHistory ();
-					tb1.Checked=false;
-				}
-
-			};
-
-			#endregion
 
 		}
 	}

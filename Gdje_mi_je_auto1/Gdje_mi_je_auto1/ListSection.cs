@@ -18,18 +18,23 @@ namespace Gdje_mi_je_auto1
 		
 		String _columnHeader1;
 		 BaseAdapter _adapter;
+		//ImageView image;
 
 		public ListSection( String columnHeader1, BaseAdapter adapter)
 		{
-			//_caption = caption;
+			
 			_columnHeader1 = columnHeader1;
-
+			//this.image = image;
 			_adapter = adapter;
 		}
 		//public String Caption { get { return _caption; } set { _caption = value; } }
 		public String ColumnHeader1 { 
 			get { return _columnHeader1; } 
 			set { _columnHeader1 = value; } }
+
+//		public ImageView Image { 
+//			get { return image; } 
+//			set { image = value; } }
 		
 		public BaseAdapter Adapter { 
 			get { return _adapter; } 

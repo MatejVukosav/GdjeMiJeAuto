@@ -56,13 +56,22 @@ namespace Gdje_mi_je_auto1
 				{
 					View view = convertView; //re-use an existing view, if one is available
 					if(view==null)//otherwise create another one
-						view = context.LayoutInflater.Inflate (Android.Resource.Layout.TestListItem, null);
+				view = context.LayoutInflater.Inflate (Android.Resource.Layout.SimpleExpandableListItem2, null);
 					view.FindViewById<TextView> (Android.Resource.Id.Text1).Text = items[position];//glavni natpis
 					//view.FindViewById<TextView> (Android.Resource.Id.Text2).Text = items[position];
 
 					return view;
 
 				}
+
+		void OnListItemClick(object sender, AdapterView.ItemClickEventArgs e)
+		{
+//			var listview = sender as ListView;
+//			var t = tableItems [e.Position];
+//			Android.Widget.Toast.MakeText (this,t.Heading,Android.Widget.ToastLength.Short).Show ();
+
+		}
+
 
 			}
 		}

@@ -62,7 +62,6 @@
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="List_Data.cs" />
     <Compile Include="ListViewAdapter.cs" />
     <Compile Include="OnReceiveSMS.cs" />
     <Compile Include="Pay_Automat_Main.cs" />
@@ -81,7 +80,6 @@
     <Compile Include="ParseZoneNumbers.cs" />
     <Compile Include="Fill_ListView_With_Data.cs" />
     <Compile Include="CustomDialogFragment.cs" />
-    <Compile Include="MainFragmentActivity.cs" />
     <Compile Include="SeeSettings.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="SettingsRecord.cs" />
@@ -90,6 +88,15 @@
     <Compile Include="ListSection.cs" />
     <Compile Include="BaseAdapterKlasa.cs" />
     <Compile Include="SettingsAdapter.cs" />
+    <Compile Include="LayoutNotConnected.cs" />
+    <Compile Include="LocationUpdateDensity.cs" />
+    <Compile Include="SpeedBetweenNodes.cs" />
+    <Compile Include="ChangeRegistrationPicture.cs" />
+    <Compile Include="ChooseRegistration.cs" />
+    <Compile Include="ChooseAlarmSound.cs" />
+    <Compile Include="ChooseReminderSound.cs" />
+    <Compile Include="ChooseReminderTime.cs" />
+    <Compile Include="MessageFromInboxSettings.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -603,7 +610,6 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\Icon.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
     <AndroidResource Include="Resources\layout\dialog_fragment_layout.axml" />
-    <AndroidResource Include="Resources\layout\List_Represent.axml" />
     <AndroidResource Include="Resources\layout\Pay_Automat_Main_Enter.axml" />
     <AndroidResource Include="Resources\layout\Pay_Main.axml" />
     <AndroidResource Include="Resources\layout\Pay_SMS_Main.axml" />
@@ -619,7 +625,6 @@
     <AndroidResource Include="Resources\values\Zet_zone_numbers.xml" />
     <AndroidResource Include="Resources\layout\Locations.axml" />
     <AndroidResource Include="Resources\layout\MapLayout.axml" />
-    <AndroidResource Include="Resources\layout\CustomDialog.axml" />
     <AndroidResource Include="Resources\layout\MainFragment.axml" />
     <AndroidResource Include="Resources\drawable-hdpi\custom_dialog.png" />
     <AndroidResource Include="Resources\layout\MainLayout.axml" />
@@ -628,6 +633,17 @@
     <AndroidResource Include="Resources\layout\Alarm_Main.axml" />
     <AndroidResource Include="Resources\layout\Settings_Main.axml" />
     <AndroidResource Include="Resources\layout\SettingsSeparator.axml" />
+    <AndroidResource Include="Resources\layout\LocationUpdateDensity.axml" />
+    <AndroidResource Include="Resources\layout\SpeedBetweenNodes.axml" />
+    <AndroidResource Include="Resources\layout\ChangeRegistrationPicture.axml" />
+    <AndroidResource Include="Resources\layout\ChooseRegistration.axml" />
+    <AndroidResource Include="Resources\layout\ChooseAlarmSound.axml" />
+    <AndroidResource Include="Resources\layout\ChooseReminderSound.axml" />
+    <AndroidResource Include="Resources\layout\ChooseReminderTime.axml" />
+    <AndroidResource Include="Resources\layout\MessagesFromInboxSettings.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\Setting_icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\registracija2.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\registracija3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -642,5 +658,10 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Zone_Numbers_Assets.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\layout-sw320dp\" />
+    <Folder Include="Resources\layout-sw533dp\" />
+    <Folder Include="Resources\layout-sw800dp\" />
   </ItemGroup>
 </Project>

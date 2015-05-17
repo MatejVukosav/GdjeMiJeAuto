@@ -20,44 +20,4 @@
         android:layout_marginTop="20dp"
         style="@style/main_btn"
         android:layout_marginBottom="0.0dp" />
-    <TableRow
-        android:id="@+id/tableRow1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:text="Učitaj poruke iz inboxa: "
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="30.0dp" />
-        <ToggleButton
-            android:id="@+id/toggleButton1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:checked="false"
-            android:textOff="UČITAJ"
-            android:textOn="UČITANO"
-            android:layout_marginLeft="0.0dp" />
-    </TableRow>
-    <TableRow
-        android:id="@+id/tableRow1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:text="Obriši poruke iz inboxa: "
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="30.0dp" />
-        <ToggleButton
-            android:id="@+id/toggleButton2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:checked="false"
-            android:textOff="Obriši"
-            android:textOn="Obrisano"
-            android:layout_marginLeft="0.0dp" />
-    </TableRow>
 </LinearLayout>

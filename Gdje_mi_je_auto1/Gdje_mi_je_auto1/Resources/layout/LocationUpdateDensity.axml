@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TextView
+        android:text="@string/LocationUpdateDensity"
+        android:id="@+id/LocationUpdateDensity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#808080"
+        android:layout_marginTop="5dp" />
+    <TextView
+        android:text="@string/LocationUpdateDensityNormal"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/LocationUpdateDensityNormal" />
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/normalSpinner"
+        android:spinnerMode="dropdown"
+        android:prompt="@string/normal_density_prompt" />
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#808080"
+        android:layout_marginTop="5dp" />
+    <TextView
+        android:text="@string/LocationUpdateDensityPrecise"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/LocationUpdateDensityPrecise" />
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/denseSpinner"
+        android:spinnerMode="dropdown"
+        android:prompt="@string/high_density_prompt" />
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#808080"
+        android:layout_marginTop="5dp" />
+</LinearLayout>

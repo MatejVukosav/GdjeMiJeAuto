@@ -26,11 +26,11 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Upišite registracijsku oznaku:" />
+<!-- android:background="@drawable/ociscena_rega"-->
     <EditText
         android:id="@+id/editText_message"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@drawable/ociscena_rega"
         android:textColor="@android:color/background_dark"
         style="@style/registration_view"
         android:layout_marginBottom="10dp" />

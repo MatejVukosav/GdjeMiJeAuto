@@ -14,6 +14,7 @@ using Android.Graphics;
 
 namespace Gdje_mi_je_auto1
 {
+	/*
 	public class CustomDialogFragment : Android.Support.V4.App.DialogFragment
 	{
 		Button Button_Dismiss;
@@ -24,13 +25,13 @@ namespace Gdje_mi_je_auto1
 			Dialog.Window.RequestFeature(WindowFeatures.NoTitle);
 
 			// Create our view
-			var view = inflater.Inflate(Resource.Layout.CustomDialog, container, true);
+//			var view = inflater.Inflate(Resource.Layout.CustomDialog, container, true);
+//
+//			// Handle dismiss button click
+//			Button_Dismiss = view.FindViewById<Button>(Resource.Id.Button_Dismiss);
+//			Button_Dismiss.Click += Button_Dismiss_Click;
 
-			// Handle dismiss button click
-			Button_Dismiss = view.FindViewById<Button>(Resource.Id.Button_Dismiss);
-			Button_Dismiss.Click += Button_Dismiss_Click;
-
-			return view;
+//			return view;
 		}
 
 		public override void OnResume()
@@ -62,4 +63,5 @@ namespace Gdje_mi_je_auto1
 		}
 
 	}
+	*/
 }

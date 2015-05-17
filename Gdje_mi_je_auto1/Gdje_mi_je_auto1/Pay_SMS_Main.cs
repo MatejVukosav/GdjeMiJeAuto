@@ -39,12 +39,14 @@ namespace Gdje_mi_je_auto1
 
 		static Dictionary<string,string> zoneDictionary=new Dictionary<string,string>();
 		static List<string> zone = new List<string> ();
+		static List<string> registrationHolder = new List<string> ();
 		String dict="";
 
 		Android.Telephony.SmsManager smsManager = Android.Telephony.SmsManager.Default;
 		ListViewAdapter ls = new ListViewAdapter ();
 		ListView listView;
 
+		ISharedPreferences prefs = Application.Context.GetSharedPreferences("MySharedPrefs", FileCreationMode.Private);
 
 		static String message_Path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
 		String message_Data = System.IO.Path.Combine(message_Path, "Message_data.txt");
@@ -65,6 +67,16 @@ namespace Gdje_mi_je_auto1
 			//prikazuje sva slova kao velika.(upper) i ogranicava velicinu registracije na registrationLength
 			messageEditText.SetFilters (new IInputFilter[] { new InputFilterAllCaps (),new InputFilterLengthFilter (registrationLength) });
 
+			var prefs = Application.Context.GetSharedPreferences("MySharedPrefs", FileCreationMode.Private);
+			const int regaPicDefault=Resource.Drawable.ociscena_rega;
+
+			messageEditText.SetBackgroundResource ( prefs.GetInt("MyRegistrationPrefs",regaPicDefault ));
+
+			try{
+				messageEditText.Text = prefs.GetString ("MyRegistrationDefaultPrefs", "");
+			}catch(Exception e){
+				Log.Debug ("Nema registracija na izbor",e.ToString ());
+			}
 
 			#region Ucitava podatke iz datoteke svaki put kad se otvori layout Pay_SMS_Main
 			//Log.Debug ("ON CREATE","DULJINA"+new FileInfo(message_Data).Length+" -- "+Enable_message_update);
@@ -106,7 +118,6 @@ namespace Gdje_mi_je_auto1
 
 
 
-
 			try{
 				var tuple=ParseZoneNumbers.LoadZoneNumbersAssetsData (this);
 				zone = tuple.Item1; //zone
@@ -114,7 +125,6 @@ namespace Gdje_mi_je_auto1
 			}catch(Exception e){
 				Log.Debug ("Greska prilikom ucitavanja zone i zoneDictionary u Pay_SMS_Main",e.ToString ());
 			}
-			Log.Debug ("U ON CREATE", "U ON CREATE PAY_SMS_MAIN");
 
 			//dodavanje metode EventHandler delegatu iz OnReceiveSMS
 			//OnReceiveSMS.ReceiveSMSmessage += new OnReceiveSMS.ReceiveSMSdelegate (EventHandler);
@@ -195,6 +205,7 @@ namespace Gdje_mi_je_auto1
 			 */
 			sendSMS_btn.Click += delegate {
 				String sms_message="";
+				String sms_messageClean=messageEditText.Text;
 
 				if(zone_number.Equals (VukiTestNumber)){
 					sms_message=messageEditText.Text+"#30";
@@ -210,6 +221,12 @@ namespace Gdje_mi_je_auto1
 				if (valid_check) {
 					smsManager.SendTextMessage (zone_number, null, sms_message, null, null);
 					Toast.MakeText (ApplicationContext, "SMS poruka je poslana.", ToastLength.Short).Show ();
+
+					registrationHolder.Add (sms_messageClean);
+					var prefsEditor = prefsZone.Edit ();
+					prefsEditor.PutStringSet ("MyRegistrationTextPrefs", registrationHolder);
+					prefsEditor.Commit ();
+
 
 					var activity_pay_main = new Intent (this, typeof(Pay_Main));
 

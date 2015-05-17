@@ -52,7 +52,6 @@ C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\bin\Debug\Xama
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\bin\Debug\Xamarin.Android.Support.v7.AppCompat.dll
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\bin\Debug\Xamarin.Android.Support.v7.MediaRouter.dll
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\bin\Debug\Newtonsoft.Json.xml
-C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\Gdje_mi_je_auto1.csprojResolveAssemblyReference.cache
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\Gdje_mi_je_auto1.dll
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\Gdje_mi_je_auto1.pdb
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\android\bin\maptest.maptest.apk
@@ -63,7 +62,6 @@ C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\drawable-xxhdpi\icon.png
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\drawable-xxxhdpi\icon.png
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\layout\dialog_fragment_layout.xml
-C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\layout\list_represent.xml
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\layout\pay_automat_main_enter.xml
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\layout\pay_main.xml
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\layout\pay_sms_main.xml
@@ -79,7 +77,6 @@ C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\values\zet_zone_numbers.xml
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\layout\locations.xml
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\layout\maplayout.xml
-C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\layout\customdialog.xml
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\layout\mainfragment.xml
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\drawable-hdpi\custom_dialog.png
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\layout\mainlayout.xml
@@ -88,5 +85,16 @@ C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\layout\alarm_main.xml
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\layout\settings_main.xml
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\layout\settingsseparator.xml
+C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\layout\locationupdatedensity.xml
+C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\layout\speedbetweennodes.xml
+C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\layout\changeregistrationpicture.xml
+C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\layout\chooseregistration.xml
+C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\layout\choosealarmsound.xml
+C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\layout\chooseremindersound.xml
+C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\layout\chooseremindertime.xml
+C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\layout\messagesfrominboxsettings.xml
+C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\drawable-hdpi\setting_icon.png
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\R.cs.flag
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\uploadflags.txt
+C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\drawable-hdpi\registracija2.png
+C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\drawable-hdpi\registracija3.png
