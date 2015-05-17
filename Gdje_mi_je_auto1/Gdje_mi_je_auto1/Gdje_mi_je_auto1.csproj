@@ -627,7 +627,6 @@
     <AndroidResource Include="Resources\layout\MapLayout.axml" />
     <AndroidResource Include="Resources\layout\MainFragment.axml" />
     <AndroidResource Include="Resources\drawable-hdpi\custom_dialog.png" />
-    <AndroidResource Include="Resources\layout\MainLayout.axml" />
     <AndroidResource Include="Resources\layout\packages.config" />
     <AndroidResource Include="Resources\layout\Start.axml" />
     <AndroidResource Include="Resources\layout\Alarm_Main.axml" />
@@ -644,6 +643,8 @@
     <AndroidResource Include="Resources\drawable-hdpi\Setting_icon.png" />
     <AndroidResource Include="Resources\drawable-hdpi\registracija2.png" />
     <AndroidResource Include="Resources\drawable-hdpi\registracija3.png" />
+    <AndroidResource Include="Resources\layout\AlertDialog.axml" />
+    <AndroidResource Include="Resources\layout\DialogList.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

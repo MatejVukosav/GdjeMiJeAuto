@@ -31,6 +31,7 @@ namespace Gdje_mi_je_auto1
 		private Button btn_save_time;
 		//private string[] items;
 		ListView listView;
+		List<string> podaciDialogLista = new List<string> ();
 
 		private int hour;
 		private int minute;
@@ -84,12 +85,12 @@ namespace Gdje_mi_je_auto1
 					data.Add (line);
 				}
 				reader.Close ();
-				Log.Debug ("Puni","puni listuuu");
+				podaciDialogLista=data;
 				try{
 					Fill_ListView_With_Data.FillListWithData (data,this,listView);
 				}
 				catch(NullReferenceException e){
-					Log.Debug ("FillListWithData:Na pocetku Pay_SMS_Main",	e.ToString ());
+					Log.Debug ("Fill_ListView_With_Data.FillListWithData",	e.ToString ());
 				}
 			}else{
 				Fill_ListView_With_Data.DeleteHistory ();
@@ -121,7 +122,8 @@ namespace Gdje_mi_je_auto1
 			 * UPALI ALARM I SPREMI VRIJEME PLACANJA U HISTORY
 			 * */
 			btn_save_time.Click+=delegate {
-				//TODO klikom na save se pokrece alarm ako je upisano vrijeme i odabrana zona
+				//TODO nije omogucen save,klikom na save se pokrece alarm ako je upisano vrijeme i odabrana zona
+
 				if(valid_check_automat){
 					var activity_pay_main=new Intent (this,typeof(Pay_Main));
 					StartActivity (activity_pay_main);
@@ -173,19 +175,7 @@ namespace Gdje_mi_je_auto1
 		 * */
 		void OnListItemClick(object sender, AdapterView.ItemClickEventArgs e)
 		{
-			//TODO onListItemClick not defined 
-			/*
-			var listview = sender as ListView;
-			FragmentTransaction ftr = FragmentManager.BeginTransaction ();
-			try{
-				ShowDialog dialog = new ShowDialog (listview.Id );
-				dialog.Show (ftr, "dinamooo");
-			}catch(NullReferenceException e1){
-				Log.Debug("ouuuuuuuuuuuuu",e1.ToString ());
-			}
-
-			//Android.Widget.Toast.MakeText (this,"ispisaoaooa",Android.Widget.ToastLength.Short).Show ();
-			*/
+			CustomDialogFragment.CreateListDialog (this,podaciDialogLista);
 		}
 	
 

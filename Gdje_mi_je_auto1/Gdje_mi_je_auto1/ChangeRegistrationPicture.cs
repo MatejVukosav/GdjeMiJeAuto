@@ -31,7 +31,7 @@ namespace Gdje_mi_je_auto1
 			var prefs = Application.Context.GetSharedPreferences("MySharedPrefs", FileCreationMode.Private);
 			var prefsEditor = prefs.Edit ();
 
-		//TODO stavit jos 2 slike registracija
+
 			regBtn1.Click += delegate  {
 				//var imageView = FindViewById<ImageView> (Resource.Id.registrationPicture1);
 				//registrationPicture.SetBackgroundResource (Resource.Drawable.ociscena_rega);

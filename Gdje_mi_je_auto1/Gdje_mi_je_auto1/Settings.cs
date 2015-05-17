@@ -19,6 +19,7 @@ using System.Threading.Tasks;
 
 namespace Gdje_mi_je_auto1
 {
+	/*
 	[Activity (Label = "Map & Location", Icon = "@drawable/icon",ScreenOrientation = ScreenOrientation.Portrait)]
 //	public class Main : Activity, ILocationListener
 	public class Settings : Activity
@@ -54,7 +55,7 @@ namespace Gdje_mi_je_auto1
 		{
 			base.OnCreate (bundle);
 
-			SetContentView (Resource.Layout.MainLayout);
+			//SetContentView (Resource.Layout.MainLayout);
 
 //			locMgr = GetSystemService (Context.LocationService) as LocationManager;
 			//GeoFencer.Initialize(this);
@@ -103,13 +104,13 @@ namespace Gdje_mi_je_auto1
 //				StartActivity(typeof(MapActivity));
 //			};
 
-			btnLocations = FindViewById<Button>(Resource.Id.mainLocation);
+			//btnLocations = FindViewById<Button>(Resource.Id.mainLocation);
 			btnLocations.Click += delegate {
 				StartActivity(typeof(LocationsActivity));
 			};
 
 			btnSettings = FindViewById<Button>(Resource.Id.mainSettings);
-			btnSettings.Click += delegate {
+			//btnSettings.Click += delegate {
 				StartActivity(typeof(SeeSettings));
 			};
 
@@ -322,6 +323,7 @@ namespace Gdje_mi_je_auto1
 			StartService (new Intent (this, typeof(LocationLogger)));
 		}
 	}
+	*/
 		
 }
 

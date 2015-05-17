@@ -45,6 +45,7 @@ namespace Gdje_mi_je_auto1
 		Android.Telephony.SmsManager smsManager = Android.Telephony.SmsManager.Default;
 		ListViewAdapter ls = new ListViewAdapter ();
 		ListView listView;
+		List<string> podaciDialogLista = new List<string> ();
 
 		ISharedPreferences prefs = Application.Context.GetSharedPreferences("MySharedPrefs", FileCreationMode.Private);
 
@@ -62,6 +63,7 @@ namespace Gdje_mi_je_auto1
 			numberEditText.Text = GeoFencer.inZone ();
 
 			listView = FindViewById<ListView> (Resource.Id.List_SMS_Main_History);
+			listView.ItemClick += OnListItemClick;
 
 			messageEditText = FindViewById<EditText> (Resource.Id.editText_message);
 			//prikazuje sva slova kao velika.(upper) i ogranicava velicinu registracije na registrationLength
@@ -98,6 +100,7 @@ namespace Gdje_mi_je_auto1
 				}
 
 				reader.Close ();
+				podaciDialogLista=data;
 				try{
 					Fill_ListView_With_Data.FillListWithData (data,this,listView);
 				}
@@ -129,7 +132,6 @@ namespace Gdje_mi_je_auto1
 			//dodavanje metode EventHandler delegatu iz OnReceiveSMS
 			//OnReceiveSMS.ReceiveSMSmessage += new OnReceiveSMS.ReceiveSMSdelegate (EventHandler);
 
-			//TODO spremit izbor registracijske slike i spremit registraciju
 
 			//spremanje popisa brojeva zona u memoriju
 			var prefsZone = Application.Context.GetSharedPreferences("MySharedPrefs", FileCreationMode.Private);
@@ -308,7 +310,7 @@ namespace Gdje_mi_je_auto1
 			if (smsTimeOD.Equals ("00")) {
 				smsTimeOD = "23";
 			} else {
-				smsTimeOD=string.Format("{0:D2}",(smsTimeODInt+1));
+				smsTimeOD=string.Format("{0:D2}",(smsTimeODInt-1));
 			}
 			smsTimeOD = smsTimeOD +":"+ satDO [1];
 
@@ -374,8 +376,11 @@ namespace Gdje_mi_je_auto1
 		public string ConvertDateFromMillseconds(long value){
 			var epoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
 			return epoch.AddMilliseconds(value).ToString ("d.M.yyyy");
+		}
 
-
+		void OnListItemClick(object sender, AdapterView.ItemClickEventArgs e)
+		{
+			CustomDialogFragment.CreateListDialog (this,podaciDialogLista);
 		}
 
 	}

@@ -12,56 +12,39 @@ using Android.Widget;
 using Android.Graphics.Drawables;
 using Android.Graphics;
 
-namespace Gdje_mi_je_auto1
+namespace Gdje_mi_je_auto1 
 {
-	/*
-	public class CustomDialogFragment : Android.Support.V4.App.DialogFragment
+	[Activity ()]
+	public class CustomDialogFragment  
 	{
-		Button Button_Dismiss;
 
-		public override Android.Views.View OnCreateView(Android.Views.LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-		{
-			// Android 3.x+ still wants to show title: disable
-			Dialog.Window.RequestFeature(WindowFeatures.NoTitle);
-
-			// Create our view
-//			var view = inflater.Inflate(Resource.Layout.CustomDialog, container, true);
+//		protected override void OnCreate(Bundle bundle){
+//			base.OnCreate (bundle);
+//			SetContentView (Resource.Layout.AlertDialog);
 //
-//			// Handle dismiss button click
-//			Button_Dismiss = view.FindViewById<Button>(Resource.Id.Button_Dismiss);
-//			Button_Dismiss.Click += Button_Dismiss_Click;
+//			Button bt = FindViewById<Button> (Resource.Id.button1);
+//
+//			bt.Click += delegate {
+//				CreateAddProjectDialog ();
+//			};
+//
+//			}
 
-//			return view;
+		public static void CreateListDialog(Context context,List<string> lista) { 
+
+			Dialog dialog = new Dialog (context);
+			dialog.SetContentView (Resource.Layout.DialogList);
+			ListView lv = (ListView)dialog.FindViewById (Resource.Id.dialogList);
+			//List<string> lista = new List<string> ();
+			lv.Adapter = new ArrayAdapter<String> (context, Android.Resource.Layout.TestListItem, lista);
+			dialog.Window.SetBackgroundDrawableResource (Android.Resource.Color.BackgroundDark);
+			//dialog.Window.SetLayout(LinearLayout.LayoutParams.WrapContent, LinearLayout.LayoutParams.WrapContent);
+			//dialog.Window.RequestFeature(WindowFeatures.NoTitle);
+
+			dialog.SetCancelable(true);
+			dialog.SetTitle ("Povijest poruka.");
+			dialog.Show();
 		}
-
-		public override void OnResume()
-		{
-			// Auto size the dialog based on it's contents
-			Dialog.Window.SetLayout(LinearLayout.LayoutParams.WrapContent, LinearLayout.LayoutParams.WrapContent);
-
-			// Make sure there is no background behind our view
-			Dialog.Window.SetBackgroundDrawable(new ColorDrawable(Color.Transparent));
-
-			// Disable standard dialog styling/frame/theme: our custom view should create full UI
-			SetStyle(Android.Support.V4.App.DialogFragment.StyleNoFrame, Android.Resource.Style.Theme);
-
-			base.OnResume();
-		}
-
-		private void Button_Dismiss_Click (object sender, EventArgs e)
-		{
-			Dismiss();
-		}
-
-		protected override void Dispose(bool disposing)
-		{
-			base.Dispose(disposing);
-
-			// Unwire event
-			if (disposing)
-				Button_Dismiss.Click -= Button_Dismiss_Click;
-		}
-
 	}
-	*/
 }
+
