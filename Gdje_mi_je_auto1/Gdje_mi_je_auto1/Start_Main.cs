@@ -15,7 +15,7 @@ using Newtonsoft.Json;
 
 namespace Gdje_mi_je_auto1
 {
-	[Activity (Label = "Gdje mi je auto?!",MainLauncher = true,Icon = "@drawable/main_icon")]			
+	[Activity (Label = "Gdje mi je auto?!",MainLauncher = true,ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]			
 	public class Start_Main : Activity
 	{
 		string settingsFile;

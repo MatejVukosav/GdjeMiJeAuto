@@ -12,7 +12,7 @@ using Android.Content.PM;
 
 namespace Gdje_mi_je_auto1
 {
-	[Activity (Label = "MapTest", MainLauncher = false, Icon = "@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]
+	[Activity (MainLauncher = false,ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
 	public class MapActivity : Activity , IOnMapReadyCallback
 	{
 		

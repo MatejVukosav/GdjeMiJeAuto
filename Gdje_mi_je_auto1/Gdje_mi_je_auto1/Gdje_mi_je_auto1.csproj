@@ -115,6 +115,8 @@
     <Compile Include="NotifAlarmBroadcast.cs" />
     <Compile Include="NotifReminderBroadcast.cs" />
     <Compile Include="SMS_Sound.cs" />
+    <Compile Include="About.cs" />
+    <Compile Include="AuthorsAdapterKlasa.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt">
@@ -663,14 +665,15 @@
     <AndroidResource Include="Resources\layout\ChooseReminderTime.axml" />
     <AndroidResource Include="Resources\layout\MessagesFromInboxSettings.axml" />
     <AndroidResource Include="Resources\drawable-hdpi\Setting_icon.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\registracija2.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\registracija3.png" />
     <AndroidResource Include="Resources\layout\AlertDialog.axml" />
     <AndroidResource Include="Resources\layout\DialogList.axml" />
     <AndroidResource Include="Resources\layout\AlarmSeparator.axml" />
     <AndroidResource Include="Resources\layout\AddNewAlarm.axml" />
     <AndroidResource Include="Resources\layout\EditExistingAlarm.axml" />
     <AndroidResource Include="Resources\drawable-hdpi\phone_alarm.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\registracija3.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\registracija2.png" />
+    <AndroidResource Include="Resources\layout\About.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

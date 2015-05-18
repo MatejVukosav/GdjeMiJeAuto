@@ -15,7 +15,7 @@ using System.Collections.Generic;
 
 namespace Gdje_mi_je_auto1
 {
-	[Activity (Icon = "@drawable/main_icon")] 
+	[Activity (ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)] 
 	public class Pay_Main:Activity
     {
        

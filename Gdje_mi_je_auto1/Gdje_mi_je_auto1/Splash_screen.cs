@@ -18,7 +18,7 @@ using System.Threading;
  * */
 namespace Gdje_mi_je_auto1
 {
-	[Activity (Theme="@style/Theme.splash",Icon = "@drawable/main_icon" ,NoHistory = true)]
+	[Activity (Theme="@style/Theme.splash",Icon = "@drawable/main_icon" ,NoHistory = true,ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
 	public class Splash_screen:Activity
 	{
           

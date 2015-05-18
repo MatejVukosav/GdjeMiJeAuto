@@ -21,6 +21,7 @@ using Android.Telephony;
 using Android.Database;
 using System.Windows;
 using Java;
+using Environment = System.Environment;
 
 
 /*
@@ -32,7 +33,7 @@ namespace Gdje_mi_je_auto1
 
 	[BroadcastReceiver(Enabled = true, Label = "SMS Receiver")]
 	[IntentFilter(new[] { "android.provider.Telephony.SMS_RECEIVED" },Priority = (int)IntentFilterPriority.HighPriority)] 
-	[Activity ( Label = "ReadFromInbox")]			
+	[Activity ( Label = "ReadFromInbox",ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]			
 	
 	public class OnReceiveSMS: BroadcastReceiver
 	{
@@ -48,9 +49,9 @@ namespace Gdje_mi_je_auto1
 		{
 
 			Log.Info ("SmsReceiver", "SMS Received");
-			//InvokeAbortBroadcast();
 
 			if (intent.Action == INTENT_ACTION) {
+				
 				StringBuilder buffer = new StringBuilder ();
 				Bundle bundle = intent.Extras;
 				String smsSender = "";
@@ -74,25 +75,6 @@ namespace Gdje_mi_je_auto1
 							smsSender = msgs [i].OriginatingAddress;
 							smsBody = msgs [i].MessageBody;
 
-							Log.Debug ("tuu", "buu");
-
-							Intent broadcastIntent = new Intent ();
-							broadcastIntent.SetAction ("SMS_READED");
-							broadcastIntent.PutExtra ("sms", smsBody);
-							context.SendBroadcast (broadcastIntent);
-
-							Intent broadcastIntent1 = new Intent ();
-							broadcastIntent1.SetAction ("SMS_READ");
-							broadcastIntent1.PutExtra ("sms", smsBody);
-							context.SendBroadcast (broadcastIntent1);
-
-
-//							ContentValues values = new ContentValues();
-//							values.Put("READ",1);
-////							getContentResolver().update(Android.Net.Uri.Parse("content://sms/inbox"),values,
-////								"_id=", null);
-//							Log.Debug ("tuu2","buu");
-
 							try {
 								var tuple = ParseSMS.ParseSMSbody (smsBody);
 								valid_body_check = tuple.Item1; //bool true or false
@@ -114,40 +96,43 @@ namespace Gdje_mi_je_auto1
 								//send sms data to further reproduction
 
 
-
-
-//								String[] projection = new String[]{ "_id" };
-//								CursorLoader loader = new CursorLoader (context);
-//								try {
-//									loader = new CursorLoader (context, Android.Net.Uri.Parse ("content://sms/inbox"), projection, null, null, null);
+//String[] projection = new String[]{ "_id" };
+//var uri="content://sms/inbox";
+//CursorLoader loader = new CursorLoader (context);
 //
-//								} catch (Exception e) {
-//									Log.Debug ("Problem kod loadera", e.ToString ());
-//								}
 //
-//								ICursor cursor = (ICursor)loader.LoadInBackground ();
-//								if (cursor.MoveToFirst ()) { 
+//try {
+//loader = new CursorLoader (context, Android.Net.Uri.Parse (uri), projection, null, null, null);
 //
-//									String smsID = cursor.GetString (cursor.GetColumnIndexOrThrow (projection [0]));
-//									ContentValues values1=new ContentValues();
+//} catch (Exception e) {
+//Log.Debug ("Problem kod loadera", e.ToString ());
+//}
 //
-//									values1.Put (smsID,1);
-////									pdus.SetValue ("read",Convert.ToInt32 (smsID));
-//									Log.Debug ("id", smsID);
-//								}
+//ICursor cursor = (ICursor)loader.LoadInBackground ();
+//if (cursor.MoveToFirst ()) { 
 //
-
-								//	ICursor queryData = ContentResolver.Query (CallLog.Calls.ContentUri, null, queryFilter, null, querySorter)
+//String smsID = cursor.GetString (cursor.GetColumnIndexOrThrow (projection [0]));
+//
+//Log.Debug ("id", smsID);
+//}
+//
+//ContentValues values = new ContentValues();
+//values.Put("READ",1);
+//getContentResolver().update(Android.Net.Uri.Parse("content://sms/inbox"),values,"_id="+smsId, null);
+//Log.Debug ("tuu2","buu");
+//
+//ICursor queryData = ContentResolver.Query (CallLog.Calls.ContentUri, null, queryFilter, null, querySorter)
 
 
 
 								Pay_SMS_Main.AddIncomingMessageToView (smsSender, smsFilteredBody, smsTime, smsDate);
 							} else {
 								Log.Debug ("SMS was not from parking number!", "Pass message.");
-								//ClearAbortBroadcast ();
+
 							}
 						}
 					} catch (Exception e) {
+						
 						Log.Debug ("Exception caught while receiving message: !!!", e.Message);
 					}
 				}

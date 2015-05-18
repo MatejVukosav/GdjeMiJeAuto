@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace Gdje_mi_je_auto1
 {
-	[Activity (Label = "ChooseAlarmSound",NoHistory = true)]			
+	[Activity (NoHistory = true,ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]			
 	public class ChooseAlarmSound : Activity
 	{
 		protected override void OnCreate (Bundle bundle)

@@ -14,7 +14,7 @@ using Android.Util;
 
 namespace Gdje_mi_je_auto1
 {
-	[Activity (Label = "ChooseRegistration")]			
+	[Activity (NoHistory = true,ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]			
 	public class ChooseRegistration : Activity
 	{
 		List<string> regText = new List<string> ();

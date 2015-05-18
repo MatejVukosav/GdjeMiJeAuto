@@ -186,9 +186,7 @@ namespace Gdje_mi_je_auto1
 			Location locationGPS;
 			try{
 		    locationNetwork = locMgr.GetLastKnownLocation (LocationManager.NetworkProvider);
-//			Log.Debug ("locationNetwork",Convert.ToString ( locationNetwork));
 		    locationGPS = locMgr.GetLastKnownLocation (LocationManager.GpsProvider);
-//			Log.Debug ("locationGPS",Convert.ToString (locationGPS));
 			
 			if (locationGPS == null) {
 				location = locationNetwork;
@@ -197,11 +195,8 @@ namespace Gdje_mi_je_auto1
 			} else {
 				location = locationNetwork.Time > locationGPS.Time ? locationNetwork : locationGPS;
 			}
-//			Log.Debug ("latitude", Convert.ToString ( location.Latitude));	
-//			Log.Debug ("longitude", Convert.ToString (location.Longitude));	
 			return inZone (location.Latitude, location.Longitude);	
 			} catch(Exception ){
-				//Log.Debug ("Lokacija nije ukljucena.",e.ToString ());
 				return "Zona nepoznata.";
 			}
 		}
@@ -271,17 +266,17 @@ namespace Gdje_mi_je_auto1
 
 			switch (zoneColors [i]) {
 			case red:
-				return "1";
+				return "[ ZONA 1 ]";
 			case darkRed:
-				return "1.1";
+				return "[ ZONA 1#30 ]"; //1.1
 			case yellow:
-				return "2";
+				return "[ ZONA 2 ]";
 			case green:
-				return "3";
+				return "[ ZONA 3 ]";
 			case cyan:
-				return "4.1";
+				return "[ ZONA 4.1 ]";
 			case blue:
-				return "4.2";
+				return "[ ZONA 4.2 ]";
 			default:
 				return "outside";
 			}

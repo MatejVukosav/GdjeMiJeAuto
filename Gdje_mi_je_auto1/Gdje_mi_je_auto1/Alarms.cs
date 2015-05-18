@@ -14,7 +14,7 @@ using Android.Util;
 
 namespace Gdje_mi_je_auto1	
 {
-	[Activity (Label = "Alarms")]
+	[Activity (Label = "Alarms",ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
 	public class Alarms : Activity
 	{
 		public static string mindif;

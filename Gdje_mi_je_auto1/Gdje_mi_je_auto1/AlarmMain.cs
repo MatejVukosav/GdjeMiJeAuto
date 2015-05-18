@@ -14,7 +14,7 @@ using Android.Util;
 
 namespace Gdje_mi_je_auto1
 {
-	[Activity (Label = "AlarmMain")]			
+	[Activity (Label = "Alarm",ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]		
 	public class AlarmMain : Activity
 	{
 		ListView listview;

@@ -48,7 +48,8 @@
 
 	<string name="ChangeRegistrationPictureMain">Odaberite sliku registracije.</string>
 
-	<string name="ChooseRegistrationMain">Odaberite registraciju koja će biti postavljena kao početna.</string>
+	<string name="ChooseRegistrationMain">Odaberite registraciju koja će biti postavljena kao početna.
+			Prikazuje se popis registracijskih oznaka koje su već bile korištene za plačanje parkinga putem sms poruke</string>
 
 	<string name="ChooseAlarmSoundMain">Odaberite zvuk alarma.</string>
 	<string name="ChooseReminderSoundMain">Odaberite zvuk podsjetnika.</string>
@@ -60,6 +61,8 @@
 	<string name="DeleteSMS">Obriši poruke iz inboxa:</string>
 	<string name="Obriši">Obriši</string>
 	<string name="Obrisano">Obrisano:</string>
+
+	<string name="AboutAuthors">Autori ove aplikacije su:</string>
 
 	<!-- MAPA -->
 

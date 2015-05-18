@@ -22,7 +22,7 @@ using System.Net;
 
 namespace Gdje_mi_je_auto1
 {
-	[Activity (Label = "BaseAdapterKlasa")]			
+	[Activity (Label = "BaseAdapterKlasa",ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]			
 	public class BaseAdapterKlasa : BaseAdapter<string>
 	{
 

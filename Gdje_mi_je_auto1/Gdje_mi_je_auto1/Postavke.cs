@@ -14,7 +14,7 @@ using Android.Util;
 
 namespace Gdje_mi_je_auto1
 {
-	[Activity (Label = "Postavke",Icon = "@drawable/Setting_icon" )]			
+	[Activity (Label = "Postavke",Icon = "@drawable/Setting_icon",ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait )]			
 	public class Postavke : Activity
 	{
 		ListView listview;
@@ -29,6 +29,8 @@ namespace Gdje_mi_je_auto1
 		const int Alarm0=8;
 		const int Alarm1=9;
 		const int Alarm2=10;
+		const int About=11;
+		const int About0=12;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -53,9 +55,14 @@ namespace Gdje_mi_je_auto1
 			alarm[1]="Odaberi zvuk podsjetnika";
 			alarm[2]="Odaberi vrijeme podsjetnika";
 
+			String[] about=new String[1];
+			about[0]="O autorima";
+
+
 			BaseAdapter mapB = new BaseAdapterKlasa (this, map);
 			BaseAdapter payB = new BaseAdapterKlasa (this, pay);
 			BaseAdapter alarmB = new BaseAdapterKlasa (this, alarm);
+			BaseAdapter aboutB = new BaseAdapterKlasa (this, about);
 
 //			ImageView ivM=FindViewById<ImageView> (Resource.Id.SettingsImage);	
 //			ivM.SetImageResource (Resource.Drawable.ociscena_rega);
@@ -69,6 +76,7 @@ namespace Gdje_mi_je_auto1
 			sectionAdapter.AddSection("Mapa", mapB);
 			sectionAdapter.AddSection("Plaćanje",payB);
 			sectionAdapter.AddSection("Alarm", alarmB);
+			sectionAdapter.AddSection("Ostalo", aboutB);
 
 			listview.Adapter = sectionAdapter;
 			listview.ItemClick += OnListItemClick;
@@ -108,7 +116,11 @@ namespace Gdje_mi_je_auto1
 				var activity_CRT = new Intent (this, typeof(ChooseReminderTime));
 				StartActivity (activity_CRT);
 
-			} else {
+			} else if (e.Position == About0) {
+				var activity_A = new Intent (this, typeof(About));
+				StartActivity (activity_A);
+
+		} else {
 				//throw new LayoutNotConnected ();
 			}
 				

@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace Gdje_mi_je_auto1
 {
-	[Activity (Label = "AddNewAlarm")]			
+	[Activity (ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]			
 	public class AddNewAlarm : Activity
 	{
 		private Button btnVrijeme;

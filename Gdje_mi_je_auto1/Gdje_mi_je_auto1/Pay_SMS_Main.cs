@@ -25,7 +25,7 @@ using System.Collections.Specialized;
  * */
 namespace Gdje_mi_je_auto1
 {
-	[Activity (Label = "SMS" , Icon = "@drawable/main_icon", NoHistory = true,
+	[Activity (Label = "SMS" , NoHistory = true,
 		ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
 	//ConfigurationChanges=Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.ScreenSize			
 	public class Pay_SMS_Main : Activity
@@ -35,7 +35,7 @@ namespace Gdje_mi_je_auto1
 		EditText numberEditText;
 		bool valid_check=false;
 		private readonly int registrationLength=8;
-		private readonly string VukiTestNumber="+385989305003";
+		private readonly string VukiTestNumber="+385989305003";  //TODO promijenit defaultni broj //broj prve zone za pola sata
 
 		static Dictionary<string,string> zoneDictionary=new Dictionary<string,string>();
 		static List<string> zone = new List<string> ();

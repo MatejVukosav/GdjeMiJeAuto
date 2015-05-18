@@ -134,6 +134,14 @@ Gdje_mi_je_auto1.SMS_Sound, Gdje_mi_je_auto1;md5cd61a8e1f9f2291d7d02a5b72739b7e4
 Gdje_mi_je_auto1.SMS_Sound, Gdje_mi_je_auto1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5cd61a8e1f9f2291d7d02a5b72739b7e4.SMS_Sound
 Gdje_mi_je_auto1.SMS_Sound;md5cd61a8e1f9f2291d7d02a5b72739b7e4.SMS_Sound
 gdje_mi_je_auto1.SMS_Sound;md5cd61a8e1f9f2291d7d02a5b72739b7e4.SMS_Sound
+Gdje_mi_je_auto1.About, Gdje_mi_je_auto1;md5cd61a8e1f9f2291d7d02a5b72739b7e4.About
+Gdje_mi_je_auto1.About, Gdje_mi_je_auto1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5cd61a8e1f9f2291d7d02a5b72739b7e4.About
+Gdje_mi_je_auto1.About;md5cd61a8e1f9f2291d7d02a5b72739b7e4.About
+gdje_mi_je_auto1.About;md5cd61a8e1f9f2291d7d02a5b72739b7e4.About
+Gdje_mi_je_auto1.AuthorsAdapterKlasa, Gdje_mi_je_auto1;md5cd61a8e1f9f2291d7d02a5b72739b7e4.AuthorsAdapterKlasa
+Gdje_mi_je_auto1.AuthorsAdapterKlasa, Gdje_mi_je_auto1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5cd61a8e1f9f2291d7d02a5b72739b7e4.AuthorsAdapterKlasa
+Gdje_mi_je_auto1.AuthorsAdapterKlasa;md5cd61a8e1f9f2291d7d02a5b72739b7e4.AuthorsAdapterKlasa
+gdje_mi_je_auto1.AuthorsAdapterKlasa;md5cd61a8e1f9f2291d7d02a5b72739b7e4.AuthorsAdapterKlasa
 Android.Gms.Ads.DoubleClick.IAppEventListenerImplementor, GooglePlayServicesLib;mono.com.google.android.gms.ads.doubleclick.AppEventListenerImplementor
 Android.Gms.Ads.DoubleClick.IAppEventListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.ads.doubleclick.AppEventListenerImplementor
 Android.Gms.Ads.DoubleClick.IAppEventListenerImplementor;mono.com.google.android.gms.ads.doubleclick.AppEventListenerImplementor

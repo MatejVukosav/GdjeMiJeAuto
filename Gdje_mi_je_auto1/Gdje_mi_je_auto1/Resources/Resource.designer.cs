@@ -1532,62 +1532,65 @@ namespace Gdje_mi_je_auto1
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0c0056
-			public const int AlarmList = 2131492950;
+			// aapt resource value: 0x7f0c0054
+			public const int AboutAuthorsList = 2131492948;
 			
-			// aapt resource value: 0x7f0c0071
-			public const int Button_Launch = 2131492977;
+			// aapt resource value: 0x7f0c0058
+			public const int AlarmList = 2131492952;
 			
-			// aapt resource value: 0x7f0c005a
-			public const int ChangePictureLayout = 2131492954;
+			// aapt resource value: 0x7f0c0072
+			public const int Button_Launch = 2131492978;
 			
-			// aapt resource value: 0x7f0c005e
-			public const int ChooseAlarmSound = 2131492958;
-			
-			// aapt resource value: 0x7f0c005f
-			public const int ChooseRegistrationMain = 2131492959;
-			
-			// aapt resource value: 0x7f0c0061
-			public const int ChooseReminderSound = 2131492961;
-			
-			// aapt resource value: 0x7f0c0062
-			public const int ChooseReminderTime = 2131492962;
+			// aapt resource value: 0x7f0c005c
+			public const int ChangePictureLayout = 2131492956;
 			
 			// aapt resource value: 0x7f0c0060
-			public const int Choose_Registration_List = 2131492960;
+			public const int ChooseAlarmSound = 2131492960;
 			
-			// aapt resource value: 0x7f0c0087
-			public const int List_SMS_Main_History = 2131492999;
+			// aapt resource value: 0x7f0c0053
+			public const int ChooseRegistrationMain = 2131492947;
 			
-			// aapt resource value: 0x7f0c0070
-			public const int LocationRecords = 2131492976;
+			// aapt resource value: 0x7f0c0062
+			public const int ChooseReminderSound = 2131492962;
 			
-			// aapt resource value: 0x7f0c006b
-			public const int LocationUpdateDensity = 2131492971;
+			// aapt resource value: 0x7f0c0063
+			public const int ChooseReminderTime = 2131492963;
 			
-			// aapt resource value: 0x7f0c006c
-			public const int LocationUpdateDensityNormal = 2131492972;
-			
-			// aapt resource value: 0x7f0c006e
-			public const int LocationUpdateDensityPrecise = 2131492974;
-			
-			// aapt resource value: 0x7f0c0079
-			public const int ObrisiPoruke = 2131492985;
-			
-			// aapt resource value: 0x7f0c0089
-			public const int Pay_Automat_Main = 2131493001;
+			// aapt resource value: 0x7f0c0061
+			public const int Choose_Registration_List = 2131492961;
 			
 			// aapt resource value: 0x7f0c0088
-			public const int Pay_SMS_Main = 2131493000;
+			public const int List_SMS_Main_History = 2131493000;
 			
-			// aapt resource value: 0x7f0c0094
-			public const int SettingsList = 2131493012;
+			// aapt resource value: 0x7f0c0071
+			public const int LocationRecords = 2131492977;
+			
+			// aapt resource value: 0x7f0c006c
+			public const int LocationUpdateDensity = 2131492972;
+			
+			// aapt resource value: 0x7f0c006d
+			public const int LocationUpdateDensityNormal = 2131492973;
+			
+			// aapt resource value: 0x7f0c006f
+			public const int LocationUpdateDensityPrecise = 2131492975;
+			
+			// aapt resource value: 0x7f0c007a
+			public const int ObrisiPoruke = 2131492986;
+			
+			// aapt resource value: 0x7f0c008a
+			public const int Pay_Automat_Main = 2131493002;
+			
+			// aapt resource value: 0x7f0c0089
+			public const int Pay_SMS_Main = 2131493001;
 			
 			// aapt resource value: 0x7f0c0095
-			public const int SpeedBetweenNodes = 2131493013;
+			public const int SettingsList = 2131493013;
 			
-			// aapt resource value: 0x7f0c0077
-			public const int UcitajPoruke = 2131492983;
+			// aapt resource value: 0x7f0c0096
+			public const int SpeedBetweenNodes = 2131493014;
+			
+			// aapt resource value: 0x7f0c0078
+			public const int UcitajPoruke = 2131492984;
 			
 			// aapt resource value: 0x7f0c0045
 			public const int action_bar = 2131492933;
@@ -1637,8 +1640,8 @@ namespace Gdje_mi_je_auto1
 			// aapt resource value: 0x7f0c001f
 			public const int adjust_width = 2131492895;
 			
-			// aapt resource value: 0x7f0c0063
-			public const int alarmSpinner = 2131492963;
+			// aapt resource value: 0x7f0c0064
+			public const int alarmSpinner = 2131492964;
 			
 			// aapt resource value: 0x7f0c0016
 			public const int always = 2131492886;
@@ -1649,32 +1652,32 @@ namespace Gdje_mi_je_auto1
 			// aapt resource value: 0x7f0c002b
 			public const int book_now = 2131492907;
 			
-			// aapt resource value: 0x7f0c0075
-			public const int btnLocations = 2131492981;
+			// aapt resource value: 0x7f0c0076
+			public const int btnLocations = 2131492982;
+			
+			// aapt resource value: 0x7f0c0068
+			public const int btnUgasi = 2131492968;
 			
 			// aapt resource value: 0x7f0c0067
-			public const int btnUgasi = 2131492967;
+			public const int btnUpali = 2131492967;
 			
-			// aapt resource value: 0x7f0c0066
-			public const int btnUpali = 2131492966;
+			// aapt resource value: 0x7f0c0057
+			public const int btnVrijemeAlarma = 2131492951;
 			
-			// aapt resource value: 0x7f0c0055
-			public const int btnVrijemeAlarma = 2131492949;
+			// aapt resource value: 0x7f0c0075
+			public const int btnZones = 2131492981;
 			
-			// aapt resource value: 0x7f0c0074
-			public const int btnZones = 2131492980;
+			// aapt resource value: 0x7f0c0083
+			public const int btn_change_time = 2131492995;
 			
-			// aapt resource value: 0x7f0c0082
-			public const int btn_change_time = 2131492994;
+			// aapt resource value: 0x7f0c0087
+			public const int btn_save_time = 2131492999;
 			
-			// aapt resource value: 0x7f0c0086
-			public const int btn_save_time = 2131492998;
+			// aapt resource value: 0x7f0c005a
+			public const int button1 = 2131492954;
 			
-			// aapt resource value: 0x7f0c0058
-			public const int button1 = 2131492952;
-			
-			// aapt resource value: 0x7f0c0059
-			public const int button2 = 2131492953;
+			// aapt resource value: 0x7f0c005b
+			public const int button2 = 2131492955;
 			
 			// aapt resource value: 0x7f0c0028
 			public const int buyButton = 2131492904;
@@ -1694,8 +1697,8 @@ namespace Gdje_mi_je_auto1
 			// aapt resource value: 0x7f0c0017
 			public const int collapseActionView = 2131492887;
 			
-			// aapt resource value: 0x7f0c0057
-			public const int columnHeader1 = 2131492951;
+			// aapt resource value: 0x7f0c0059
+			public const int columnHeader1 = 2131492953;
 			
 			// aapt resource value: 0x7f0c0043
 			public const int decor_content_parent = 2131492931;
@@ -1703,17 +1706,17 @@ namespace Gdje_mi_je_auto1
 			// aapt resource value: 0x7f0c0038
 			public const int default_activity_button = 2131492920;
 			
-			// aapt resource value: 0x7f0c006f
-			public const int denseSpinner = 2131492975;
+			// aapt resource value: 0x7f0c0070
+			public const int denseSpinner = 2131492976;
 			
 			// aapt resource value: 0x7f0c001b
 			public const int dialog = 2131492891;
 			
-			// aapt resource value: 0x7f0c0065
-			public const int dialogList = 2131492965;
+			// aapt resource value: 0x7f0c0066
+			public const int dialogList = 2131492966;
 			
-			// aapt resource value: 0x7f0c0064
-			public const int dialog_btn = 2131492964;
+			// aapt resource value: 0x7f0c0065
+			public const int dialog_btn = 2131492965;
 			
 			// aapt resource value: 0x7f0c000c
 			public const int disableHome = 2131492876;
@@ -1724,23 +1727,23 @@ namespace Gdje_mi_je_auto1
 			// aapt resource value: 0x7f0c001c
 			public const int dropdown = 2131492892;
 			
-			// aapt resource value: 0x7f0c008c
-			public const int editText_message = 2131493004;
+			// aapt resource value: 0x7f0c008d
+			public const int editText_message = 2131493005;
 			
-			// aapt resource value: 0x7f0c008b
-			public const int editText_number = 2131493003;
+			// aapt resource value: 0x7f0c008c
+			public const int editText_number = 2131493004;
 			
 			// aapt resource value: 0x7f0c0047
 			public const int edit_query = 2131492935;
 			
-			// aapt resource value: 0x7f0c0081
-			public const int edit_time_automat = 2131492993;
+			// aapt resource value: 0x7f0c0082
+			public const int edit_time_automat = 2131492994;
 			
 			// aapt resource value: 0x7f0c0014
 			public const int end = 2131492884;
 			
-			// aapt resource value: 0x7f0c0054
-			public const int etVrijemeAlarma = 2131492948;
+			// aapt resource value: 0x7f0c0056
+			public const int etVrijemeAlarma = 2131492950;
 			
 			// aapt resource value: 0x7f0c0036
 			public const int expand_activities_button = 2131492918;
@@ -1781,29 +1784,29 @@ namespace Gdje_mi_je_auto1
 			// aapt resource value: 0x7f0c0039
 			public const int list_item = 2131492921;
 			
-			// aapt resource value: 0x7f0c0068
-			public const int locationsClear = 2131492968;
+			// aapt resource value: 0x7f0c0069
+			public const int locationsClear = 2131492969;
 			
-			// aapt resource value: 0x7f0c0072
-			public const int map = 2131492978;
+			// aapt resource value: 0x7f0c0073
+			public const int map = 2131492979;
 			
 			// aapt resource value: 0x7f0c002a
 			public const int match_parent = 2131492906;
 			
-			// aapt resource value: 0x7f0c007e
-			public const int media_route_control_frame = 2131492990;
-			
 			// aapt resource value: 0x7f0c007f
-			public const int media_route_disconnect_button = 2131492991;
+			public const int media_route_control_frame = 2131492991;
 			
-			// aapt resource value: 0x7f0c007b
-			public const int media_route_list = 2131492987;
+			// aapt resource value: 0x7f0c0080
+			public const int media_route_disconnect_button = 2131492992;
 			
 			// aapt resource value: 0x7f0c007c
-			public const int media_route_volume_layout = 2131492988;
+			public const int media_route_list = 2131492988;
 			
 			// aapt resource value: 0x7f0c007d
-			public const int media_route_volume_slider = 2131492989;
+			public const int media_route_volume_layout = 2131492989;
+			
+			// aapt resource value: 0x7f0c007e
+			public const int media_route_volume_slider = 2131492990;
 			
 			// aapt resource value: 0x7f0c0015
 			public const int middle = 2131492885;
@@ -1820,8 +1823,8 @@ namespace Gdje_mi_je_auto1
 			// aapt resource value: 0x7f0c000a
 			public const int normal = 2131492874;
 			
-			// aapt resource value: 0x7f0c006d
-			public const int normalSpinner = 2131492973;
+			// aapt resource value: 0x7f0c006e
+			public const int normalSpinner = 2131492974;
 			
 			// aapt resource value: 0x7f0c0025
 			public const int production = 2131492901;
@@ -1835,14 +1838,14 @@ namespace Gdje_mi_je_auto1
 			// aapt resource value: 0x7f0c003f
 			public const int radio = 2131492927;
 			
-			// aapt resource value: 0x7f0c005b
-			public const int registrationPicture1 = 2131492955;
-			
-			// aapt resource value: 0x7f0c005c
-			public const int registrationPicture2 = 2131492956;
-			
 			// aapt resource value: 0x7f0c005d
-			public const int registrationPicture3 = 2131492957;
+			public const int registrationPicture1 = 2131492957;
+			
+			// aapt resource value: 0x7f0c005e
+			public const int registrationPicture2 = 2131492958;
+			
+			// aapt resource value: 0x7f0c005f
+			public const int registrationPicture3 = 2131492959;
 			
 			// aapt resource value: 0x7f0c0026
 			public const int sandbox = 2131492902;
@@ -1850,8 +1853,8 @@ namespace Gdje_mi_je_auto1
 			// aapt resource value: 0x7f0c0021
 			public const int satellite = 2131492897;
 			
-			// aapt resource value: 0x7f0c0069
-			public const int scrollView1 = 2131492969;
+			// aapt resource value: 0x7f0c006a
+			public const int scrollView1 = 2131492970;
 			
 			// aapt resource value: 0x7f0c0049
 			public const int search_badge = 2131492937;
@@ -1886,8 +1889,8 @@ namespace Gdje_mi_je_auto1
 			// aapt resource value: 0x7f0c0029
 			public const int selectionDetails = 2131492905;
 			
-			// aapt resource value: 0x7f0c008d
-			public const int sendSMS = 2131493005;
+			// aapt resource value: 0x7f0c008e
+			public const int sendSMS = 2131493006;
 			
 			// aapt resource value: 0x7f0c003e
 			public const int shortcut = 2131492926;
@@ -1901,26 +1904,26 @@ namespace Gdje_mi_je_auto1
 			// aapt resource value: 0x7f0c0011
 			public const int showTitle = 2131492881;
 			
-			// aapt resource value: 0x7f0c0096
-			public const int speedSpinner = 2131493014;
+			// aapt resource value: 0x7f0c0097
+			public const int speedSpinner = 2131493015;
 			
-			// aapt resource value: 0x7f0c0073
-			public const int spinner1 = 2131492979;
+			// aapt resource value: 0x7f0c0074
+			public const int spinner1 = 2131492980;
 			
 			// aapt resource value: 0x7f0c0007
 			public const int split_action_bar = 2131492871;
 			
-			// aapt resource value: 0x7f0c0099
-			public const int startAlarm = 2131493017;
-			
-			// aapt resource value: 0x7f0c0097
-			public const int startMap = 2131493015;
+			// aapt resource value: 0x7f0c009a
+			public const int startAlarm = 2131493018;
 			
 			// aapt resource value: 0x7f0c0098
-			public const int startPay = 2131493016;
+			public const int startMap = 2131493016;
 			
-			// aapt resource value: 0x7f0c009a
-			public const int startSettings = 2131493018;
+			// aapt resource value: 0x7f0c0099
+			public const int startPay = 2131493017;
+			
+			// aapt resource value: 0x7f0c009b
+			public const int startSettings = 2131493019;
 			
 			// aapt resource value: 0x7f0c0027
 			public const int strict_sandbox = 2131492903;
@@ -1931,38 +1934,38 @@ namespace Gdje_mi_je_auto1
 			// aapt resource value: 0x7f0c000b
 			public const int tabMode = 2131492875;
 			
-			// aapt resource value: 0x7f0c0076
-			public const int tableRow1 = 2131492982;
+			// aapt resource value: 0x7f0c0077
+			public const int tableRow1 = 2131492983;
 			
-			// aapt resource value: 0x7f0c0083
-			public const int tableRow3 = 2131492995;
+			// aapt resource value: 0x7f0c0084
+			public const int tableRow3 = 2131492996;
 			
 			// aapt resource value: 0x7f0c0022
 			public const int terrain = 2131492898;
 			
-			// aapt resource value: 0x7f0c006a
-			public const int textLocations = 2131492970;
+			// aapt resource value: 0x7f0c006b
+			public const int textLocations = 2131492971;
 			
-			// aapt resource value: 0x7f0c008a
-			public const int textView = 2131493002;
+			// aapt resource value: 0x7f0c008b
+			public const int textView = 2131493003;
 			
-			// aapt resource value: 0x7f0c0053
-			public const int textView1 = 2131492947;
+			// aapt resource value: 0x7f0c0055
+			public const int textView1 = 2131492949;
 			
-			// aapt resource value: 0x7f0c0084
-			public const int textView2 = 2131492996;
+			// aapt resource value: 0x7f0c0085
+			public const int textView2 = 2131492997;
 			
-			// aapt resource value: 0x7f0c0080
-			public const int text_view1 = 2131492992;
+			// aapt resource value: 0x7f0c0081
+			public const int text_view1 = 2131492993;
 			
 			// aapt resource value: 0x7f0c003b
 			public const int title = 2131492923;
 			
-			// aapt resource value: 0x7f0c0078
-			public const int toggleButton1 = 2131492984;
+			// aapt resource value: 0x7f0c0079
+			public const int toggleButton1 = 2131492985;
 			
-			// aapt resource value: 0x7f0c007a
-			public const int toggleButton2 = 2131492986;
+			// aapt resource value: 0x7f0c007b
+			public const int toggleButton2 = 2131492987;
 			
 			// aapt resource value: 0x7f0c0008
 			public const int up = 2131492872;
@@ -1976,26 +1979,26 @@ namespace Gdje_mi_je_auto1
 			// aapt resource value: 0x7f0c001d
 			public const int wrap_content = 2131492893;
 			
-			// aapt resource value: 0x7f0c008e
-			public const int zona01_btn = 2131493006;
-			
 			// aapt resource value: 0x7f0c008f
-			public const int zona1_btn = 2131493007;
+			public const int zona01_btn = 2131493007;
 			
 			// aapt resource value: 0x7f0c0090
-			public const int zona2_btn = 2131493008;
+			public const int zona1_btn = 2131493008;
 			
 			// aapt resource value: 0x7f0c0091
-			public const int zona3_btn = 2131493009;
+			public const int zona2_btn = 2131493009;
 			
 			// aapt resource value: 0x7f0c0092
-			public const int zona4_1_btn = 2131493010;
+			public const int zona3_btn = 2131493010;
 			
 			// aapt resource value: 0x7f0c0093
-			public const int zona4_2_btn = 2131493011;
+			public const int zona4_1_btn = 2131493011;
 			
-			// aapt resource value: 0x7f0c0085
-			public const int zoneSpinner = 2131492997;
+			// aapt resource value: 0x7f0c0094
+			public const int zona4_2_btn = 2131493012;
+			
+			// aapt resource value: 0x7f0c0086
+			public const int zoneSpinner = 2131492998;
 			
 			static Id()
 			{
@@ -2099,91 +2102,94 @@ namespace Gdje_mi_je_auto1
 			public const int abc_simple_dropdown_hint = 2130903062;
 			
 			// aapt resource value: 0x7f030017
-			public const int AddNewAlarm = 2130903063;
+			public const int About = 2130903063;
 			
 			// aapt resource value: 0x7f030018
-			public const int Alarm_Main = 2130903064;
+			public const int AddNewAlarm = 2130903064;
 			
 			// aapt resource value: 0x7f030019
-			public const int AlarmSeparator = 2130903065;
+			public const int Alarm_Main = 2130903065;
 			
 			// aapt resource value: 0x7f03001a
-			public const int AlertDialog = 2130903066;
+			public const int AlarmSeparator = 2130903066;
 			
 			// aapt resource value: 0x7f03001b
-			public const int ChangeRegistrationPicture = 2130903067;
+			public const int AlertDialog = 2130903067;
 			
 			// aapt resource value: 0x7f03001c
-			public const int ChooseAlarmSound = 2130903068;
+			public const int ChangeRegistrationPicture = 2130903068;
 			
 			// aapt resource value: 0x7f03001d
-			public const int ChooseRegistration = 2130903069;
+			public const int ChooseAlarmSound = 2130903069;
 			
 			// aapt resource value: 0x7f03001e
-			public const int ChooseReminderSound = 2130903070;
+			public const int ChooseRegistration = 2130903070;
 			
 			// aapt resource value: 0x7f03001f
-			public const int ChooseReminderTime = 2130903071;
+			public const int ChooseReminderSound = 2130903071;
 			
 			// aapt resource value: 0x7f030020
-			public const int dialog_fragment_layout = 2130903072;
+			public const int ChooseReminderTime = 2130903072;
 			
 			// aapt resource value: 0x7f030021
-			public const int DialogList = 2130903073;
+			public const int dialog_fragment_layout = 2130903073;
 			
 			// aapt resource value: 0x7f030022
-			public const int EditExistingAlarm = 2130903074;
+			public const int DialogList = 2130903074;
 			
 			// aapt resource value: 0x7f030023
-			public const int Locations = 2130903075;
+			public const int EditExistingAlarm = 2130903075;
 			
 			// aapt resource value: 0x7f030024
-			public const int LocationUpdateDensity = 2130903076;
+			public const int Locations = 2130903076;
 			
 			// aapt resource value: 0x7f030025
-			public const int MainFragment = 2130903077;
+			public const int LocationUpdateDensity = 2130903077;
 			
 			// aapt resource value: 0x7f030026
-			public const int MapLayout = 2130903078;
+			public const int MainFragment = 2130903078;
 			
 			// aapt resource value: 0x7f030027
-			public const int MessagesFromInboxSettings = 2130903079;
+			public const int MapLayout = 2130903079;
 			
 			// aapt resource value: 0x7f030028
-			public const int mr_media_route_chooser_dialog = 2130903080;
+			public const int MessagesFromInboxSettings = 2130903080;
 			
 			// aapt resource value: 0x7f030029
-			public const int mr_media_route_controller_dialog = 2130903081;
+			public const int mr_media_route_chooser_dialog = 2130903081;
 			
 			// aapt resource value: 0x7f03002a
-			public const int mr_media_route_list_item = 2130903082;
+			public const int mr_media_route_controller_dialog = 2130903082;
 			
 			// aapt resource value: 0x7f03002b
-			public const int packages = 2130903083;
+			public const int mr_media_route_list_item = 2130903083;
 			
 			// aapt resource value: 0x7f03002c
-			public const int Pay_Automat_Main_Enter = 2130903084;
+			public const int packages = 2130903084;
 			
 			// aapt resource value: 0x7f03002d
-			public const int Pay_Main = 2130903085;
+			public const int Pay_Automat_Main_Enter = 2130903085;
 			
 			// aapt resource value: 0x7f03002e
-			public const int Pay_SMS_Main = 2130903086;
+			public const int Pay_Main = 2130903086;
 			
 			// aapt resource value: 0x7f03002f
-			public const int Settings_Main = 2130903087;
+			public const int Pay_SMS_Main = 2130903087;
 			
 			// aapt resource value: 0x7f030030
-			public const int SettingsSeparator = 2130903088;
+			public const int Settings_Main = 2130903088;
 			
 			// aapt resource value: 0x7f030031
-			public const int SpeedBetweenNodes = 2130903089;
+			public const int SettingsSeparator = 2130903089;
 			
 			// aapt resource value: 0x7f030032
-			public const int Start = 2130903090;
+			public const int SpeedBetweenNodes = 2130903090;
 			
 			// aapt resource value: 0x7f030033
-			public const int support_simple_spinner_dropdown_item = 2130903091;
+			public const int Start = 2130903091;
+			
+			// aapt resource value: 0x7f030034
+			public const int support_simple_spinner_dropdown_item = 2130903092;
 			
 			static Layout()
 			{
@@ -2213,6 +2219,9 @@ namespace Gdje_mi_je_auto1
 		
 		public partial class String
 		{
+			
+			// aapt resource value: 0x7f06001c
+			public const int AboutAuthors = 2131099676;
 			
 			// aapt resource value: 0x7f060011
 			public const int ChangeRegistrationPictureMain = 2131099665;
@@ -2274,152 +2283,152 @@ namespace Gdje_mi_je_auto1
 			// aapt resource value: 0x7f060018
 			public const int Učitano = 2131099672;
 			
-			// aapt resource value: 0x7f06002a
-			public const int abc_action_bar_home_description = 2131099690;
-			
 			// aapt resource value: 0x7f06002b
-			public const int abc_action_bar_home_description_format = 2131099691;
+			public const int abc_action_bar_home_description = 2131099691;
 			
 			// aapt resource value: 0x7f06002c
-			public const int abc_action_bar_home_subtitle_description_format = 2131099692;
+			public const int abc_action_bar_home_description_format = 2131099692;
 			
 			// aapt resource value: 0x7f06002d
-			public const int abc_action_bar_up_description = 2131099693;
+			public const int abc_action_bar_home_subtitle_description_format = 2131099693;
 			
 			// aapt resource value: 0x7f06002e
-			public const int abc_action_menu_overflow_description = 2131099694;
+			public const int abc_action_bar_up_description = 2131099694;
 			
 			// aapt resource value: 0x7f06002f
-			public const int abc_action_mode_done = 2131099695;
+			public const int abc_action_menu_overflow_description = 2131099695;
 			
 			// aapt resource value: 0x7f060030
-			public const int abc_activity_chooser_view_see_all = 2131099696;
+			public const int abc_action_mode_done = 2131099696;
 			
 			// aapt resource value: 0x7f060031
-			public const int abc_activitychooserview_choose_application = 2131099697;
+			public const int abc_activity_chooser_view_see_all = 2131099697;
 			
 			// aapt resource value: 0x7f060032
-			public const int abc_searchview_description_clear = 2131099698;
+			public const int abc_activitychooserview_choose_application = 2131099698;
 			
 			// aapt resource value: 0x7f060033
-			public const int abc_searchview_description_query = 2131099699;
+			public const int abc_searchview_description_clear = 2131099699;
 			
 			// aapt resource value: 0x7f060034
-			public const int abc_searchview_description_search = 2131099700;
+			public const int abc_searchview_description_query = 2131099700;
 			
 			// aapt resource value: 0x7f060035
-			public const int abc_searchview_description_submit = 2131099701;
+			public const int abc_searchview_description_search = 2131099701;
 			
 			// aapt resource value: 0x7f060036
-			public const int abc_searchview_description_voice = 2131099702;
+			public const int abc_searchview_description_submit = 2131099702;
 			
 			// aapt resource value: 0x7f060037
-			public const int abc_shareactionprovider_share_with = 2131099703;
+			public const int abc_searchview_description_voice = 2131099703;
 			
 			// aapt resource value: 0x7f060038
-			public const int abc_shareactionprovider_share_with_application = 2131099704;
+			public const int abc_shareactionprovider_share_with = 2131099704;
 			
 			// aapt resource value: 0x7f060039
-			public const int abc_toolbar_collapse_description = 2131099705;
+			public const int abc_shareactionprovider_share_with_application = 2131099705;
 			
-			// aapt resource value: 0x7f06003c
-			public const int accept = 2131099708;
+			// aapt resource value: 0x7f06003a
+			public const int abc_toolbar_collapse_description = 2131099706;
+			
+			// aapt resource value: 0x7f06003d
+			public const int accept = 2131099709;
 			
 			// aapt resource value: 0x7f060000
 			public const int app_name = 2131099648;
 			
-			// aapt resource value: 0x7f060043
-			public const int common_android_wear_notification_needs_update_text = 2131099715;
-			
-			// aapt resource value: 0x7f060050
-			public const int common_android_wear_update_text = 2131099728;
-			
-			// aapt resource value: 0x7f06004e
-			public const int common_android_wear_update_title = 2131099726;
-			
-			// aapt resource value: 0x7f06004c
-			public const int common_google_play_services_enable_button = 2131099724;
-			
-			// aapt resource value: 0x7f06004b
-			public const int common_google_play_services_enable_text = 2131099723;
-			
-			// aapt resource value: 0x7f06004a
-			public const int common_google_play_services_enable_title = 2131099722;
-			
-			// aapt resource value: 0x7f060045
-			public const int common_google_play_services_error_notification_requested_by_msg = 2131099717;
-			
-			// aapt resource value: 0x7f060049
-			public const int common_google_play_services_install_button = 2131099721;
-			
-			// aapt resource value: 0x7f060047
-			public const int common_google_play_services_install_text_phone = 2131099719;
-			
-			// aapt resource value: 0x7f060048
-			public const int common_google_play_services_install_text_tablet = 2131099720;
-			
-			// aapt resource value: 0x7f060046
-			public const int common_google_play_services_install_title = 2131099718;
-			
-			// aapt resource value: 0x7f060054
-			public const int common_google_play_services_invalid_account_text = 2131099732;
-			
-			// aapt resource value: 0x7f060053
-			public const int common_google_play_services_invalid_account_title = 2131099731;
-			
 			// aapt resource value: 0x7f060044
-			public const int common_google_play_services_needs_enabling_title = 2131099716;
-			
-			// aapt resource value: 0x7f060052
-			public const int common_google_play_services_network_error_text = 2131099730;
+			public const int common_android_wear_notification_needs_update_text = 2131099716;
 			
 			// aapt resource value: 0x7f060051
-			public const int common_google_play_services_network_error_title = 2131099729;
-			
-			// aapt resource value: 0x7f060041
-			public const int common_google_play_services_notification_needs_installation_title = 2131099713;
-			
-			// aapt resource value: 0x7f060042
-			public const int common_google_play_services_notification_needs_update_title = 2131099714;
-			
-			// aapt resource value: 0x7f060040
-			public const int common_google_play_services_notification_ticker = 2131099712;
-			
-			// aapt resource value: 0x7f060055
-			public const int common_google_play_services_unknown_issue = 2131099733;
-			
-			// aapt resource value: 0x7f060057
-			public const int common_google_play_services_unsupported_text = 2131099735;
-			
-			// aapt resource value: 0x7f060056
-			public const int common_google_play_services_unsupported_title = 2131099734;
-			
-			// aapt resource value: 0x7f060058
-			public const int common_google_play_services_update_button = 2131099736;
+			public const int common_android_wear_update_text = 2131099729;
 			
 			// aapt resource value: 0x7f06004f
-			public const int common_google_play_services_update_text = 2131099727;
+			public const int common_android_wear_update_title = 2131099727;
 			
 			// aapt resource value: 0x7f06004d
-			public const int common_google_play_services_update_title = 2131099725;
+			public const int common_google_play_services_enable_button = 2131099725;
 			
-			// aapt resource value: 0x7f06005b
-			public const int common_open_on_phone = 2131099739;
+			// aapt resource value: 0x7f06004c
+			public const int common_google_play_services_enable_text = 2131099724;
+			
+			// aapt resource value: 0x7f06004b
+			public const int common_google_play_services_enable_title = 2131099723;
+			
+			// aapt resource value: 0x7f060046
+			public const int common_google_play_services_error_notification_requested_by_msg = 2131099718;
+			
+			// aapt resource value: 0x7f06004a
+			public const int common_google_play_services_install_button = 2131099722;
+			
+			// aapt resource value: 0x7f060048
+			public const int common_google_play_services_install_text_phone = 2131099720;
+			
+			// aapt resource value: 0x7f060049
+			public const int common_google_play_services_install_text_tablet = 2131099721;
+			
+			// aapt resource value: 0x7f060047
+			public const int common_google_play_services_install_title = 2131099719;
+			
+			// aapt resource value: 0x7f060055
+			public const int common_google_play_services_invalid_account_text = 2131099733;
+			
+			// aapt resource value: 0x7f060054
+			public const int common_google_play_services_invalid_account_title = 2131099732;
+			
+			// aapt resource value: 0x7f060045
+			public const int common_google_play_services_needs_enabling_title = 2131099717;
+			
+			// aapt resource value: 0x7f060053
+			public const int common_google_play_services_network_error_text = 2131099731;
+			
+			// aapt resource value: 0x7f060052
+			public const int common_google_play_services_network_error_title = 2131099730;
+			
+			// aapt resource value: 0x7f060042
+			public const int common_google_play_services_notification_needs_installation_title = 2131099714;
+			
+			// aapt resource value: 0x7f060043
+			public const int common_google_play_services_notification_needs_update_title = 2131099715;
+			
+			// aapt resource value: 0x7f060041
+			public const int common_google_play_services_notification_ticker = 2131099713;
+			
+			// aapt resource value: 0x7f060056
+			public const int common_google_play_services_unknown_issue = 2131099734;
+			
+			// aapt resource value: 0x7f060058
+			public const int common_google_play_services_unsupported_text = 2131099736;
+			
+			// aapt resource value: 0x7f060057
+			public const int common_google_play_services_unsupported_title = 2131099735;
 			
 			// aapt resource value: 0x7f060059
-			public const int common_signin_button_text = 2131099737;
+			public const int common_google_play_services_update_button = 2131099737;
+			
+			// aapt resource value: 0x7f060050
+			public const int common_google_play_services_update_text = 2131099728;
+			
+			// aapt resource value: 0x7f06004e
+			public const int common_google_play_services_update_title = 2131099726;
+			
+			// aapt resource value: 0x7f06005c
+			public const int common_open_on_phone = 2131099740;
 			
 			// aapt resource value: 0x7f06005a
-			public const int common_signin_button_text_long = 2131099738;
+			public const int common_signin_button_text = 2131099738;
+			
+			// aapt resource value: 0x7f06005b
+			public const int common_signin_button_text_long = 2131099739;
+			
+			// aapt resource value: 0x7f060040
+			public const int create_calendar_message = 2131099712;
 			
 			// aapt resource value: 0x7f06003f
-			public const int create_calendar_message = 2131099711;
+			public const int create_calendar_title = 2131099711;
 			
 			// aapt resource value: 0x7f06003e
-			public const int create_calendar_title = 2131099710;
-			
-			// aapt resource value: 0x7f06003d
-			public const int decline = 2131099709;
+			public const int decline = 2131099710;
 			
 			// aapt resource value: 0x7f060003
 			public const int editText_message = 2131099651;
@@ -2430,32 +2439,32 @@ namespace Gdje_mi_je_auto1
 			// aapt resource value: 0x7f06000d
 			public const int high_density_prompt = 2131099661;
 			
-			// aapt resource value: 0x7f06001c
-			public const int map_prompt = 2131099676;
-			
-			// aapt resource value: 0x7f060024
-			public const int mr_media_route_button_content_description = 2131099684;
+			// aapt resource value: 0x7f06001d
+			public const int map_prompt = 2131099677;
 			
 			// aapt resource value: 0x7f060025
-			public const int mr_media_route_chooser_searching = 2131099685;
+			public const int mr_media_route_button_content_description = 2131099685;
 			
 			// aapt resource value: 0x7f060026
-			public const int mr_media_route_chooser_title = 2131099686;
+			public const int mr_media_route_chooser_searching = 2131099686;
 			
 			// aapt resource value: 0x7f060027
-			public const int mr_media_route_controller_disconnect = 2131099687;
+			public const int mr_media_route_chooser_title = 2131099687;
 			
 			// aapt resource value: 0x7f060028
-			public const int mr_system_route_name = 2131099688;
+			public const int mr_media_route_controller_disconnect = 2131099688;
 			
 			// aapt resource value: 0x7f060029
-			public const int mr_user_route_category_name = 2131099689;
+			public const int mr_system_route_name = 2131099689;
+			
+			// aapt resource value: 0x7f06002a
+			public const int mr_user_route_category_name = 2131099690;
 			
 			// aapt resource value: 0x7f06000c
 			public const int normal_density_prompt = 2131099660;
 			
-			// aapt resource value: 0x7f06001d
-			public const int provider_prompt = 2131099677;
+			// aapt resource value: 0x7f06001e
+			public const int provider_prompt = 2131099678;
 			
 			// aapt resource value: 0x7f060001
 			public const int sendSMS = 2131099649;
@@ -2463,35 +2472,35 @@ namespace Gdje_mi_je_auto1
 			// aapt resource value: 0x7f060010
 			public const int speed_prompt = 2131099664;
 			
-			// aapt resource value: 0x7f06003b
-			public const int store_picture_message = 2131099707;
+			// aapt resource value: 0x7f06003c
+			public const int store_picture_message = 2131099708;
 			
-			// aapt resource value: 0x7f06003a
-			public const int store_picture_title = 2131099706;
+			// aapt resource value: 0x7f06003b
+			public const int store_picture_title = 2131099707;
 			
 			// aapt resource value: 0x7f060005
 			public const int valid_check = 2131099653;
 			
-			// aapt resource value: 0x7f06005c
-			public const int wallet_buy_button_place_holder = 2131099740;
-			
-			// aapt resource value: 0x7f06001e
-			public const int zona01_number = 2131099678;
+			// aapt resource value: 0x7f06005d
+			public const int wallet_buy_button_place_holder = 2131099741;
 			
 			// aapt resource value: 0x7f06001f
-			public const int zona1_number = 2131099679;
+			public const int zona01_number = 2131099679;
 			
 			// aapt resource value: 0x7f060020
-			public const int zona2_number = 2131099680;
+			public const int zona1_number = 2131099680;
 			
 			// aapt resource value: 0x7f060021
-			public const int zona3_number = 2131099681;
+			public const int zona2_number = 2131099681;
 			
 			// aapt resource value: 0x7f060022
-			public const int zona4_1_number = 2131099682;
+			public const int zona3_number = 2131099682;
 			
 			// aapt resource value: 0x7f060023
-			public const int zona4_2_number = 2131099683;
+			public const int zona4_1_number = 2131099683;
+			
+			// aapt resource value: 0x7f060024
+			public const int zona4_2_number = 2131099684;
 			
 			static String()
 			{

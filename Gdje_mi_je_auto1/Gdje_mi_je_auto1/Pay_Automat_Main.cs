@@ -23,7 +23,7 @@ using System.Runtime.InteropServices;
 namespace Gdje_mi_je_auto1
 {
 
-	[Activity ( Label = "Automat",Icon = "@drawable/main_icon",NoHistory = true,ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]			
+	[Activity ( Label = "Automat",NoHistory = true,ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]			
 	public class Pay_Automat_Main : Activity
 	{
 		private Button btn_change_time;
@@ -36,6 +36,8 @@ namespace Gdje_mi_je_auto1
 		private int hour;
 		private int minute;
 		private bool valid_check_automat=false;
+
+		Spinner spinnerPayA;
 
 		ListViewAdapter ls = new ListViewAdapter ();
 
@@ -55,15 +57,12 @@ namespace Gdje_mi_je_auto1
 
 			listView = FindViewById<ListView> (Resource.Id.List_SMS_Main_History);
 
-			Spinner spinnerPayA = FindViewById<Spinner> (Resource.Id.zoneSpinner);
+			spinnerPayA = FindViewById<Spinner> (Resource.Id.zoneSpinner);
 			spinnerList = FillSpinnerWithData ();
 
 			ArrayAdapter<string> spinnerArrayAdapter = new ArrayAdapter<string> (this, Android.Resource.Layout.SimpleSpinnerItem, spinnerList);
 			spinnerArrayAdapter.SetDropDownViewResource (Android.Resource.Layout.SimpleSpinnerDropDownItem);
 			spinnerPayA.Adapter = spinnerArrayAdapter;
-
-			//TODO kad se klikne izvan dialoga, da se dialog ugasi
-			
 
 			#region PuniListu
 			//Log.Debug ("ON CREATE","DULJINA"+new FileInfo(message_Data).Length+" -- "+Enable_message_update);
@@ -137,15 +136,23 @@ namespace Gdje_mi_je_auto1
 		}
 
 		private void HandlePositiveButtonClick (object sender, EventArgs e) {
-			//TODO predat argumente za paljenje alarma
+			var prefs = Application.Context.GetSharedPreferences ("MySharedPrefs", FileCreationMode.Private);
+			var prefsEdit = prefs.Edit ();
+			int automat= prefs.GetInt ("MyAutomatAlarms", 0);
+			if (automat > 100) {
+				automat = 0;
+			}else{
+				automat += 1;
+			}
+			prefsEdit.PutInt ("MyAutomatAlarms", automat).Commit();
+
+//			NotificationAlertReceiver nar = new NotificationAlertReceiver ();
+
+			String chosenSpinner=spinnerPayA.SelectedItem.ToString ();
 			String[] time=text_time_screen.Text.Split (':');
-			//TODO promijenit ovu 2
-			String min = (Convert.ToInt32 (time [1]) + 2).ToString ();
-			Log.Debug ("sat",time[0]);
-			Log.Debug ("min",min);
-			//TODO promijenit mindif
-			Alarms.mindif = "1";
-			Alarms.createAlarm(time[0], min, "Zona 1","43312");
+			String min = (Convert.ToInt32 (time [1])).ToString ();
+
+			Alarms.createAlarm(time[0], min, chosenSpinner,automat.ToString ());
 			var activity_pay_main=new Intent (this,typeof(Pay_Main));
 			StartActivity (activity_pay_main);
 		}

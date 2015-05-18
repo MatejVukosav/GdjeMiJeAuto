@@ -9,7 +9,7 @@ using Android.Widget;
 
 namespace Gdje_mi_je_auto1
 {
-	[Activity (Label = "Locations")]			
+	[Activity (ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]			
 	public class LocationsActivity : Activity
 	{
 		private TextView textLocations;
