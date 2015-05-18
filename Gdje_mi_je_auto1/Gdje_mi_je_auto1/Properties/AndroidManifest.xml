@@ -11,6 +11,7 @@
 	<uses-permission android:name="android.permission.BROADCAST_SMS" />
 	<uses-permission android:name="android.permission.READ_SMS" />
 	<uses-permission android:name="android.permission.RECEIVE_SMS" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 	<uses-feature android:glEsVersion="0x00020000" android:required="true" />
 	<!-- We need to be able to download map tiles and access Google Play Services-->
 	<uses-permission android:name="android.permission.INTERNET" />
@@ -28,6 +29,9 @@
 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 	<uses-permission android:name="android.permission.READ_OWNER_DATA" />
 	<uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS" />
+	<uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+	<uses-permission android:name="android.permission.RECORD_AUDIO" />
+	<uses-permission android:name="android.permission.READ_CALENDAR" />
 	<application android:label="Gdje mi je auto?! New">&gt;
-		<!-- Put your Google Maps V2 API Key here. --><meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyA3XTDS9IvWASDG9Yewqgolvpzx287nyS8" /><meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" /></application>
+		<!-- Put your Google Maps V2 API Key here. --><meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyA3XTDS9IvWASDG9Yewqgolvpzx287nyS8" /><meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" /><receiver android:name="NotifAlarmBroadcast"></receiver><receiver android:name="NotifReminderBroadcast"></receiver><receiver android:name="DeviceBootReceiver"></receiver></application>
 </manifest>

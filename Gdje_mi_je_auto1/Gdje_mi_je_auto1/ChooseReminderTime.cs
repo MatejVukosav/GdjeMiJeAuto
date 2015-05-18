@@ -21,6 +21,9 @@ namespace Gdje_mi_je_auto1
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.ChooseReminderTime);
 			//reminder vrijeme prije obavijesti
+			//Spinner spinnerPayA = FindViewById<Spinner> (Resource.Id.ala);
+
+
 		}
 	}
 }

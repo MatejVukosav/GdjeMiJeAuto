@@ -5,6 +5,19 @@ using System.Globalization;
 using System.IO;
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using System.Threading.Tasks;
+using System.Net;
+using System.IO;
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
+using System;
+using Android.App;
+using Android.Widget;
+using Android.OS;
+using Android.Gms.Maps;
+using Android.Gms.Maps.Model;
+using Android.Locations;
+using System.Json;
 
 namespace Gdje_mi_je_auto1
 {
@@ -20,10 +33,12 @@ namespace Gdje_mi_je_auto1
 		private const int white = unchecked((int) 0x60FFFFFF);
 
 		private string locationsFile;
+	
 
 
 		private static PolygonOptions[] zones = new PolygonOptions[34];
 		private static Polygon[] drawnZones = new Polygon[34];
+		private Polyline ruta;
 		private static List<Marker> markers = new List<Marker>();
 
 		private static int[] zoneColors = {cyan,cyan,cyan,red,green,green,green,green,green,yellow,green,green,green,green,green,yellow,yellow,yellow,yellow,yellow,yellow,yellow,yellow,yellow,green,blue,blue,blue,red,darkRed,green,yellow,darkRed,darkRed};
@@ -209,6 +224,114 @@ namespace Gdje_mi_je_auto1
 			foreach (Marker marker in markers) {
 				marker.Remove ();
 			}
+		}
+		private async Task<JsonValue> getJson (string url)
+		{
+			// Create an HTTP web request using the URL:
+			HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create (new Uri (url));
+			request.ContentType = "application/json";
+			request.Method = "GET";
+
+			// Send the request to the server and wait for the response:
+			using (WebResponse response = await request.GetResponseAsync ())
+			{
+				// Get a stream representation of the HTTP web response:
+				using (Stream stream = response.GetResponseStream ())
+				{
+					// Use this stream to build a JSON document object:
+					JsonValue jsonDoc = await Task.Run (() => JsonObject.Load (stream));
+					Console.Out.WriteLine("Response: {0}", jsonDoc.ToString ());
+
+					// Return the JSON document:
+					return jsonDoc;
+				}
+			}
+		}
+		private List<LatLng> DecodePolylinePoints(string encodedPoints) 
+		{
+			//Console.WriteLine (encodedPoints);
+			if (encodedPoints == null || encodedPoints == "") return null;
+			List<LatLng> poly = new List<LatLng>();
+			char[] polylinechars = encodedPoints.ToCharArray();
+			int index = 0;
+			int currentLat = 0;
+			int currentLng = 0;
+			int next5bits;
+			int sum;
+			int shifter;
+			try
+			{
+				while (index < polylinechars.Length)
+				{
+					// calculate next latitude
+					sum = 0;
+					shifter = 0;
+					do
+					{
+						next5bits = (int)polylinechars[index++] - 63;
+						sum |= (next5bits & 31) << shifter;
+						shifter += 5;
+					} while (next5bits >= 32 && index < polylinechars.Length);
+					if (index >= polylinechars.Length)
+						break;
+					currentLat += (sum & 1) == 1 ? ~(sum >> 1) : (sum >> 1);
+					//calculate next longitude
+					sum = 0;
+					shifter = 0;
+					do
+					{
+						next5bits = (int)polylinechars[index++] - 63;
+						sum |= (next5bits & 31) << shifter;
+						shifter += 5;
+					} while (next5bits >= 32 && index < polylinechars.Length);
+					if (index >= polylinechars.Length && next5bits >= 32)
+						break;
+					currentLng += (sum & 1) == 1 ? ~(sum >> 1) : (sum >> 1);
+					LatLng p = new LatLng(Convert.ToDouble(currentLat) / 100000.0,
+						Convert.ToDouble(currentLng) / 100000.0);
+					poly.Add(p);
+				} 
+			}
+			catch (Exception ex)
+			{
+				//log
+			}
+			return poly;
+		}
+
+		public async Task<Polyline> DrawRoute (string origin, string destination)
+		{
+			//string origin="45.81444,15.97798";
+			//string destination="45.80109,15.97082";
+			//Polyline ruta;
+			PolylineOptions linija = new PolylineOptions();
+			linija.InvokeColor(-16776961);
+			string url = "https://maps.googleapis.com/maps/api/directions/json?origin="+origin+"&destination="+destination+"&mode=walking&region=hr&key=AIzaSyAi5T6O9DsVUJ3HMN4xDpfGf9qupGjY7xQ";
+			var json = await getJson (url);
+			Console.WriteLine (url);
+			string jsonString = json.ToString ();
+			Regex points = new Regex ("\"polyline\": {\"points\": \"(.*?)},");
+			Match polypoints = points.Match (jsonString);
+			while (polypoints.Success) {
+				string finalni = polypoints.Groups [0].ToString ();
+				finalni=finalni.Substring(24, finalni.Length-24);
+				finalni=finalni.Remove(finalni.Length-3);
+				finalni = finalni.Replace("\\\\", "\\");
+				List<LatLng> privremeni = DecodePolylinePoints(finalni);
+				for (int i = 0; i <privremeni.Count; i++)
+				{
+					linija.Add (new LatLng (privremeni[i].Latitude, privremeni[i].Longitude));
+				}
+				polypoints = polypoints.NextMatch ();
+			}
+
+			try{
+				ruta.Remove();
+			}
+			catch (Exception ex){
+
+			}
+			return ruta=mMap.AddPolyline(linija);
 		}
 	}
 }

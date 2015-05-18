@@ -57,8 +57,11 @@ namespace Gdje_mi_je_auto1
 		{
 			mMap = googleMap;
 			mMap.MyLocationEnabled = true;
+			mMap.MarkerClick += MapOnMarkerClick;
 			setToZg (mMap);
-
+// OVO TREBA MAKNUT!!!
+			mMap.AddMarker (new MarkerOptions().SetPosition(new LatLng (45.81444, 15.97798)));
+			mMap.AddMarker (new MarkerOptions().SetPosition(new LatLng (45.82, 15.98)));
 			zoner = new Zoner (mMap);
 		}
 			
@@ -86,6 +89,21 @@ namespace Gdje_mi_je_auto1
 				btnLocations.Text = "Locations (on)";
 				locationsVisible = true;
 			}
+		}
+
+//		void btnLocations_Click (object sender, EventArgs e){
+//			LatLng origin = GeoFencer.getLocation ();
+//			//zoner.DrawRoute (origin.Latitude.ToString()+","+origin.Longitude.ToString());
+//		}
+
+		private void MapOnMarkerClick(object sender, GoogleMap.MarkerClickEventArgs markerClickEventArgs)
+		{
+			markerClickEventArgs.Handled = true;
+			Marker marker = markerClickEventArgs.Marker;
+			LatLng origin = GeoFencer.getLocation ();
+			LatLng destination = marker.Position;
+
+			zoner.DrawRoute (origin.Latitude.ToString()+","+origin.Longitude.ToString(), destination.Latitude.ToString()+","+destination.Longitude.ToString());
 		}
 
 		private void spinner_ItemSelected (object sender, AdapterView.ItemSelectedEventArgs e)

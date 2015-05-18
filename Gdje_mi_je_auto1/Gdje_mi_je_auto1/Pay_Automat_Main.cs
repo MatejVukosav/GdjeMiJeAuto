@@ -138,7 +138,14 @@ namespace Gdje_mi_je_auto1
 
 		private void HandlePositiveButtonClick (object sender, EventArgs e) {
 			//TODO predat argumente za paljenje alarma
-			Alarms.createAlarm("11", "39", "Zona 1","43312");
+			String[] time=text_time_screen.Text.Split (':');
+			//TODO promijenit ovu 2
+			String min = (Convert.ToInt32 (time [1]) + 2).ToString ();
+			Log.Debug ("sat",time[0]);
+			Log.Debug ("min",min);
+			//TODO promijenit mindif
+			Alarms.mindif = "1";
+			Alarms.createAlarm(time[0], min, "Zona 1","43312");
 			var activity_pay_main=new Intent (this,typeof(Pay_Main));
 			StartActivity (activity_pay_main);
 		}

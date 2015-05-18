@@ -100,7 +100,7 @@ C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\layout\alarmseparator.xml
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\layout\addnewalarm.xml
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\layout\editexistingalarm.xml
+C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\drawable-hdpi\phone_alarm.png
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\R.cs.flag
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\uploadflags.txt
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\Gdje_mi_je_auto1.csprojResolveAssemblyReference.cache
-C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\drawable-hdpi\phone_alarm.png

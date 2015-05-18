@@ -15,12 +15,17 @@ namespace Gdje_mi_je_auto1
 {
 	[Activity (Label = "LocationUpdateDensity",NoHistory = true)]			
 	public class LocationUpdateDensity : Activity
+
 	{
+		private Button btnLocations;
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.LocationUpdateDensity);
-
+			btnLocations = FindViewById<Button>(Resource.Id.LocationRecords);
+			btnLocations.Click += delegate {
+				StartActivity (typeof(LocationsActivity));
+			};
 		}
 	}
 }

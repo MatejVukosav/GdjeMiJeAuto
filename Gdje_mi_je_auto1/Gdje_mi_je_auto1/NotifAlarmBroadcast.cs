@@ -8,6 +8,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Android.Util;
 
 namespace Gdje_mi_je_auto1
 {
@@ -17,22 +18,30 @@ namespace Gdje_mi_je_auto1
 		private string rega;
 		private string zona;
 		Vibrator vibrator;
-		Dialog dialog;
+
 
 		public override void OnReceive (Context context, Intent intent)
 		{
-			AlertDialog.Builder builder = new AlertDialog.Builder (context);
+			Log.Debug ("bee", "1");
+//			Alarms.playSound ();
+			var builder = new AlertDialog.Builder (context);
 			builder.SetTitle ("Istek parkinga");
-			builder.SetMessage (String.Format("Isteklo je vrijeme parkinga.", System.Environment.NewLine));
-			builder.SetPositiveButton ("OK", delegate { dialog.Dismiss();
+			//builder.SetMessage (String.Format("Isteklo je vrijeme parkinga.", System.Environment.NewLine));
+			Log.Debug ("bee", "2");
+			var dialog1 = builder.Create ();
+			builder.SetPositiveButton ("OK", delegate { 
+				//		Alarms.stopSound();
+				Log.Debug ("bee", "3");
+				dialog1.Dismiss();
 			});
 
 			vibrator = (Vibrator)context.GetSystemService (Context.VibratorService);
 			vibrator.Vibrate (500);
+			Log.Debug ("bee", "4");
 
-			dialog = builder.Create ();
-			dialog.Show ();
-
+			Log.Debug ("bee", "5");
+			dialog1.Show ();
+			Log.Debug ("bee", "6");
 
 		}
 	}

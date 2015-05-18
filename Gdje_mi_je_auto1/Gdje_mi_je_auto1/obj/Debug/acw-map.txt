@@ -130,6 +130,10 @@ Gdje_mi_je_auto1.NotifReminderBroadcast, Gdje_mi_je_auto1;md5cd61a8e1f9f2291d7d0
 Gdje_mi_je_auto1.NotifReminderBroadcast, Gdje_mi_je_auto1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5cd61a8e1f9f2291d7d02a5b72739b7e4.NotifReminderBroadcast
 Gdje_mi_je_auto1.NotifReminderBroadcast;md5cd61a8e1f9f2291d7d02a5b72739b7e4.NotifReminderBroadcast
 gdje_mi_je_auto1.NotifReminderBroadcast;md5cd61a8e1f9f2291d7d02a5b72739b7e4.NotifReminderBroadcast
+Gdje_mi_je_auto1.SMS_Sound, Gdje_mi_je_auto1;md5cd61a8e1f9f2291d7d02a5b72739b7e4.SMS_Sound
+Gdje_mi_je_auto1.SMS_Sound, Gdje_mi_je_auto1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5cd61a8e1f9f2291d7d02a5b72739b7e4.SMS_Sound
+Gdje_mi_je_auto1.SMS_Sound;md5cd61a8e1f9f2291d7d02a5b72739b7e4.SMS_Sound
+gdje_mi_je_auto1.SMS_Sound;md5cd61a8e1f9f2291d7d02a5b72739b7e4.SMS_Sound
 Android.Gms.Ads.DoubleClick.IAppEventListenerImplementor, GooglePlayServicesLib;mono.com.google.android.gms.ads.doubleclick.AppEventListenerImplementor
 Android.Gms.Ads.DoubleClick.IAppEventListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.ads.doubleclick.AppEventListenerImplementor
 Android.Gms.Ads.DoubleClick.IAppEventListenerImplementor;mono.com.google.android.gms.ads.doubleclick.AppEventListenerImplementor
@@ -318,10 +322,6 @@ Google.Ads.Mediation.IMediationInterstitialListenerImplementor, GooglePlayServic
 Google.Ads.Mediation.IMediationInterstitialListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.ads.mediation.MediationInterstitialListenerImplementor
 Google.Ads.Mediation.IMediationInterstitialListenerImplementor;mono.com.google.ads.mediation.MediationInterstitialListenerImplementor
 google.ads.mediation.IMediationInterstitialListenerImplementor;mono.com.google.ads.mediation.MediationInterstitialListenerImplementor
-Android.Support.V4.View.ViewPager/IOnPageChangeListenerImplementor, Xamarin.Android.Support.v4;mono.android.support.v4.view.ViewPager_OnPageChangeListenerImplementor
-Android.Support.V4.View.ViewPager/IOnPageChangeListenerImplementor, Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.android.support.v4.view.ViewPager_OnPageChangeListenerImplementor
-Android.Support.V4.View.ViewPager.IOnPageChangeListenerImplementor;mono.android.support.v4.view.ViewPager_OnPageChangeListenerImplementor
-android.support.v4.view.ViewPager_IOnPageChangeListenerImplementor;mono.android.support.v4.view.ViewPager_OnPageChangeListenerImplementor
 Android.Support.V4.App.FragmentManager/IOnBackStackChangedListenerImplementor, Xamarin.Android.Support.v4;mono.android.support.v4.app.FragmentManager_OnBackStackChangedListenerImplementor
 Android.Support.V4.App.FragmentManager/IOnBackStackChangedListenerImplementor, Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.android.support.v4.app.FragmentManager_OnBackStackChangedListenerImplementor
 Android.Support.V4.App.FragmentManager.IOnBackStackChangedListenerImplementor;mono.android.support.v4.app.FragmentManager_OnBackStackChangedListenerImplementor
@@ -330,10 +330,6 @@ Android.Support.V4.Content.Loader/IOnLoadCompleteListenerImplementor, Xamarin.An
 Android.Support.V4.Content.Loader/IOnLoadCompleteListenerImplementor, Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.android.support.v4.content.Loader_OnLoadCompleteListenerImplementor
 Android.Support.V4.Content.Loader.IOnLoadCompleteListenerImplementor;mono.android.support.v4.content.Loader_OnLoadCompleteListenerImplementor
 android.support.v4.content.Loader_IOnLoadCompleteListenerImplementor;mono.android.support.v4.content.Loader_OnLoadCompleteListenerImplementor
-Android.Support.V4.Media.Session.MediaSessionCompat/IOnActiveChangeListenerImplementor, Xamarin.Android.Support.v4;mono.android.support.v4.media.session.MediaSessionCompat_OnActiveChangeListenerImplementor
-Android.Support.V4.Media.Session.MediaSessionCompat/IOnActiveChangeListenerImplementor, Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.android.support.v4.media.session.MediaSessionCompat_OnActiveChangeListenerImplementor
-Android.Support.V4.Media.Session.MediaSessionCompat.IOnActiveChangeListenerImplementor;mono.android.support.v4.media.session.MediaSessionCompat_OnActiveChangeListenerImplementor
-android.support.v4.media.session.MediaSessionCompat_IOnActiveChangeListenerImplementor;mono.android.support.v4.media.session.MediaSessionCompat_OnActiveChangeListenerImplementor
 Android.Support.V4.View.ActionProvider/ISubUiVisibilityListenerImplementor, Xamarin.Android.Support.v4;mono.android.support.v4.view.ActionProvider_SubUiVisibilityListenerImplementor
 Android.Support.V4.View.ActionProvider/ISubUiVisibilityListenerImplementor, Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.android.support.v4.view.ActionProvider_SubUiVisibilityListenerImplementor
 Android.Support.V4.View.ActionProvider.ISubUiVisibilityListenerImplementor;mono.android.support.v4.view.ActionProvider_SubUiVisibilityListenerImplementor
@@ -358,6 +354,10 @@ Android.Support.V4.View.MenuItemCompat/IOnActionExpandListenerImplementor, Xamar
 Android.Support.V4.View.MenuItemCompat/IOnActionExpandListenerImplementor, Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.android.support.v4.view.MenuItemCompat_OnActionExpandListenerImplementor
 Android.Support.V4.View.MenuItemCompat.IOnActionExpandListenerImplementor;mono.android.support.v4.view.MenuItemCompat_OnActionExpandListenerImplementor
 android.support.v4.view.MenuItemCompat_IOnActionExpandListenerImplementor;mono.android.support.v4.view.MenuItemCompat_OnActionExpandListenerImplementor
+Android.Support.V4.View.ViewPager/IOnPageChangeListenerImplementor, Xamarin.Android.Support.v4;mono.android.support.v4.view.ViewPager_OnPageChangeListenerImplementor
+Android.Support.V4.View.ViewPager/IOnPageChangeListenerImplementor, Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.android.support.v4.view.ViewPager_OnPageChangeListenerImplementor
+Android.Support.V4.View.ViewPager.IOnPageChangeListenerImplementor;mono.android.support.v4.view.ViewPager_OnPageChangeListenerImplementor
+android.support.v4.view.ViewPager_IOnPageChangeListenerImplementor;mono.android.support.v4.view.ViewPager_OnPageChangeListenerImplementor
 Android.Support.V4.Widget.DrawerLayout/IDrawerListenerImplementor, Xamarin.Android.Support.v4;mono.android.support.v4.widget.DrawerLayout_DrawerListenerImplementor
 Android.Support.V4.Widget.DrawerLayout/IDrawerListenerImplementor, Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.android.support.v4.widget.DrawerLayout_DrawerListenerImplementor
 Android.Support.V4.Widget.DrawerLayout.IDrawerListenerImplementor;mono.android.support.v4.widget.DrawerLayout_DrawerListenerImplementor
@@ -370,18 +370,6 @@ Android.Support.V4.Widget.SwipeRefreshLayout/IOnRefreshListenerImplementor, Xama
 Android.Support.V4.Widget.SwipeRefreshLayout/IOnRefreshListenerImplementor, Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.android.support.v4.widget.SwipeRefreshLayout_OnRefreshListenerImplementor
 Android.Support.V4.Widget.SwipeRefreshLayout.IOnRefreshListenerImplementor;mono.android.support.v4.widget.SwipeRefreshLayout_OnRefreshListenerImplementor
 android.support.v4.widget.SwipeRefreshLayout_IOnRefreshListenerImplementor;mono.android.support.v4.widget.SwipeRefreshLayout_OnRefreshListenerImplementor
-Android.Support.V7.App.AlertDialog/IDialogInterfaceOnClickListenerImplementor, Xamarin.Android.Support.v7.AppCompat;md555691f64b98059b48c2227278b6d2b9c.AlertDialog_IDialogInterfaceOnClickListenerImplementor
-Android.Support.V7.App.AlertDialog/IDialogInterfaceOnClickListenerImplementor, Xamarin.Android.Support.v7.AppCompat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md555691f64b98059b48c2227278b6d2b9c.AlertDialog_IDialogInterfaceOnClickListenerImplementor
-Android.Support.V7.App.AlertDialog.IDialogInterfaceOnClickListenerImplementor;md555691f64b98059b48c2227278b6d2b9c.AlertDialog_IDialogInterfaceOnClickListenerImplementor
-android.support.v7.app.AlertDialog_IDialogInterfaceOnClickListenerImplementor;md555691f64b98059b48c2227278b6d2b9c.AlertDialog_IDialogInterfaceOnClickListenerImplementor
-Android.Support.V7.App.AlertDialog/IDialogInterfaceOnCancelListenerImplementor, Xamarin.Android.Support.v7.AppCompat;md555691f64b98059b48c2227278b6d2b9c.AlertDialog_IDialogInterfaceOnCancelListenerImplementor
-Android.Support.V7.App.AlertDialog/IDialogInterfaceOnCancelListenerImplementor, Xamarin.Android.Support.v7.AppCompat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md555691f64b98059b48c2227278b6d2b9c.AlertDialog_IDialogInterfaceOnCancelListenerImplementor
-Android.Support.V7.App.AlertDialog.IDialogInterfaceOnCancelListenerImplementor;md555691f64b98059b48c2227278b6d2b9c.AlertDialog_IDialogInterfaceOnCancelListenerImplementor
-android.support.v7.app.AlertDialog_IDialogInterfaceOnCancelListenerImplementor;md555691f64b98059b48c2227278b6d2b9c.AlertDialog_IDialogInterfaceOnCancelListenerImplementor
-Android.Support.V7.App.AlertDialog/IDialogInterfaceOnMultiChoiceClickListenerImplementor, Xamarin.Android.Support.v7.AppCompat;md555691f64b98059b48c2227278b6d2b9c.AlertDialog_IDialogInterfaceOnMultiChoiceClickListenerImplementor
-Android.Support.V7.App.AlertDialog/IDialogInterfaceOnMultiChoiceClickListenerImplementor, Xamarin.Android.Support.v7.AppCompat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md555691f64b98059b48c2227278b6d2b9c.AlertDialog_IDialogInterfaceOnMultiChoiceClickListenerImplementor
-Android.Support.V7.App.AlertDialog.IDialogInterfaceOnMultiChoiceClickListenerImplementor;md555691f64b98059b48c2227278b6d2b9c.AlertDialog_IDialogInterfaceOnMultiChoiceClickListenerImplementor
-android.support.v7.app.AlertDialog_IDialogInterfaceOnMultiChoiceClickListenerImplementor;md555691f64b98059b48c2227278b6d2b9c.AlertDialog_IDialogInterfaceOnMultiChoiceClickListenerImplementor
 Android.Support.V7.App.ActionBar/IOnMenuVisibilityListenerImplementor, Xamarin.Android.Support.v7.AppCompat;mono.android.support.v7.app.ActionBar_OnMenuVisibilityListenerImplementor
 Android.Support.V7.App.ActionBar/IOnMenuVisibilityListenerImplementor, Xamarin.Android.Support.v7.AppCompat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.android.support.v7.app.ActionBar_OnMenuVisibilityListenerImplementor
 Android.Support.V7.App.ActionBar.IOnMenuVisibilityListenerImplementor;mono.android.support.v7.app.ActionBar_OnMenuVisibilityListenerImplementor

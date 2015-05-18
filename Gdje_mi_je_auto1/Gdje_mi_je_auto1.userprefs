@@ -1,25 +1,25 @@
 ﻿<Properties StartupItem="Gdje_mi_je_auto1\Gdje_mi_je_auto1.csproj" GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.0ad52474" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Moj_Novi" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Gdje_mi_je_auto1\Pay_Automat_Main.cs">
+    <Files>
+      <File FileName="Gdje_mi_je_auto1\SMS_Sound.cs" Line="26" Column="4" />
+      <File FileName="Gdje_mi_je_auto1\Resources\layout\packages.config" Line="1" Column="1" />
+      <File FileName="Gdje_mi_je_auto1\MapActivity.cs" Line="110" Column="4" />
+      <File FileName="c:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\Alarms.cs" Line="20" Column="3" />
+      <File FileName="Gdje_mi_je_auto1\ChooseReminderTime.cs" Line="24" Column="24" />
+      <File FileName="Gdje_mi_je_auto1\Pay_Automat_Main.cs" Line="142" Column="3" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Gdje_mi_je_auto1" expanded="True">
             <Node name="Gdje_mi_je_auto1" expanded="True">
-              <Node name="Resources" expanded="True">
-                <Node name="drawable-hdpi" expanded="True" />
-              </Node>
-              <Node name="Pay_SMS_Main.cs" selected="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="Resources" expanded="True" />
+              <Node name="Pay_Automat_Main.cs" selected="True" />
             </Node>
+            <Node name="Gdje_mi_je_auto1.UITests" expanded="True" />
           </Node>
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
-      </Pad>
-      <Pad Id="MonoDevelop.NUnit.TestPad">
-        <State name="__root__">
-          <Node name="Gdje_mi_je_auto1" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
