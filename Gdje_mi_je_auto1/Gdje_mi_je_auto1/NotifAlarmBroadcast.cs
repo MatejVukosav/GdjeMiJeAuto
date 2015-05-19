@@ -20,10 +20,19 @@ namespace Gdje_mi_je_auto1
 		Vibrator vibrator;
 
 
+
 		public override void OnReceive (Context context, Intent intent)
 		{
+
+
+			Intent intent2= new Intent(context, typeof(AlarmDialog));
+			intent2.SetFlags(ActivityFlags.NewTask);
+			context.StartActivity(intent2);
+	
+
+			/*
 			Log.Debug ("bee", "1");
-//			Alarms.playSound ();
+			Alarms.playSound ();
 			var builder = new AlertDialog.Builder (context);
 			builder.SetTitle ("Istek parkinga");
 			//builder.SetMessage (String.Format("Isteklo je vrijeme parkinga.", System.Environment.NewLine));
@@ -42,8 +51,10 @@ namespace Gdje_mi_je_auto1
 			Log.Debug ("bee", "5");
 			dialog1.Show ();
 			Log.Debug ("bee", "6");
-
+			*/
 		}
+
+
 	}
 }
 

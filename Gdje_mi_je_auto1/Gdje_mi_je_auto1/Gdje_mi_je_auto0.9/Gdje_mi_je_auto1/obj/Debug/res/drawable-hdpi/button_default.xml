@@ -1,0 +1,2 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android"><item> name="button_default"
+    <shape><gradient android:startColor="#43708f" android:endColor="#8ba0bb" android:angle="90" /><stroke android:width="1dp" android:color="#33364252" /><corners android:radius="6dp" /><padding android:left="10dp" android:top="10dp" android:right="10dp" android:bottom="10dp" /></shape></item></selector>

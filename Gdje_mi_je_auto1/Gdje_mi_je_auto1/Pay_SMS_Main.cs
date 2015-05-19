@@ -268,10 +268,10 @@ namespace Gdje_mi_je_auto1
 		/*
 		 * Metoda koja nadodaje dolaznu poruku u list view.
 		 * */
-		public static void AddIncomingMessageToView(string smsSender,string smsBody,string smsTime,string smsDate){
+		public static void AddIncomingMessageToView(string smsSender,string smsBody,string smsTime,string smsTimePaying,string smsDate){
 
 			Pay_SMS_Main psm=new Pay_SMS_Main();
-			string poruka = psm.MessageDisplayIncoming (smsSender, smsBody,smsTime,smsDate);
+			string poruka = psm.MessageDisplayIncoming (smsSender, smsBody,smsTime,smsTimePaying,smsDate);
 			//string poruka=psm.DetermineZone(smsSender)+" [ " +smsBody +" ]" + " "+smsTime; 
 			//zapisuje poruku u datoteku
 			using (StreamWriter sw = File.AppendText (psm.message_Data)) {
@@ -304,7 +304,7 @@ namespace Gdje_mi_je_auto1
 			foreach (String number in zone2)
 			{ 
 				if(string.Compare(value,number)==0){
-					Log.Debug ("value:"+value,"number:"+number);
+					//Log.Debug ("value:"+value,"number:"+number);
 					valid_number=true;
 					break;
 				}
@@ -325,29 +325,29 @@ namespace Gdje_mi_je_auto1
 //			Log.Debug ("min",min);
 //			Log.Debug ("zona",zona);
 //			Log.Debug ("rega",rega);
-			Log.Debug ("Upaljen alarm za sms","Postavljen");
-			Alarms.createAlarm(hour, min, zona,rega);
+			Log.Debug ("Upaljen alarm za sms","Pokrenut u Pay_SMS_Main");
+			Alarms.createAlarm(hour, min, zona,rega,this);
 
 		}
 
 		/*
 		 * Metoda koja uređuje ispis dolazne poruke
 		 * */
-		public String MessageDisplayIncoming(string smsSender,string smsBody,string smsTime,string smsDate){
+		public String MessageDisplayIncoming(string smsSender,string smsBody,string smsTime,string smsTimePaying,string smsDate){
 			//return DetermineZone(smsSender)+" < " +"Vrijeme Od : Do" +" >"+" Datum " ;
 			/* */
-			string[] satDO=smsTime.Split (':'); //do tad vrijedi,izvuceno iz poruke
+			string[] satDO=smsTimePaying.Split (':'); //do tad vrijedi,izvuceno iz poruke
 			//string format = "{ 0, 10 }"; // 
 			string editedDate =smsDate.PadLeft (10,'_'); //string.Format (format, smsDate);
 
 			string smsTimeOD=satDO[0];
 			int smsTimeODInt=Int32.Parse (satDO[0]);
 
-			if (smsTimeOD.Equals ("00")) {
-				smsTimeOD = "23";
-			} else {
-				smsTimeOD=string.Format("{0:D2}",(smsTimeODInt-1));
-			}
+//			if (smsTimeOD.Equals ("00")) {
+//				smsTimeOD = "23";
+//			} else {
+//				smsTimeOD=string.Format("{0:D2}",(smsTimeODInt-1));
+//			}
 
 
 			var prefs = Application.Context.GetSharedPreferences ("MySharedPrefs", FileCreationMode.Private);
@@ -361,32 +361,26 @@ namespace Gdje_mi_je_auto1
 				ActivatedAlarmOnSMS ();
 			}
 
-			smsTimeOD = smsTimeOD +":"+ satDO [1];
 
-			return editedDate+"  "+DetermineZone (smsSender)+ " < "+smsTimeOD+" - "+smsTime+" > "+ " [" +smsBody +"]"; 
+
+			return editedDate+"  "+DetermineZone (smsSender)+ " < "+smsTime+" - "+smsTimePaying+" > "+ " [" +smsBody +"]"; 
 			//return editedDate+"  "+DetermineZone(smsSender)+ " OD "+smsTime+" DO "+smsTimeDO+" "+ " [ " +smsBody +" ]"; 
 		}
 
 		/*
 		 * Metoda koja uređuje ispis history-a
 		 * */
-		public String MessageDisplay(string smsSender,string smsBody,string smsTime,string smsDate){
+		public String MessageDisplay(string smsSender,string smsBody,string smsTime,string smsTimePaying,string smsDate){
 			//return DetermineZone(smsSender)+" < " +"Vrijeme Od : Do" +" >"+" Datum " ;
-			string[] satOD=smsTime.Split (':');
+
+			string[] satDO=smsTimePaying.Split (':'); //do tad vrijedi,izvuceno iz poruke
 			//string format = "{ 0, 10 }"; // 
 			string editedDate =smsDate.PadLeft (10,'_'); //string.Format (format, smsDate);
 
-			string smsTimeDO=satOD[0];
-			int smsTimeDOInt=Int32.Parse (satOD[0]);
+//			string smsTimeOD=satDO[0];
+//			int smsTimeODInt=Int32.Parse (satDO[0]);
 
-			if (smsTimeDO.Equals ("23")) {
-				smsTimeDO = "00";
-			} else {
-				smsTimeDO=string.Format("{0:D2}",(smsTimeDOInt+1));
-			}
-			 smsTimeDO = smsTimeDO +":"+ satOD [1];
-
-			return editedDate+"  "+DetermineZone(smsSender)+ " < "+smsTime+" - "+smsTimeDO+" > "+ " [" +smsBody +"]"; 
+			return editedDate+"  "+DetermineZone(smsSender)+ " < "+smsTime+" - "+smsTimePaying+" > "+ " [" +smsBody +"]"; 
 			//return editedDate+"  "+DetermineZone(smsSender)+ " OD "+smsTime+" DO "+smsTimeDO+" "+ " [ " +smsBody +" ]"; 
 		}
 

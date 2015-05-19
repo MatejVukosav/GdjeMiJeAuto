@@ -25,13 +25,14 @@ namespace Gdje_mi_je_auto1
 		const int Placanje0=4;
 		const int Placanje1=5;
 		const int Placanje2=6;
-		const int Alarm=7;
-		const int Alarm0=8;
-		const int Alarm1=9;
-		const int Alarm2=10;
-		const int Alarm3=11;
-		const int About=12;
-		const int About0=13;
+		const int Placanje3=7;
+		const int Alarm=8;
+		const int Alarm0=9;
+		const int Alarm1=10;
+		const int Alarm2=11;
+		const int Alarm3=12;
+		const int About=13;
+		const int About0=14;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -46,10 +47,11 @@ namespace Gdje_mi_je_auto1
 			map[1]="Brzina prebacivanja postavki.";
 
 
-			String[] pay=new String[3];
+			String[] pay=new String[4];
 			pay[0]="Promijeni sliku registracije";
 			pay[1]="Odaberi registraciju";
 			pay[2]="Poruke iz inboxa";
+			pay[3]="Cijene parkiranja";
 
 			String[] alarm=new String[4];
 			alarm[0]="Odaberi zvuk alarma";
@@ -105,6 +107,10 @@ namespace Gdje_mi_je_auto1
 			}else if (e.Position == Placanje2) {
 				var activity_MFIS = new Intent (this, typeof(MessageFromInboxSettings));
 				StartActivity (activity_MFIS);
+
+			}else if (e.Position == Placanje3) {
+				var activity_CP = new Intent (this, typeof(CijeneParkinga));
+				StartActivity (activity_CP);
 
 			} else if (e.Position == Alarm0) {
 				var activity_CAS = new Intent (this, typeof(ChooseAlarmSound));

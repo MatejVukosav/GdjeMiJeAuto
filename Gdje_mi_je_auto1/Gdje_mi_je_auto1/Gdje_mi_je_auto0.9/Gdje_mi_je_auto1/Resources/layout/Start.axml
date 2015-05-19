@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <Button
+        android:text="Gdje mi je auto?"
+        android:background="@drawable/collor_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/startMap"
+        android:layout_gravity="center" />
+    <Button
+        android:text="Plaćanje"
+        android:background="@drawable/collor_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/startPay" />
+    <Button
+        android:text="Alarm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/collor_button"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/startAlarm" />
+    <Button
+        android:text="Postavke"
+        android:background="@drawable/collor_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/startSettings" />
+</LinearLayout>

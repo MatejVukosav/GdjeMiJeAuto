@@ -18,14 +18,14 @@ namespace Gdje_mi_je_auto1
 	{
 		public override void OnReceive (Context context, Intent intent)
 		{
-			Log.Debug ("notif", "1");
+			//Log.Debug ("notif", "1");
 
 			NotificationManager notifManager = (NotificationManager)Application.Context.GetSystemService (Context.NotificationService);
 
 			var notIntent = new Intent (context, typeof(Alarms));
 			var contentIntent = PendingIntent.GetActivity (context, 0, notIntent, PendingIntentFlags.CancelCurrent);
 
-			Log.Debug ("notif", "2");
+		//	Log.Debug ("notif", "2");
 			var builder = new Notification.Builder (context)
 				.SetContentTitle ("Istek roka")
 				.SetContentText (String.Format ("Za {0} minuta će isteći vrijeme parkinga.", Alarms.mindif)) //TODO promijeniti klasu iz Alarms u onu od settingsa
@@ -33,9 +33,9 @@ namespace Gdje_mi_je_auto1
 				.SetContentIntent (contentIntent);
 
 
-			Log.Debug ("notif", "3");
+			//Log.Debug ("notif", "3");
 			notifManager.Notify (Alarms.reqcode, builder.Build ());
-			Log.Debug ("notif", "4");
+			//Log.Debug ("notif", "4");
 			Toast.MakeText (Application.Context, "Podsjetnik!", ToastLength.Long).Show ();
 		}
 	}

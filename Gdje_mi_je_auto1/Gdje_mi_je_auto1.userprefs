@@ -1,8 +1,8 @@
 ﻿<Properties StartupItem="Gdje_mi_je_auto1\Gdje_mi_je_auto1.csproj" GitUserInfo="UsingGIT">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.0ad52474" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Gdje_mi_je_auto1\Alarms.cs">
     <Files>
-      <File FileName="Gdje_mi_je_auto1\Postavke.cs" Line="17" Column="129" />
+      <File FileName="Gdje_mi_je_auto1\Alarms.cs" Line="74" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

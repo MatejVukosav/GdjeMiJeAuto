@@ -15,6 +15,7 @@ using Android.Telephony;
 using Android.Database;
 using System.Windows;
 using System.Runtime.InteropServices;
+using Android.Util;
 
 
 /*
@@ -153,7 +154,7 @@ namespace Gdje_mi_je_auto1
 			String[] time=text_time_screen.Text.Split (':');
 			String min = (Convert.ToInt32 (time [1])).ToString ();
 
-			Alarms.createAlarm(time[0], min, chosenSpinner,automat.ToString ());
+			Alarms.createAlarm(time[0], min, chosenSpinner,automat.ToString (),this);
 
 			Log.Debug ("Upaljen alarm za automat","Postavljen");
 

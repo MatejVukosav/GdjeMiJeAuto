@@ -32,6 +32,6 @@
 	<uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
 	<uses-permission android:name="android.permission.RECORD_AUDIO" />
 	<uses-permission android:name="android.permission.READ_CALENDAR" />
-	<application android:label="Gdje mi je auto?! New" android:icon="@drawable/main_icon">&gt;
+	<application android:label="Gdje mi je auto?! " android:icon="@drawable/main_icon">&gt;
 		<!-- Put your Google Maps V2 API Key here. --><meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyA3XTDS9IvWASDG9Yewqgolvpzx287nyS8" /><meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" /><receiver android:name="NotifAlarmBroadcast"></receiver><receiver android:name="NotifReminderBroadcast"></receiver><receiver android:name="DeviceBootReceiver"></receiver></application>
 </manifest>

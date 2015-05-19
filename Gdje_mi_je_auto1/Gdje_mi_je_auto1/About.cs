@@ -26,11 +26,11 @@ namespace Gdje_mi_je_auto1
 
 			SetContentView (Resource.Layout.About);
 			listview = FindViewById<ListView> (Resource.Id.AboutAuthorsList);
-			//TODO nadopuniti mailove
-			authors.Add ("Filip Sakač , mail: (@fer.hr)");
-			authors.Add ("Matej Vukosav , mail: (mv473765@fer.hr)");
-			authors.Add ("Antonio Brezjan , mail: (@fer.hr)");
-			authors.Add ("Emanuel Vukelić , mail: (@fer.hr)");
+
+			authors.Add ("Filip Sakač"+"\n"+"mail: (filip.sakac@fer.hr)");
+			authors.Add ("Matej Vukosav"+"\n"+"mail: (matej.vukosav@fer.hr)");
+			authors.Add ("Antonio Brezjan"+"\n"+"mail: (antonio.brezjan@fer.hr)");
+			authors.Add ("Emanuel Vukelić"+"\n"+"mail: (emanuel.vukelic@fer.hr)");
 
 			listview.Adapter = new AuthorsAdapterKlasa (this, authors.ToArray ());
 

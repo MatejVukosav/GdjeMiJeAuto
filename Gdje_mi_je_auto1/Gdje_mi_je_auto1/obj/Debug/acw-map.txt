@@ -142,6 +142,14 @@ Gdje_mi_je_auto1.EnableAlarms, Gdje_mi_je_auto1;md5cd61a8e1f9f2291d7d02a5b72739b
 Gdje_mi_je_auto1.EnableAlarms, Gdje_mi_je_auto1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5cd61a8e1f9f2291d7d02a5b72739b7e4.EnableAlarms
 Gdje_mi_je_auto1.EnableAlarms;md5cd61a8e1f9f2291d7d02a5b72739b7e4.EnableAlarms
 gdje_mi_je_auto1.EnableAlarms;md5cd61a8e1f9f2291d7d02a5b72739b7e4.EnableAlarms
+Gdje_mi_je_auto1.CijeneParkinga, Gdje_mi_je_auto1;md5cd61a8e1f9f2291d7d02a5b72739b7e4.CijeneParkinga
+Gdje_mi_je_auto1.CijeneParkinga, Gdje_mi_je_auto1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5cd61a8e1f9f2291d7d02a5b72739b7e4.CijeneParkinga
+Gdje_mi_je_auto1.CijeneParkinga;md5cd61a8e1f9f2291d7d02a5b72739b7e4.CijeneParkinga
+gdje_mi_je_auto1.CijeneParkinga;md5cd61a8e1f9f2291d7d02a5b72739b7e4.CijeneParkinga
+Gdje_mi_je_auto1.AlarmDialog, Gdje_mi_je_auto1;md5cd61a8e1f9f2291d7d02a5b72739b7e4.AlarmDialog
+Gdje_mi_je_auto1.AlarmDialog, Gdje_mi_je_auto1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5cd61a8e1f9f2291d7d02a5b72739b7e4.AlarmDialog
+Gdje_mi_je_auto1.AlarmDialog;md5cd61a8e1f9f2291d7d02a5b72739b7e4.AlarmDialog
+gdje_mi_je_auto1.AlarmDialog;md5cd61a8e1f9f2291d7d02a5b72739b7e4.AlarmDialog
 Android.Gms.Ads.DoubleClick.IAppEventListenerImplementor, GooglePlayServicesLib;mono.com.google.android.gms.ads.doubleclick.AppEventListenerImplementor
 Android.Gms.Ads.DoubleClick.IAppEventListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.ads.doubleclick.AppEventListenerImplementor
 Android.Gms.Ads.DoubleClick.IAppEventListenerImplementor;mono.com.google.android.gms.ads.doubleclick.AppEventListenerImplementor

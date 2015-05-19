@@ -29,15 +29,27 @@ namespace Gdje_mi_je_auto1
 			btnUpali = FindViewById<Button> (Resource.Id.btnUpali);
 			btnUgasi = FindViewById<Button> (Resource.Id.btnUgasi);
 
+			String idAlarma = Intent.GetStringExtra ("idAlarma");
+			int idAlarmaInt = Convert.ToInt32 (idAlarma);
+			int i = 0;
+			foreach (KeyValuePair<string,string>pair in AlarmMain.AlarmiDictionary) {
+				if (i == idAlarmaInt) {
+					idAlarmaInt = Convert.ToInt32 (pair.Key);
+					break;
+				}
+
+			}
 
 			btnUgasi.Click+=delegate {
-				//TODO ugasi alarm, (ali ne obrisat)
+				// ugasi alarm, (ali ne obrisat)
+				Alarms.cancelAlarm (idAlarmaInt);
 				var activityAM = new Intent (this, typeof(AlarmMain));
 				StartActivity (activityAM);
 			};
 			
 			btnUpali.Click+=delegate {
-				//TODO upali alarm
+				//upali alarm
+				Alarms.resumeAlarm (idAlarmaInt);
 				var activityAM = new Intent (this, typeof(AlarmMain));
 				StartActivity (activityAM);
 			};

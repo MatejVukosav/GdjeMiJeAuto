@@ -1,0 +1,6 @@
+D:\GdjeMiAuto0.9\Gdje_mi_je_auto1\Gdje_mi_je_auto1\bin\Debug\Gdje_mi_je_auto1.dll
+D:\GdjeMiAuto0.9\Gdje_mi_je_auto1\Gdje_mi_je_auto1\bin\Debug\GooglePlayServicesLib.dll
+D:\GdjeMiAuto0.9\Gdje_mi_je_auto1\packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll
+D:\GdjeMiAuto0.9\Gdje_mi_je_auto1\Gdje_mi_je_auto1\bin\Debug\Xamarin.Android.Support.v4.dll
+D:\GdjeMiAuto0.9\Gdje_mi_je_auto1\Gdje_mi_je_auto1\bin\Debug\Xamarin.Android.Support.v7.AppCompat.dll
+D:\GdjeMiAuto0.9\Gdje_mi_je_auto1\Gdje_mi_je_auto1\bin\Debug\Xamarin.Android.Support.v7.MediaRouter.dll

@@ -57,6 +57,7 @@ namespace Gdje_mi_je_auto1
 				String smsSender = "";
 				String smsBody = "";
 				String smsTime = "";
+				String[] smsTimePaying = new string[5];
 				String smsDate = "";
 				bool valid_body_check = false;
 				String smsFilteredBody = "";
@@ -74,19 +75,25 @@ namespace Gdje_mi_je_auto1
 							msgs [i] = SmsMessage.CreateFromPdu ((byte[])pdus [i]);
 							smsSender = msgs [i].OriginatingAddress;
 							smsBody = msgs [i].MessageBody;
+							String smsTimeH=DateTime.UtcNow.Hour.ToString ();
+							String smsTimeM=DateTime.UtcNow.Minute.ToString ();
+							smsTime=smsTimeH+":"+smsTimeM;
 
 							try {
 								var tuple = ParseSMS.ParseSMSbody (smsBody);
 								valid_body_check = tuple.Item1; //bool true or false
 								smsFilteredBody = tuple.Item2; // car registration
-								smsTime = tuple.Item3;
+								smsTimePaying=tuple.Item3.Split ('.');
 							} catch (Exception e) {
 								Log.Debug ("Greska prilikom filtriranja sms poruke.", e.ToString ());
 							}
-						
-							//smsTime= DateTime.Now.ToString("HH:mm");
-							smsDate = DateTime.Now.ToString ("d.M.yyyy");
 
+							try{
+							smsDate = DateTime.Now.ToString ("d.M.yyyy");
+							}catch(Exception e){
+								Log.Debug ("Krivo konvertiranje datuma","smsDate");
+							}
+//
 //						Log.Debug ("sender",smsSender);
 //						Log.Debug ("evaluation",(smsSender != null).ToString ());
 //						Log.Debug ("number",psm.CheckSMSNumbers (smsSender).ToString ());
@@ -123,30 +130,27 @@ namespace Gdje_mi_je_auto1
 //
 //ICursor queryData = ContentResolver.Query (CallLog.Calls.ContentUri, null, queryFilter, null, querySorter)
 
-
-
-								Pay_SMS_Main.AddIncomingMessageToView (smsSender, smsFilteredBody, smsTime, smsDate);
-							} else {
-								Log.Debug ("SMS was not from parking number!", "Pass message.");
-
-							}
-						}
-					} catch (Exception e) {
-						
-						Log.Debug ("Exception caught while receiving message: !!!", e.Message);
+					try{
+									Pay_SMS_Main.AddIncomingMessageToView (smsSender, smsFilteredBody, smsTime,smsTimePaying[0], smsDate);
+					}catch(Exception e){
+									Log.Debug ("Krivo ucitavanje AddIncomingMessageToView ","onReceive");
 					}
+				} else {
+					Log.Debug ("SMS was not from parking number!", "Pass message.");
+
 				}
+			}
+		} catch (Exception e) {
+			
+			Log.Debug ("Exception caught while receiving message: !!!", e.Message);
+		}
+	}
 
 
 				
 			}
 		}
-
-
-
-
-
-
+			
 
 	}
 }

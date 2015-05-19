@@ -78,6 +78,7 @@ namespace Gdje_mi_je_auto1
 				List<String> items=new List<String>();
 				bool valid_body_check=false;
 				String smsFilteredBody="";
+				String[] smsTimePaying= new string[5];
 
 				String[] projection = new String[]{ "address", "body","date" };
 				CursorLoader loader=new CursorLoader(context);
@@ -107,12 +108,13 @@ namespace Gdje_mi_je_auto1
 								var tuple=ParseSMS.ParseSMSbody (smsBody);
 								valid_body_check = tuple.Item1; //bool true or false
 								smsFilteredBody = tuple.Item2; // car registration
+								smsTimePaying=tuple.Item3.Split ('.');// car_time
 							}catch(Exception e){
 								Log.Debug ("Greska prilikom filtriranja sms poruke.",e.ToString ());
 							}
 							//check if sms body pass validation
 							if(valid_body_check){
-								String msgData = psm.MessageDisplay (smsSender, smsFilteredBody,smsTime,smsDate);
+								String msgData = psm.MessageDisplay (smsSender, smsFilteredBody,smsTime,smsTimePaying[0],smsDate);
 								items.Add (msgData);
 							}
 
