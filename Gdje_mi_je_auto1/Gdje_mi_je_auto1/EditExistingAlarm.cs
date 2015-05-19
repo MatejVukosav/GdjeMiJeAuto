@@ -32,10 +32,14 @@ namespace Gdje_mi_je_auto1
 
 			btnUgasi.Click+=delegate {
 				//TODO ugasi alarm, (ali ne obrisat)
+				var activityAM = new Intent (this, typeof(AlarmMain));
+				StartActivity (activityAM);
 			};
 			
 			btnUpali.Click+=delegate {
 				//TODO upali alarm
+				var activityAM = new Intent (this, typeof(AlarmMain));
+				StartActivity (activityAM);
 			};
 
 

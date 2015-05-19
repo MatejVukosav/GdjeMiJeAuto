@@ -18,6 +18,7 @@ using System.Collections.Generic;
 using System.Windows;
 using System.Runtime.InteropServices;
 using System.Collections.Specialized;
+using System.Threading;
 
 /*
  * Klasa u kojoj se izvršava slanje SMS poruke. 
@@ -34,6 +35,7 @@ namespace Gdje_mi_je_auto1
 		EditText messageEditText;
 		EditText numberEditText;
 		bool valid_check=false;
+
 		private readonly int registrationLength=8;
 		private readonly string VukiTestNumber="+385989305003";  //TODO promijenit defaultni broj //broj prve zone za pola sata
 
@@ -52,11 +54,21 @@ namespace Gdje_mi_je_auto1
 		static String message_Path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
 		String message_Data = System.IO.Path.Combine(message_Path, "Message_data.txt");
 
+		String hourAlarm="";
+		String minAlarm="";
+		String zonaAlarm="";
+		String regaAlarm="";
+
+
+
 		protected override void OnCreate (Bundle bundle)
 		{
 			//RequestWindowFeature(WindowFeatures.NoTitle);
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.Pay_SMS_Main);
+
+	
+
 			sendSMS_btn = FindViewById<Button> (Resource.Id.sendSMS);
 
 			numberEditText = FindViewById<EditText> (Resource.Id.editText_number);
@@ -222,16 +234,19 @@ namespace Gdje_mi_je_auto1
 
 				if (valid_check) {
 					smsManager.SendTextMessage (zone_number, null, sms_message, null, null);
-					Toast.MakeText (ApplicationContext, "SMS poruka je poslana.", ToastLength.Short).Show ();
 
-					registrationHolder.Add (sms_messageClean);
+					//ako je omogucen alarm prikazi Toast
+					var valid_Alarm=prefs.GetBoolean ("MyAlarmValue", true);
+					if(valid_Alarm){
+						Toast.MakeText (ApplicationContext, "SMS poruka je poslana. (alarm JE upaljen)", ToastLength.Short).Show ();
+					}else{
+						Toast.MakeText (ApplicationContext, "SMS poruka je poslana. (alarm NIJE upaljen)", ToastLength.Short).Show ();
+					}
 					var prefsEditor = prefsZone.Edit ();
 					prefsEditor.PutStringSet ("MyRegistrationTextPrefs", registrationHolder);
 					prefsEditor.Commit ();
 
-
-					var activity_pay_main = new Intent (this, typeof(Pay_Main));
-
+					var activity_pay_main=new Intent (this,typeof(Pay_Main));
 					StartActivity (activity_pay_main);
 
 				} else {
@@ -263,7 +278,10 @@ namespace Gdje_mi_je_auto1
 				sw.Write (poruka+"\n");
 			};
 
+		
+
 		}
+
 
 
 	
@@ -295,11 +313,29 @@ namespace Gdje_mi_je_auto1
 			return valid_number;
 		}
 
+
+
+		private void ActivatedAlarmOnSMS(){
+			
+			String hour = hourAlarm ; 
+			String min = minAlarm ;
+			String zona = zonaAlarm ;
+			String rega = regaAlarm ;
+//			Log.Debug ("sat",hour);
+//			Log.Debug ("min",min);
+//			Log.Debug ("zona",zona);
+//			Log.Debug ("rega",rega);
+			Log.Debug ("Upaljen alarm za sms","Postavljen");
+			Alarms.createAlarm(hour, min, zona,rega);
+
+		}
+
 		/*
 		 * Metoda koja uređuje ispis dolazne poruke
 		 * */
 		public String MessageDisplayIncoming(string smsSender,string smsBody,string smsTime,string smsDate){
 			//return DetermineZone(smsSender)+" < " +"Vrijeme Od : Do" +" >"+" Datum " ;
+			/* */
 			string[] satDO=smsTime.Split (':'); //do tad vrijedi,izvuceno iz poruke
 			//string format = "{ 0, 10 }"; // 
 			string editedDate =smsDate.PadLeft (10,'_'); //string.Format (format, smsDate);
@@ -312,9 +348,22 @@ namespace Gdje_mi_je_auto1
 			} else {
 				smsTimeOD=string.Format("{0:D2}",(smsTimeODInt-1));
 			}
+
+
+			var prefs = Application.Context.GetSharedPreferences ("MySharedPrefs", FileCreationMode.Private);
+			var valid_Alarm=prefs.GetBoolean ("MyAlarmValue", true);
+
+			if (valid_Alarm) {
+				hourAlarm = smsTimeOD;
+				minAlarm = satDO [1];
+				zonaAlarm = DetermineZone (smsSender);
+				regaAlarm = smsBody;
+				ActivatedAlarmOnSMS ();
+			}
+
 			smsTimeOD = smsTimeOD +":"+ satDO [1];
 
-			return editedDate+"  "+DetermineZone(smsSender)+ " < "+smsTimeOD+" - "+smsTime+" > "+ " [" +smsBody +"]"; 
+			return editedDate+"  "+DetermineZone (smsSender)+ " < "+smsTimeOD+" - "+smsTime+" > "+ " [" +smsBody +"]"; 
 			//return editedDate+"  "+DetermineZone(smsSender)+ " OD "+smsTime+" DO "+smsTimeDO+" "+ " [ " +smsBody +" ]"; 
 		}
 

@@ -120,22 +120,24 @@ namespace Gdje_mi_je_auto1
 			 * UPALI ALARM I SPREMI VRIJEME PLACANJA U HISTORY
 			 * */
 			btn_save_time.Click += delegate {
-				CreateAddProjectDialog ();	
+				Log.Debug ("save","time");
+				var prefs = Application.Context.GetSharedPreferences ("MySharedPrefs", FileCreationMode.Private);
+				var valid_Alarm=prefs.GetBoolean ("MyAlarmValue", true);
+
+				if (valid_Alarm) {
+					//Toast.MakeText (this,"Alarm JE upaljen",ToastLength.Short).Show();
+					ActivatedAlarmOnSMS ();
+				}else{
+					Toast.MakeText (this,"Alarm NIJE upaljen",ToastLength.Short).Show ();
+					var activity_pay_main=new Intent (this,typeof(Pay_Main));
+					StartActivity (activity_pay_main);
+				}
 			};
 		}
 
-		private void CreateAddProjectDialog() { 
-			var alert = new AlertDialog.Builder (this);
-			alert.SetTitle ("Želite li upaliti alarm?");
-			//alert.SetView (layoutProperties);
-			alert.SetCancelable (false);
-			alert.SetPositiveButton("Da", HandlePositiveButtonClick);
-			alert.SetNegativeButton("Ne", HandelNegativeButtonClick);
-			var dialog = alert.Create();
-			dialog.Show();
-		}
 
-		private void HandlePositiveButtonClick (object sender, EventArgs e) {
+		private void ActivatedAlarmOnSMS(){
+
 			var prefs = Application.Context.GetSharedPreferences ("MySharedPrefs", FileCreationMode.Private);
 			var prefsEdit = prefs.Edit ();
 			int automat= prefs.GetInt ("MyAutomatAlarms", 0);
@@ -146,15 +148,22 @@ namespace Gdje_mi_je_auto1
 			}
 			prefsEdit.PutInt ("MyAutomatAlarms", automat).Commit();
 
-//			NotificationAlertReceiver nar = new NotificationAlertReceiver ();
 
 			String chosenSpinner=spinnerPayA.SelectedItem.ToString ();
 			String[] time=text_time_screen.Text.Split (':');
 			String min = (Convert.ToInt32 (time [1])).ToString ();
 
 			Alarms.createAlarm(time[0], min, chosenSpinner,automat.ToString ());
+
+			Log.Debug ("Upaljen alarm za automat","Postavljen");
+
 			var activity_pay_main=new Intent (this,typeof(Pay_Main));
 			StartActivity (activity_pay_main);
+
+		}
+
+		private void HandlePositiveButtonClick (object sender, EventArgs e) {
+			
 		}
 
 		private void HandelNegativeButtonClick (object sender, EventArgs e) {

@@ -29,8 +29,9 @@ namespace Gdje_mi_je_auto1
 		const int Alarm0=8;
 		const int Alarm1=9;
 		const int Alarm2=10;
-		const int About=11;
-		const int About0=12;
+		const int Alarm3=11;
+		const int About=12;
+		const int About0=13;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -50,10 +51,11 @@ namespace Gdje_mi_je_auto1
 			pay[1]="Odaberi registraciju";
 			pay[2]="Poruke iz inboxa";
 
-			String[] alarm=new String[3];
+			String[] alarm=new String[4];
 			alarm[0]="Odaberi zvuk alarma";
 			alarm[1]="Odaberi zvuk podsjetnika";
 			alarm[2]="Odaberi vrijeme podsjetnika";
+			alarm[3]="Omogući/Onemogući alarm";
 
 			String[] about=new String[1];
 			about[0]="O autorima";
@@ -115,6 +117,10 @@ namespace Gdje_mi_je_auto1
 			} else if (e.Position == Alarm2) {
 				var activity_CRT = new Intent (this, typeof(ChooseReminderTime));
 				StartActivity (activity_CRT);
+
+			}else if (e.Position == Alarm3) {
+				var activity_EA = new Intent (this, typeof(EnableAlarms));
+				StartActivity (activity_EA);
 
 			} else if (e.Position == About0) {
 				var activity_A = new Intent (this, typeof(About));
