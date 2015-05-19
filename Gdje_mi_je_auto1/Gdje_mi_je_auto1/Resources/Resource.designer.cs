@@ -1580,11 +1580,11 @@ namespace Gdje_mi_je_auto1
 			// aapt resource value: 0x7f0c007b
 			public const int ObrisiPoruke = 2131492987;
 			
-			// aapt resource value: 0x7f0c008b
-			public const int Pay_Automat_Main = 2131493003;
-			
 			// aapt resource value: 0x7f0c008a
-			public const int Pay_SMS_Main = 2131493002;
+			public const int Pay_Automat_Main = 2131493002;
+			
+			// aapt resource value: 0x7f0c008b
+			public const int Pay_SMS_Main = 2131493003;
 			
 			// aapt resource value: 0x7f0c0096
 			public const int SettingsList = 2131493014;
@@ -1916,17 +1916,17 @@ namespace Gdje_mi_je_auto1
 			// aapt resource value: 0x7f0c0007
 			public const int split_action_bar = 2131492871;
 			
-			// aapt resource value: 0x7f0c009b
-			public const int startAlarm = 2131493019;
-			
 			// aapt resource value: 0x7f0c0099
-			public const int startMap = 2131493017;
-			
-			// aapt resource value: 0x7f0c009a
-			public const int startPay = 2131493018;
+			public const int startAlarm = 2131493017;
 			
 			// aapt resource value: 0x7f0c009c
-			public const int startSettings = 2131493020;
+			public const int startMap = 2131493020;
+			
+			// aapt resource value: 0x7f0c009b
+			public const int startPay = 2131493019;
+			
+			// aapt resource value: 0x7f0c009a
+			public const int startSettings = 2131493018;
 			
 			// aapt resource value: 0x7f0c0027
 			public const int strict_sandbox = 2131492903;

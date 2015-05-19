@@ -2122,8 +2122,8 @@ containing a value of this type.
         public static final int LocationUpdateDensityNormal=0x7f0c006e;
         public static final int LocationUpdateDensityPrecise=0x7f0c0070;
         public static final int ObrisiPoruke=0x7f0c007b;
-        public static final int Pay_Automat_Main=0x7f0c008b;
-        public static final int Pay_SMS_Main=0x7f0c008a;
+        public static final int Pay_Automat_Main=0x7f0c008a;
+        public static final int Pay_SMS_Main=0x7f0c008b;
         public static final int SettingsList=0x7f0c0096;
         public static final int SpeedBetweenNodes=0x7f0c0097;
         public static final int UcitajPoruke=0x7f0c0079;
@@ -2234,10 +2234,10 @@ containing a value of this type.
         public static final int speedSpinner=0x7f0c0098;
         public static final int spinner1=0x7f0c0075;
         public static final int split_action_bar=0x7f0c0007;
-        public static final int startAlarm=0x7f0c009b;
-        public static final int startMap=0x7f0c0099;
-        public static final int startPay=0x7f0c009a;
-        public static final int startSettings=0x7f0c009c;
+        public static final int startAlarm=0x7f0c0099;
+        public static final int startMap=0x7f0c009c;
+        public static final int startPay=0x7f0c009b;
+        public static final int startSettings=0x7f0c009a;
         public static final int strict_sandbox=0x7f0c0027;
         public static final int submit_area=0x7f0c0050;
         public static final int tabMode=0x7f0c000b;
