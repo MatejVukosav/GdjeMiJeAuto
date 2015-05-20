@@ -2,7 +2,7 @@
 
 <resources>
 <!-- Add also reference in Zet_zone_numbers when changing-->
-	<string name="[ ZONA 1#30 ]">+385989305003</string>
+	<string name="[ ZONA 1#30 ]">+385989305003</string> <!--+385989305003-->
 	<string name="[ ZONA 1 ]">700101</string>
 	<string name="[ ZONA 2 ]">700102</string>
 	<string name="[ ZONA 3 ]">700103</string>

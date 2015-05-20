@@ -36,7 +36,7 @@ namespace Gdje_mi_je_auto1
 
 		private int hour;
 		private int minute;
-		private bool valid_check_automat=false;
+
 
 		Spinner spinnerPayA;
 

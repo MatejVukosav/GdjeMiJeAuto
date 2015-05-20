@@ -22,6 +22,9 @@ namespace Gdje_mi_je_auto1
 		private double speedLimit = 15 / 3.6;
 		private bool denseUpdates = false;
 		private int slowMesurement = 0;
+		private bool sameProviders = true;
+
+		private long timeDifference;
 
 		[Obsolete("Method is deprecated.", false)]
 		public override void OnStart (Android.Content.Intent intent, int startId)
@@ -58,7 +61,7 @@ namespace Gdje_mi_je_auto1
 			locMgr.RemoveUpdates (this);
 			base.OnDestroy ();    
 		}
-			
+
 		public override Android.OS.IBinder OnBind (Android.Content.Intent intent)
 		{
 			throw new Exception();
@@ -72,38 +75,56 @@ namespace Gdje_mi_je_auto1
 			} else {
 				sw = new StreamWriter(File.Create (locationsFile));
 			}
-			
+
 			//using (StreamWriter sw = File.AppendText (locationsFile)) {
-				LocationRecord record = new LocationRecord {
-					time = DateTime.Now.ToLocalTime(),
-					latitude = location.Latitude,
-					longitude = location.Longitude,
-					provider = location.Provider,
-					recordedSpeed = location.HasSpeed ? location.Speed : double.NaN,
-					calculatedSpeed = lastRecord != null? calculateSpeed(location.Time,location.Latitude,location.Longitude) : 0,
-					unixTime = location.Time
-				};
+			LocationRecord record = new LocationRecord {
+				time = DateTime.Now.ToLocalTime(),
+				latitude = location.Latitude,
+				longitude = location.Longitude,
+				provider = location.Provider,
+				recordedSpeed = location.HasSpeed ? location.Speed : double.NaN,
+				calculatedSpeed = lastRecord != null? calculateSpeed(location.Time,location.Latitude,location.Longitude) : 0,
+				unixTime = location.Time
+			};
 
-				lastRecord = record;
-				sw.WriteLine (JsonConvert.SerializeObject (record));
+			if (lastRecord != null) {		
+				timeDifference = record.unixTime - lastRecord.unixTime;
+				sameProviders = record.provider == lastRecord.provider;
+			}
 
-				if (record.calculatedSpeed > speedLimit && !denseUpdates) {
-					locMgr.RemoveUpdates (this);
-					denseUpdates = true;
+			lastRecord = record;
+			sw.WriteLine (JsonConvert.SerializeObject (record));
+
+			//if (record.calculatedSpeed > speedLimit && !denseUpdates) {
+			if (record.calculatedSpeed > speedLimit && !denseUpdates && timeDifference > timeBetweenUpdates * 0.5 && sameProviders) {
+
+				locMgr.RemoveUpdates (this);
+				denseUpdates = true;
+				if(locMgr.IsProviderEnabled(LocationManager.GpsProvider)){
 					locMgr.RequestLocationUpdates (LocationManager.GpsProvider, timeBetweenUpdatesDense , 0, this);
+				} else {
+					locMgr.RequestLocationUpdates (LocationManager.NetworkProvider, timeBetweenUpdatesDense , 0, this);
 				}
+			}
 
-				if (record.calculatedSpeed < speedLimit && record.recordedSpeed < speedLimit && denseUpdates) {
-					slowMesurement += 1;
-					if(slowMesurement > 9){
-						locMgr.RemoveUpdates (this);
-						denseUpdates = false;
-						locMgr.RequestLocationUpdates (LocationManager.NetworkProvider, timeBetweenUpdates , 0, this);
-					}
+
+			if (record.calculatedSpeed < speedLimit && record.recordedSpeed < speedLimit && denseUpdates) {
+				slowMesurement += 1;
+				if(slowMesurement > 5){
+					locMgr.RemoveUpdates (this);
+					denseUpdates = false;
+					slowMesurement = 0;
+					locMgr.RequestLocationUpdates (LocationManager.NetworkProvider, timeBetweenUpdates , 0, this);
 				}
+			}
+
+			if ((record.calculatedSpeed > speedLimit || record.recordedSpeed > speedLimit) && denseUpdates) {
+				if (slowMesurement > 0)
+					slowMesurement--;
+			}
 
 			sw.Close ();
-			
+
 			//}
 		}
 

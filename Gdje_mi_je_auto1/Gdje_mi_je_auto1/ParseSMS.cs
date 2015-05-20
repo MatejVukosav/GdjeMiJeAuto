@@ -30,32 +30,41 @@ namespace Gdje_mi_je_auto1
 			//test smsBody="Kupili ste parkirnu kartu za vozilo ZG4994AG,ZAGREB2,(3 KN) do 19:52. .."
 			bool valid_check = false;
 
-			char[] delimiterChars = { ' ' , ','};
+			char[] delimiterChars = {' ' , ','};
 			string[] words = smsBody.Split(delimiterChars);
+			foreach (String r in words)
+				Log.Debug ("poruka", r);
+
 			String car_time = "";
 
 			bool Do=false;
 			bool DoProsao = false;
 			bool datumProsao = false;
-			int i = 0;
+			//int i = 0;
 
 			foreach (String str in words) {
-				
+				Log.Debug ("rijec",str);
+
 				if (str.Equals ("do")) {
 					Do = true;
-				}
-
-				if (DoProsao && (str.Count () < 7)) {
-					car_time = str;// hour:minutes
-					break;
-				} else {
-					datumProsao = true;
 				}
 
 				if(datumProsao) {
 					car_time = str; //nema datuma
 					break;
 				}
+
+				if (DoProsao && (str.Count () > 7)) {
+					datumProsao = true;
+					Log.Debug ("Do prosao i str.count >7",Do.ToString ());
+				}
+
+				if (DoProsao && (str.Count () < 7)) {
+					car_time = str;// hour:minutes
+					break;
+				} 
+					
+
 
 				if (Do) {
 					DoProsao = true;
@@ -75,8 +84,8 @@ namespace Gdje_mi_je_auto1
 				car_registration = words [6]; //registration
 				valid_check=true;
 			 
-				//Log.Debug ("Kupili",car_registration);
-				//Log.Debug ("Kupili",car_time);
+				Log.Debug ("Kupili",car_registration);
+				Log.Debug ("Kupili",car_time);
 				Log.Debug ("Poruka je ispravna.","SMS is valid");
 				//TODO disable zvuk dolazne poruke-tesko izvedivo/ne moguce
 				//TODO procitat poruku-tesko izvedivo/ne moguce

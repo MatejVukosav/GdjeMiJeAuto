@@ -32,9 +32,12 @@ namespace Gdje_mi_je_auto1
 
 			var prefsDict = Application.Context.GetSharedPreferences("MySharedPrefs", FileCreationMode.Private);
 			String dictString = prefsDict.GetString("MyAktivniAlarmiPrefs", "");
+			try{
 			AlarmiDictionary = dictString.Split(',').Select(p => p.Trim()
 				.Split(':'))
 				.ToDictionary(p => p[0], p => p[1]);
+			}catch(Exception){
+			}
 
 			foreach (KeyValuePair<string,string>pair in AlarmiDictionary) {
 				String[] ureditAlarme = pair.Value.Split ('&');

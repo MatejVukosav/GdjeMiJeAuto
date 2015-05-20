@@ -14,7 +14,7 @@ using Android.Util;
 
 namespace Gdje_mi_je_auto1
 {
-	[Activity (Label = "AlarmDialog",NoHistory =true)]			
+	[Activity (Label = "Alarm",NoHistory =true)]			
 	public class AlarmDialog:Activity
 	{
 

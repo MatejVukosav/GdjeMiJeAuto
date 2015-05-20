@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:actionBarNavMode="tabs">
+    tools:actionBarNavMode="list">
     <TextView
         android:text="Unesite vrijeme plaćanja karte:"
         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -69,7 +69,7 @@
         android:layout_width="fill_parent"
         android:layout_height="1dp"
         android:background="#808080"
-        android:layout_marginTop="50dp" />
+        android:layout_marginTop="40dp" />
     <ListView
         android:id="@+id/List_SMS_Main_History"
         android:minWidth="25px"

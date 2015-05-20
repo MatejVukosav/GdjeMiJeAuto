@@ -46,7 +46,19 @@ namespace Gdje_mi_je_auto1
 					}
 				}
 			}
-				
+
+
+			//Pokaži korisniku poruku da je bedast ako ne ukljući GPS
+			if (!GeoFencer.IsGPSProviderEnabled ()) {
+				AlertDialog.Builder alert = new AlertDialog.Builder (this);
+				alert.SetTitle ("Nemate uključen GPS");
+				alert.SetMessage ("Kako bi što bolje mogli locirati Vaš auto preporučamo Vam da omogućite korištenje GPS-a u postavkama telefona.");
+				alert.SetPositiveButton ("OK", (senderAlert, args) => {
+					return;
+				});
+				alert.Show ();
+			}
+
 
 			Button startPAY = FindViewById<Button> (Resource.Id.startPay);
 			Button startMAP = FindViewById<Button> (Resource.Id.startMap);
@@ -86,7 +98,7 @@ namespace Gdje_mi_je_auto1
 				timeBetweenUpdatesDense = MINUTE /2,
 				speedLimit = 15 / 3.6
 			};
-		
+
 			using (TextWriter tw = File.CreateText(settingsFile)){
 				tw.WriteLine (JsonConvert.SerializeObject (settings));
 			}

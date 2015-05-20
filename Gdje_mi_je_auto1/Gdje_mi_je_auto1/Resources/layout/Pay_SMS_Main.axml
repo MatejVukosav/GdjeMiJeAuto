@@ -31,6 +31,7 @@
         android:id="@+id/editText_message"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:background="@drawable/ociscena_rega"
         android:textColor="@android:color/background_dark"
         style="@style/registration_view"
         android:layout_marginBottom="10dp" />
@@ -52,27 +53,27 @@
         android:id="@+id/tableRow1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
         android:layout_marginTop="10dp">
         <Button
-            android:text="ZONA 1#30"
+            android:text="1#30"
             android:id="@+id/zona01_btn"
-            android:layout_width="wrap_content"
+            android:layout_width="112dp"
             android:layout_height="65dp"
             android:layout_weight="1"
             android:background="@drawable/collor_button" />
         <Button
             android:text="ZONA 1"
             android:id="@+id/zona1_btn"
-            android:layout_width="wrap_content"
+            android:layout_width="112dp"
             android:layout_height="65dp"
             android:layout_weight="1"
             android:background="@drawable/collor_button" />
         <Button
             android:text="ZONA 2"
             android:id="@+id/zona2_btn"
-            android:layout_width="110dp"
+            android:layout_width="112dp"
             android:layout_height="65dp"
             android:layout_weight="1"
             android:background="@drawable/collor_button" />
@@ -82,26 +83,26 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp">
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp">
         <Button
             android:text="ZONA 3"
             android:id="@+id/zona3_btn"
-            android:layout_width="110dp"
+            android:layout_width="112dp"
             android:layout_height="65dp"
             android:layout_weight="1"
             android:background="@drawable/collor_button" />
         <Button
             android:text="ZONA 4.1"
             android:id="@+id/zona4_1_btn"
-            android:layout_width="115dp"
+            android:layout_width="112dp"
             android:layout_height="65dp"
             android:layout_weight="1"
             android:background="@drawable/collor_button" />
         <Button
             android:text="ZONA 4.2"
             android:id="@+id/zona4_2_btn"
-            android:layout_width="115dp"
+            android:layout_width="112dp"
             android:layout_height="65dp"
             android:layout_weight="1"
             android:background="@drawable/collor_button" />

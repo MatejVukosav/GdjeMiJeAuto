@@ -37,7 +37,7 @@ namespace Gdje_mi_je_auto1
 		bool valid_check=false;
 
 		private readonly int registrationLength=8;
-		private readonly string VukiTestNumber="+385989305003";  //TODO promijenit defaultni broj //broj prve zone za pola sata
+		//private readonly string VukiTestNumber ="+385989305003"; //"700101"; //Broj za testiranje poruka ;  //broj prve zone za pola sata
 
 		static Dictionary<string,string> zoneDictionary=new Dictionary<string,string>();
 		static List<string> zone = new List<string> ();
@@ -59,6 +59,7 @@ namespace Gdje_mi_je_auto1
 		String zonaAlarm="";
 		String regaAlarm="";
 
+		bool zona30=false;
 
 
 		protected override void OnCreate (Bundle bundle)
@@ -176,34 +177,41 @@ namespace Gdje_mi_je_auto1
 			string zone_number = "";
 
 			vuki_btn.Click += delegate {
-				zone_number=zone[0];
+				zone_number=zone[0];  //prikazuje broj "+385989305003"
 				//zone_number = Resources.GetString (Resource.String.vuki_number);
-				numberEditText.Text = (zone_number + " [ ZONA 1#30 ] ");
+				zona30=true;
+				String broj="700101";
+				numberEditText.Text = (broj + " [ ZONA 1#30 ] ");
 			};
 
 			zona1_btn.Click += delegate {
 				zone_number=zone[1];
+				zona30=false;
 				//zone_number = Resources.GetString (Resource.String.zona1_number);
 				numberEditText.Text = (zone_number + " [ ZONA 1 ] ");
 			};
 
 			zona2_btn.Click += delegate {
 				zone_number=zone[2];
+				zona30=false;
 				//zone_number = Resources.GetString (Resource.String.zona2_number);
 				numberEditText.Text = (zone_number + " [ ZONA 2 ] ");
 			};
 			zona3_btn.Click += delegate {
 				zone_number=zone[3];
+				zona30=false;
 				//zone_number = Resources.GetString (Resource.String.zona3_number);
 				numberEditText.Text = (zone_number + " [ ZONA 3 ] ");
 			};
 			zona4_1_btn.Click += delegate {
 				zone_number=zone[4];
+				zona30=false;
 				//zone_number = Resources.GetString (Resource.String.zona4_1_number);
 				numberEditText.Text = (zone_number + " [ ZONA 4.1 ] ");
 			};
 			zona4_2_btn.Click += delegate {
 				zone_number=zone[5];
+				zona30=false;
 				//zone_number = Resources.GetString (Resource.String.zona4_2_number);
 				numberEditText.Text = (zone_number + " [ ZONA 4.2 ] ");
 			};
@@ -221,7 +229,9 @@ namespace Gdje_mi_je_auto1
 				String sms_message="";
 				String sms_messageClean=messageEditText.Text;
 
-				if(zone_number.Equals (VukiTestNumber)){
+				if(zona30==true){
+					zona30=false;
+					zone_number="700101"; //prepravka da salje na pravi broj //TODO 
 					sms_message=messageEditText.Text+"#30";
 				}else{
 					sms_message=messageEditText.Text;

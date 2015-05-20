@@ -33,7 +33,7 @@ namespace Gdje_mi_je_auto1
 		private const int white = unchecked((int) 0x60FFFFFF);
 
 		private string locationsFile;
-	
+
 
 
 		private static PolygonOptions[] zones = new PolygonOptions[34];
@@ -42,7 +42,7 @@ namespace Gdje_mi_je_auto1
 		private static List<Marker> markers = new List<Marker>();
 
 		private static int[] zoneColors = {cyan,cyan,cyan,red,green,green,green,green,green,yellow,green,green,green,green,green,yellow,yellow,yellow,yellow,yellow,yellow,yellow,yellow,yellow,green,blue,blue,blue,red,darkRed,green,yellow,darkRed,darkRed};
-//		private static int[] zoneColors = {white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,darkRed};
+		//		private static int[] zoneColors = {white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,darkRed};
 		public Zoner (GoogleMap map)
 		{
 			this.mMap = map;
@@ -136,14 +136,14 @@ namespace Gdje_mi_je_auto1
 
 			};
 			#endregion
-				
+
 			for (i = 0; i < zones.Length; i++) {
 				String[] x = xList[i].Split (',');
 				String[] y = yList[i].Split (',');
 
 				zones [i] = new PolygonOptions ();
-//				zones [i].InvokeFillColor (zoneColors[i]);
-//				zones [i].InvokeStrokeWidth (2);
+				//				zones [i].InvokeFillColor (zoneColors[i]);
+				//				zones [i].InvokeStrokeWidth (2);
 
 				hole1 = new List<LatLng>();
 				hole2 = new List<LatLng>();
@@ -166,16 +166,16 @@ namespace Gdje_mi_je_auto1
 				if (i == 33) {
 					zones [3].AddHole (new Java.Util.ArrayList (hole2.ToArray ()));
 				}
-					
-//				if (i > 0) {
-//					MarkerOptions markerOpt1 = new MarkerOptions ();
-//					markerOpt1.SetPosition (new LatLng (double.Parse (x [j - 2], CultureInfo.InvariantCulture), double.Parse (y [j - 2], CultureInfo.InvariantCulture)));
-//					markerOpt1.SetTitle ("i = " + i.ToString ());
-//					markerOpt1.SetSnippet (zoneColors [i].ToString());
-//					mMap.AddMarker (markerOpt1);
-//				}
+
+				//				if (i > 0) {
+				//					MarkerOptions markerOpt1 = new MarkerOptions ();
+				//					markerOpt1.SetPosition (new LatLng (double.Parse (x [j - 2], CultureInfo.InvariantCulture), double.Parse (y [j - 2], CultureInfo.InvariantCulture)));
+				//					markerOpt1.SetTitle ("i = " + i.ToString ());
+				//					markerOpt1.SetSnippet (zoneColors [i].ToString());
+				//					mMap.AddMarker (markerOpt1);
+				//				}
 			}
-				
+
 			i = 0;
 			foreach (PolygonOptions zone in zones) {
 				zone.InvokeFillColor (zoneColors[i]);
@@ -184,7 +184,7 @@ namespace Gdje_mi_je_auto1
 				drawnZones[i] = mMap.AddPolygon (zone);
 				i++;
 			}
-				
+
 		}
 
 		public void ShowZones()
@@ -201,21 +201,36 @@ namespace Gdje_mi_je_auto1
 			}
 		}
 
-		public void SetMarkers(int numberOfMarkers)
+		//		public void SetMarkers(int numberOfMarkers)
+		//		{
+		//			int i;
+		//			List<string> lines = new List<string>(File.ReadLines (locationsFile));
+		//			if (numberOfMarkers > lines.Count)
+		//				numberOfMarkers = lines.Count;
+		//	
+		//			for (i = lines.Count - 1; i > lines.Count - numberOfMarkers - 1; i--) {
+		//				LocationRecord record = JsonConvert.DeserializeObject<LocationRecord> (lines[i]);
+		//				MarkerOptions options = new MarkerOptions ();
+		//				options.SetPosition (new LatLng (record.latitude, record.longitude));
+		//				options.SetTitle (record.time.ToShortTimeString ());
+		//				options.SetSnippet (!double.IsNaN(record.recordedSpeed)?"Speed: " + String.Format ("{0:0.00}", record.recordedSpeed*3.6) + " km/h":"Speed unknown");
+		//				Marker marker = mMap.AddMarker (options);
+		//				markers.Add (marker);
+		//			}
+		//		}
+
+		public bool SetMarkers()
 		{
-			int i;
-			List<string> lines = new List<string>(File.ReadLines (locationsFile));
-			if (numberOfMarkers > lines.Count)
-				numberOfMarkers = lines.Count;
-	
-			for (i = lines.Count - 1; i > lines.Count - numberOfMarkers - 1; i--) {
-				LocationRecord record = JsonConvert.DeserializeObject<LocationRecord> (lines[i]);
-				MarkerOptions options = new MarkerOptions ();
-				options.SetPosition (new LatLng (record.latitude, record.longitude));
-				options.SetTitle (record.time.ToShortTimeString ());
-				options.SetSnippet (!double.IsNaN(record.recordedSpeed)?"Speed: " + String.Format ("{0:0.00}", record.recordedSpeed*3.6) + " km/h":"Speed unknown");
-				Marker marker = mMap.AddMarker (options);
-				markers.Add (marker);
+			List<MarkerOptions> destinations = FinderAlgorithm.FindCar ();
+			if (destinations.Count > 0) {
+				foreach (MarkerOptions option in destinations) {
+					option.InvokeIcon(BitmapDescriptorFactory.FromResource(Resource.Drawable.carMarker));
+					Marker marker = mMap.AddMarker (option);
+					markers.Add (marker);
+				}
+				return true;
+			} else {
+				return false;
 			}
 		}
 
@@ -224,6 +239,7 @@ namespace Gdje_mi_je_auto1
 			foreach (Marker marker in markers) {
 				marker.Remove ();
 			}
+			markers = new List<Marker>();
 		}
 		private async Task<JsonValue> getJson (string url)
 		{
@@ -307,8 +323,8 @@ namespace Gdje_mi_je_auto1
 			PolylineOptions linija = new PolylineOptions();
 			linija.InvokeColor(-16776961);
 			string url = "https://maps.googleapis.com/maps/api/directions/json?origin="+origin+"&destination="+destination+"&mode=walking&region=hr&key=AIzaSyAi5T6O9DsVUJ3HMN4xDpfGf9qupGjY7xQ";
-			var json = await getJson (url);
 			Console.WriteLine (url);
+			var json = await getJson (url);
 			string jsonString = json.ToString ();
 			Regex points = new Regex ("\"polyline\": {\"points\": \"(.*?)},");
 			Match polypoints = points.Match (jsonString);
@@ -328,7 +344,7 @@ namespace Gdje_mi_je_auto1
 			try{
 				ruta.Remove();
 			}
-			catch (Exception ex){
+			catch (Exception){
 
 			}
 			return ruta=mMap.AddPolyline(linija);

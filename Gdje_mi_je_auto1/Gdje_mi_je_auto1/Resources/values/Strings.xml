@@ -16,27 +16,27 @@
 	<!-- Postavke -->
 	<string name="LocationUpdateDensityMain">Brzina osvježavanja lokacije.</string>
 	<string name="LocationUpdateDensity">Odaberite koliko često želite da vam se bilježi lokacija.
-	Češća mjerena povećavaju točnost izračuna lokacije.</string>
-	<string name="LocationUpdateDensityPrecise">Location update density in precise mode</string>
-	<string name="LocationUpdateDensityNormal">Location update density in normal mode</string>
+	Češća mjerena povećavaju točnost izračuna lokacije, ali i potrošnju baterije.</string>
+	<string name="LocationUpdateDensityPrecise">Brzina osvježavanja lokacije precizno</string>
+	<string name="LocationUpdateDensityNormal">Brzina osvježavanja lokacije normalno</string>
 	 <string name="normal_density_prompt">Map type</string>
     <string-array name="normal_density_array">
-        <item>Low</item>
-        <item>Medium</item>
-        <item>High</item>
+        <item>Rijetko</item>
+        <item>Srednje</item>
+        <item>Gusto</item>
     </string-array>
   
     <string name="high_density_prompt">Map type</string>
     <string-array name="high_density_array">
-        <item>Low</item>
-        <item>Medium</item>
-        <item>High</item>
+        <item>Rijetko</item>
+        <item>Srednje</item>
+        <item>Gusto</item>
     </string-array>
 
 
 
-	<string name="SpeedBetweenNodesMain">Odaberite brzinu neku nemam pojma</string>
-	<string name="SpeedBetweenNodes">Odaberite brzinu prebacivanja između GPS i Internet dohvaćanj lokacije.</string>
+	<string name="SpeedBetweenNodesMain">Odaberite brzinu</string>
+	<string name="SpeedBetweenNodes">Odaberite brzinu prebacivanja između GPS i Internet dohvaćanja lokacije.</string>
 	<string name="speed_prompt">Map type</string>
     <string-array name="speed_array">
    		<item>10 kmh</item>

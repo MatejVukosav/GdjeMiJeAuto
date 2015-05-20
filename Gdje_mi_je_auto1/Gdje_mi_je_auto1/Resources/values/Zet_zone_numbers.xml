@@ -2,7 +2,7 @@
 
 <resources>
 <!-- Add also reference in Zone_Numbers_Assets when changing-->
-	<string name="zona01_number">+385989305003</string> <!-- 700101 -->
+	<string name="zona01_number">+385989305003</string> <!-- +385989305003 -->
 	<string name="zona1_number">700101</string>
 	<string name="zona2_number">700102</string>
 	<string name="zona3_number">700103</string>

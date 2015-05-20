@@ -124,7 +124,7 @@ namespace Gdje_mi_je_auto1
 					zones [i].Add (new LatLng (double.Parse (x [j], CultureInfo.InvariantCulture), double.Parse (y [j], CultureInfo.InvariantCulture)));
 				}
 			}
-					
+
 
 			i = 0;
 			foreach (PolygonOptions zone in zones) {
@@ -175,7 +175,7 @@ namespace Gdje_mi_je_auto1
 					}
 				}
 			}
-						
+
 			return zoneName(targetZone);
 		}
 
@@ -185,18 +185,23 @@ namespace Gdje_mi_je_auto1
 			Location locationNetwork;
 			Location locationGPS;
 			try{
-		    locationNetwork = locMgr.GetLastKnownLocation (LocationManager.NetworkProvider);
-		    locationGPS = locMgr.GetLastKnownLocation (LocationManager.GpsProvider);
-			
-			if (locationGPS == null) {
-				location = locationNetwork;
-			} else if (locationNetwork == null) {
-				location = locationGPS;
-			} else {
-				location = locationNetwork.Time > locationGPS.Time ? locationNetwork : locationGPS;
-			}
-			return inZone (location.Latitude, location.Longitude);	
+				locationNetwork = locMgr.GetLastKnownLocation (LocationManager.NetworkProvider);
+				//			Log.Debug ("locationNetwork",Convert.ToString ( locationNetwork));
+				locationGPS = locMgr.GetLastKnownLocation (LocationManager.GpsProvider);
+				//			Log.Debug ("locationGPS",Convert.ToString (locationGPS));
+
+				if (locationGPS == null) {
+					location = locationNetwork;
+				} else if (locationNetwork == null) {
+					location = locationGPS;
+				} else {
+					location = locationNetwork.Time > locationGPS.Time ? locationNetwork : locationGPS;
+				}
+				//			Log.Debug ("latitude", Convert.ToString ( location.Latitude));	
+				//			Log.Debug ("longitude", Convert.ToString (location.Longitude));	
+				return inZone (location.Latitude, location.Longitude);	
 			} catch(Exception ){
+				//Log.Debug ("Lokacija nije ukljucena.",e.ToString ());
 				return "Zona nepoznata.";
 			}
 		}
@@ -280,6 +285,14 @@ namespace Gdje_mi_je_auto1
 			default:
 				return "outside";
 			}
+		}
+
+		public static bool IsNetworkProviderEnabled(){
+			return locMgr.IsProviderEnabled (LocationManager.NetworkProvider);
+		}
+
+		public static bool IsGPSProviderEnabled(){
+			return locMgr.IsProviderEnabled (LocationManager.GpsProvider);
 		}
 	}
 }
