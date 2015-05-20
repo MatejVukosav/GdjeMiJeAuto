@@ -71,9 +71,11 @@ namespace Gdje_mi_je_auto1
 							msgs [i] = SmsMessage.CreateFromPdu ((byte[])pdus [i]);
 							smsSender = msgs [i].OriginatingAddress;
 							smsBody = msgs [i].MessageBody;
+
 							String smsTimeH=DateTime.UtcNow.Hour.ToString ();
 							String smsTimeM=DateTime.UtcNow.Minute.ToString ();
 							smsTime=smsTimeH+":"+smsTimeM;
+							String time=smsTime.ToString ();
 
 							try {
 								var tuple = ParseSMS.ParseSMSbody (smsBody);
@@ -85,7 +87,7 @@ namespace Gdje_mi_je_auto1
 							}
 
 							try{
-							smsDate = DateTime.Now.ToString ("d.M.yyyy");
+							 smsDate = DateTime.Now.ToString ("d.M.yyyy");
 							}catch(Exception){
 								Log.Debug ("Krivo konvertiranje datuma","smsDate");
 							}
@@ -99,38 +101,13 @@ namespace Gdje_mi_je_auto1
 								//send sms data to further reproduction
 
 
-//String[] projection = new String[]{ "_id" };
-//var uri="content://sms/inbox";
-//CursorLoader loader = new CursorLoader (context);
-//
-//
-//try {
-//loader = new CursorLoader (context, Android.Net.Uri.Parse (uri), projection, null, null, null);
-//
-//} catch (Exception e) {
-//Log.Debug ("Problem kod loadera", e.ToString ());
-//}
-//
-//ICursor cursor = (ICursor)loader.LoadInBackground ();
-//if (cursor.MoveToFirst ()) { 
-//
-//String smsID = cursor.GetString (cursor.GetColumnIndexOrThrow (projection [0]));
-//
-//Log.Debug ("id", smsID);
-//}
-//
-//ContentValues values = new ContentValues();
-//values.Put("READ",1);
-//getContentResolver().update(Android.Net.Uri.Parse("content://sms/inbox"),values,"_id="+smsId, null);
-//Log.Debug ("tuu2","buu");
-//
-//ICursor queryData = ContentResolver.Query (CallLog.Calls.ContentUri, null, queryFilter, null, querySorter)
 
 					try{
-									Pay_SMS_Main.AddIncomingMessageToView (smsSender, smsFilteredBody, smsTime,smsTimePaying[0], smsDate);
-					}catch(Exception){
-									Log.Debug ("Krivo ucitavanje AddIncomingMessageToView ","onReceive");
-					}
+
+									Pay_SMS_Main.AddIncomingMessageToView (smsSender, smsFilteredBody, time,smsTimePaying[0], smsDate);
+					}catch(Exception e){
+									Log.Debug ("Krivo ucitavanje AddIncomingMessageToView... ",e.ToString ());
+								}
 				} else {
 					Log.Debug ("SMS was not from parking number!", "Pass message.");
 

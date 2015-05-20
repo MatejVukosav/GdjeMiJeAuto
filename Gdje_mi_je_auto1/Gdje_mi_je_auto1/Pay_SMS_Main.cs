@@ -89,6 +89,7 @@ namespace Gdje_mi_je_auto1
 
 			try{
 				messageEditText.Text = prefs.GetString ("MyRegistrationDefaultPrefs", "");
+				Log.Debug ("defaultna rega",messageEditText.Text);
 			}catch(Exception e){
 				Log.Debug ("Nema registracija na izbor",e.ToString ());
 			}
@@ -229,9 +230,11 @@ namespace Gdje_mi_je_auto1
 				String sms_message="";
 				String sms_messageClean=messageEditText.Text;
 
+
+
 				if(zona30==true){
 					zona30=false;
-					zone_number="700101"; //prepravka da salje na pravi broj //TODO 
+					//zone_number="700101"; //prepravka da salje na pravi broj //TODO 
 					sms_message=messageEditText.Text+"#30";
 				}else{
 					sms_message=messageEditText.Text;
@@ -252,8 +255,11 @@ namespace Gdje_mi_je_auto1
 					}else{
 						Toast.MakeText (ApplicationContext, "SMS poruka je poslana. (alarm NIJE upaljen)", ToastLength.Short).Show ();
 					}
+
+					ICollection<string>  rege=prefs.GetStringSet("MyRegistrationTextPrefs", null);
+					rege.Add (sms_messageClean);
 					var prefsEditor = prefsZone.Edit ();
-					prefsEditor.PutStringSet ("MyRegistrationTextPrefs", registrationHolder);
+					prefsEditor.PutStringSet ("MyRegistrationTextPrefs", rege);
 					prefsEditor.Commit ();
 
 					var activity_pay_main=new Intent (this,typeof(Pay_Main));
@@ -281,10 +287,20 @@ namespace Gdje_mi_je_auto1
 		public static void AddIncomingMessageToView(string smsSender,string smsBody,string smsTime,string smsTimePaying,string smsDate){
 
 			Pay_SMS_Main psm=new Pay_SMS_Main();
+//			Log.Debug ("time",smsTime);
+//			Log.Debug ("body",smsBody);
+//			Log.Debug ("date",smsDate);
+//			Log.Debug ("sender",smsSender);
+//			Log.Debug ("time paying",smsTimePaying);
 			string poruka = psm.MessageDisplayIncoming (smsSender, smsBody,smsTime,smsTimePaying,smsDate);
+//			Log.Debug ("time",smsTime);
+//			Log.Debug ("body",smsBody);
+//			Log.Debug ("date",smsDate);
+//			Log.Debug ("sender",smsSender);
+//			Log.Debug ("time paying",smsTimePaying);
 			//string poruka=psm.DetermineZone(smsSender)+" [ " +smsBody +" ]" + " "+smsTime; 
 			//zapisuje poruku u datoteku
-			using (StreamWriter sw = File.AppendText (psm.message_Data)) {
+			using (StreamWriter sw = File.AppendText (psm.message_Data)) { //psm.message_Data
 				sw.Write (poruka+"\n");
 			};
 
