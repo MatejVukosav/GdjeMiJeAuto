@@ -13,6 +13,9 @@ using Android.Widget;
 
 namespace Gdje_mi_je_auto1
 {
+	/*
+	 * Klasa koja odreduje prikaz podataka u prikaznim listama. (ListView)
+	 * */
 	public class ListSection
 	{
 		

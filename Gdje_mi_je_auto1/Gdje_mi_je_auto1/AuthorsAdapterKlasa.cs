@@ -22,6 +22,9 @@ using System.Net;
 
 namespace Gdje_mi_je_auto1
 {
+	/*
+	 * Klasa koja puni listu autora aplikacije.
+	 * */
 	[Activity (Label = "BaseAdapterKlasa",ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]			
 	public class AuthorsAdapterKlasa : BaseAdapter<string>
 	{

@@ -14,6 +14,9 @@ using Android.Util;
 
 namespace Gdje_mi_je_auto1
 {
+	/*
+	 * Klasa koja otvara dialog te obavijestava korisnika da je alarm istekao. 
+	 * */
 	[Activity (Label = "Alarm",NoHistory =true)]			
 	public class AlarmDialog:Activity
 	{
@@ -24,6 +27,7 @@ namespace Gdje_mi_je_auto1
 			SetContentView (Resource.Layout.AlarmAlertDialog);
 			CreateAlarmDialog ();
 
+			//usporeduje vremena alarma i onaj koji je istekao obrise.
 			foreach (KeyValuePair<string,string>pair in AlarmMain.AlarmiDictionary) {
 				String[] ureditAlarme = pair.Value.Split ('&');
 				String vrijeme = ureditAlarme [0] + ureditAlarme [1];
@@ -36,9 +40,12 @@ namespace Gdje_mi_je_auto1
 			}
 		}
 
+		/*
+		 * Metoda koja otvara dialog o isteku parkinga.
+		 * */
 		public void CreateAlarmDialog() { 
 
-			Toast.MakeText (this, "Alarm2!", ToastLength.Long).Show ();
+			//Toast.MakeText (this, "Alarm!", ToastLength.Long).Show ();
 			var builder = new AlertDialog.Builder (this);
 			builder.SetTitle ("Alert title");
 			builder.SetCancelable (false);

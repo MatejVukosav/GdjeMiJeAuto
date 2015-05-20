@@ -29,7 +29,9 @@ namespace Gdje_mi_je_auto1
 //			};
 //
 //			}
-
+		/*
+		 *Klasa koja otvara prikaz povijesti placenih parkiranja. 
+		 * */
 		public static void CreateListDialog(Context context,List<string> lista) { 
 
 			Dialog dialog = new Dialog (context);

@@ -15,7 +15,6 @@ using Android.Telephony;
 using Android.Database;
 using System.Windows;
 using System.Runtime.InteropServices;
-using Android.Util;
 
 
 /*
@@ -121,12 +120,11 @@ namespace Gdje_mi_je_auto1
 			 * UPALI ALARM I SPREMI VRIJEME PLACANJA U HISTORY
 			 * */
 			btn_save_time.Click += delegate {
-				Log.Debug ("save","time");
 				var prefs = Application.Context.GetSharedPreferences ("MySharedPrefs", FileCreationMode.Private);
 				var valid_Alarm=prefs.GetBoolean ("MyAlarmValue", true);
 
 				if (valid_Alarm) {
-					//Toast.MakeText (this,"Alarm JE upaljen",ToastLength.Short).Show();
+					Toast.MakeText (this,"Alarm JE upaljen",ToastLength.Short).Show();
 					ActivatedAlarmOnSMS ();
 				}else{
 					Toast.MakeText (this,"Alarm NIJE upaljen",ToastLength.Short).Show ();

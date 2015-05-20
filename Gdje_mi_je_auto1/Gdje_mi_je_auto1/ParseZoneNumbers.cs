@@ -21,7 +21,7 @@ using System.Runtime.InteropServices;
 namespace Gdje_mi_je_auto1
 {
 	/*
-	 * Metoda koja ucitava brojeve iz Zone_Numbers_Assets u listu
+	 * Klasa koja ucitava brojeve iz Zone_Numbers_Assets u listu
 	 * Return multiple value 
 	 * */
 	public class ParseZoneNumbers

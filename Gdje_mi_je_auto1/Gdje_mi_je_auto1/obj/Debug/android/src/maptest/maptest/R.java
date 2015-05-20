@@ -2236,10 +2236,9 @@ containing a value of this type.
         public static final int speedSpinner=0x7f0c0099;
         public static final int spinner1=0x7f0c0077;
         public static final int split_action_bar=0x7f0c0007;
-        public static final int startAlarm=0x7f0c009b;
-        public static final int startMap=0x7f0c009e;
-        public static final int startPay=0x7f0c009d;
-        public static final int startSettings=0x7f0c009c;
+        public static final int startMap=0x7f0c009d;
+        public static final int startPay=0x7f0c009c;
+        public static final int startSettings=0x7f0c009b;
         public static final int strict_sandbox=0x7f0c0027;
         public static final int submit_area=0x7f0c0050;
         public static final int tabMode=0x7f0c000b;

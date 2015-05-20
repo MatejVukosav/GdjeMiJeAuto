@@ -8,16 +8,9 @@ using Android.Util;
 using Android.Views;
 using Android.Widget;
 using Android.Net;
-using Android.App;
-using Android.Content;
-using Android.OS;
 using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using System.Threading;
-using Android.Util;
 using System.IO;
-using Android.Telephony;
 using Android.Database;
 using System.Windows;
 using Java;
@@ -34,7 +27,10 @@ namespace Gdje_mi_je_auto1
 	[BroadcastReceiver(Enabled = true, Label = "SMS Receiver")]
 	[IntentFilter(new[] { "android.provider.Telephony.SMS_RECEIVED" },Priority = (int)IntentFilterPriority.HighPriority)] 
 	[Activity ( Label = "ReadFromInbox",ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]			
-	
+
+	/*
+	 * Klasa koja osluskuje obavijest o dolaznoj poruci te je dohvaca i prosljeduje na daljnju obradu.
+	 * */
 	public class OnReceiveSMS: BroadcastReceiver
 	{
 //		public  delegate void ReceiveSMSdelegate(string smsSender,string smsBody,String smsTime);
@@ -90,7 +86,7 @@ namespace Gdje_mi_je_auto1
 
 							try{
 							smsDate = DateTime.Now.ToString ("d.M.yyyy");
-							}catch(Exception e){
+							}catch(Exception){
 								Log.Debug ("Krivo konvertiranje datuma","smsDate");
 							}
 //
@@ -132,7 +128,7 @@ namespace Gdje_mi_je_auto1
 
 					try{
 									Pay_SMS_Main.AddIncomingMessageToView (smsSender, smsFilteredBody, smsTime,smsTimePaying[0], smsDate);
-					}catch(Exception e){
+					}catch(Exception){
 									Log.Debug ("Krivo ucitavanje AddIncomingMessageToView ","onReceive");
 					}
 				} else {

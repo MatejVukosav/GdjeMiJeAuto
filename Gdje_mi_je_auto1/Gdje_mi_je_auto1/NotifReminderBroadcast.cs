@@ -16,6 +16,9 @@ namespace Gdje_mi_je_auto1
 	[BroadcastReceiver]
 	public class NotifReminderBroadcast : BroadcastReceiver
 	{
+		/*
+		 * Nije implementirano do kraja.
+		 * */
 		public override void OnReceive (Context context, Intent intent)
 		{
 			//Log.Debug ("notif", "1");
@@ -28,7 +31,7 @@ namespace Gdje_mi_je_auto1
 		//	Log.Debug ("notif", "2");
 			var builder = new Notification.Builder (context)
 				.SetContentTitle ("Istek roka")
-				.SetContentText (String.Format ("Za {0} minuta će isteći vrijeme parkinga.", Alarms.mindif)) //TODO promijeniti klasu iz Alarms u onu od settingsa
+				.SetContentText (String.Format ("Za {0} minuta će isteći vrijeme parkinga.", Alarms.mindif)) 
 				.SetDefaults (NotificationDefaults.All)
 				.SetContentIntent (contentIntent);
 
@@ -36,7 +39,7 @@ namespace Gdje_mi_je_auto1
 			//Log.Debug ("notif", "3");
 			notifManager.Notify (Alarms.reqcode, builder.Build ());
 			//Log.Debug ("notif", "4");
-			Toast.MakeText (Application.Context, "Podsjetnik!", ToastLength.Long).Show ();
+			//Toast.MakeText (Application.Context, "Podsjetnik!", ToastLength.Long).Show ();
 		}
 	}
 }

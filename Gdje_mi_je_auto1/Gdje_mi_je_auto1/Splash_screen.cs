@@ -14,7 +14,7 @@ using System.Threading;
 
 /**
  * SPLASH SCREEN
- * Ekran koji se prikazuje dok se učitavaju podaci.
+ * Ekran koji se prikazuje dok se učitavaju podaci. Disabled
  * */
 namespace Gdje_mi_je_auto1
 {

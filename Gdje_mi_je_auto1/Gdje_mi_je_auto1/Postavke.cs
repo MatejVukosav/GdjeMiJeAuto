@@ -14,6 +14,9 @@ using Android.Util;
 
 namespace Gdje_mi_je_auto1
 {
+	/*
+	 * Klasa koja omogucava prikaz postavki. U postavkama su definirane sve specificnosti na koje korisnik moze utjecati.
+	 * */
 	[Activity (Label = "Postavke",Icon = "@drawable/Setting_icon",ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait )]			
 	public class Postavke : Activity
 	{
@@ -27,12 +30,12 @@ namespace Gdje_mi_je_auto1
 		const int Placanje2=6;
 		const int Placanje3=7;
 		const int Alarm=8;
-		const int Alarm0=9;
+		/*const int Alarm0=9;
 		const int Alarm1=10;
-		const int Alarm2=11;
-		const int Alarm3=12;
-		const int About=13;
-		const int About0=14;
+		const int Alarm2=11;*/
+		const int Alarm3=9; 
+		const int About=10;
+		const int About0=11;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -53,11 +56,13 @@ namespace Gdje_mi_je_auto1
 			pay[2]="Poruke iz inboxa";
 			pay[3]="Cijene parkiranja";
 
-			String[] alarm=new String[4];
-			alarm[0]="Odaberi zvuk alarma";
+			String[] alarm=new String[1];
+			alarm[0]="Omogući/Onemogući alarm";
+			/*
 			alarm[1]="Odaberi zvuk podsjetnika";
 			alarm[2]="Odaberi vrijeme podsjetnika";
-			alarm[3]="Omogući/Onemogući alarm";
+			alarm[3]="Odaberi zvuk alarma";*/
+
 
 			String[] about=new String[1];
 			about[0]="O autorima";
@@ -112,7 +117,7 @@ namespace Gdje_mi_je_auto1
 				var activity_CP = new Intent (this, typeof(CijeneParkinga));
 				StartActivity (activity_CP);
 
-			} else if (e.Position == Alarm0) {
+			}/* else if (e.Position == Alarm0) {
 				var activity_CAS = new Intent (this, typeof(ChooseAlarmSound));
 				StartActivity (activity_CAS);
 
@@ -124,7 +129,7 @@ namespace Gdje_mi_je_auto1
 				var activity_CRT = new Intent (this, typeof(ChooseReminderTime));
 				StartActivity (activity_CRT);
 
-			}else if (e.Position == Alarm3) {
+			}*/else if (e.Position == Alarm3) {
 				var activity_EA = new Intent (this, typeof(EnableAlarms));
 				StartActivity (activity_EA);
 

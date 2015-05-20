@@ -13,6 +13,9 @@ using Android.Widget;
 
 namespace Gdje_mi_je_auto1
 {
+	/*
+	 * Klasa koja otvara layout u kojem su prikazane sve informacije o placanju parkinga.
+	 * */
 	[Activity (Label = "Cijene parkinga",NoHistory = true,ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]			
 	public class CijeneParkinga : Activity
 	{

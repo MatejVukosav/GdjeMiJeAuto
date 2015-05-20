@@ -59,19 +59,19 @@ namespace Gdje_mi_je_auto1
 			Spinner spinner = (Spinner)sender;
 
 			switch (spinner.GetItemAtPosition (e.Position).ToString()) {
-			case "10 kmh":
+			case "10 km/h":
 				settings.speedLimit = 10 / 3.6;
 				break;
-			case "15 kmh":
+			case "15 km/h":
 				settings.speedLimit = 15 / 3.6;
 				break;
-			case "30 kmh":
+			case "30 km/h":
 				settings.speedLimit = 30 / 3.6;
 				break;
-			case "40 kmh":
+			case "40 km/h":
 				settings.speedLimit = 40 / 3.6;
 				break;
-			case "50 kmh":
+			case "50 km/h":
 				settings.speedLimit = 50 / 3.6;
 				break;
 			}

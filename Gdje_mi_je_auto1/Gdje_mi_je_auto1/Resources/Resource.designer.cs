@@ -1922,17 +1922,14 @@ namespace Gdje_mi_je_auto1
 			// aapt resource value: 0x7f0c0007
 			public const int split_action_bar = 2131492871;
 			
-			// aapt resource value: 0x7f0c009b
-			public const int startAlarm = 2131493019;
-			
-			// aapt resource value: 0x7f0c009e
-			public const int startMap = 2131493022;
-			
 			// aapt resource value: 0x7f0c009d
-			public const int startPay = 2131493021;
+			public const int startMap = 2131493021;
 			
 			// aapt resource value: 0x7f0c009c
-			public const int startSettings = 2131493020;
+			public const int startPay = 2131493020;
+			
+			// aapt resource value: 0x7f0c009b
+			public const int startSettings = 2131493019;
 			
 			// aapt resource value: 0x7f0c0027
 			public const int strict_sandbox = 2131492903;

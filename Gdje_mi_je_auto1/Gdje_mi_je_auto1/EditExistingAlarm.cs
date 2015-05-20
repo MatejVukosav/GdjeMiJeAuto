@@ -13,7 +13,12 @@ using Android.Widget;
 
 namespace Gdje_mi_je_auto1
 {
-	[Activity (NoHistory = true,ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]			
+	[Activity (NoHistory = true,ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]		
+	/*
+	 * Klasa koja se otvara nakon sto se u AlarmMain odabere jedan od trenutno aktivnih alarma.
+	 * Omogucava korisniku pauziranje ili ponovo pokretanje alarma sve dok njegovo vrijeme nije isteklo.
+	 * //TODO EditExistingAlarm not implemented. 
+	 * */
 	public class EditExistingAlarm : Activity
 	{
 		private Button btnUpali;

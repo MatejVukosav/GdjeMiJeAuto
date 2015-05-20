@@ -219,3 +219,4 @@ C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\drawable-xxxhdpi\registracija3.png
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\drawable-xxxhdpi\setting_icon.png
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\res\drawable-xxxhdpi\splash.png
+C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\obj\Debug\Gdje_mi_je_auto1.csprojResolveAssemblyReference.cache

@@ -13,6 +13,9 @@ using Android.Widget;
 
 namespace Gdje_mi_je_auto1
 {
+	/*
+	 * Klasa u kojoj se omogucuje korisniku ucitavanje ili brisanje poruka iz inboxa u aplikaciju.
+	 * */
 	[Activity (NoHistory = true,ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]			
 	public class MessageFromInboxSettings : Activity
 	{

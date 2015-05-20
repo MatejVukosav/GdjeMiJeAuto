@@ -18,6 +18,9 @@ using System.Runtime.InteropServices;
 
 namespace Gdje_mi_je_auto1
 {
+	/*
+	 * Klasa koja puni prikazane liste porukama prilikom otvaranja layouta. 
+	 * */
 	public class Fill_ListView_With_Data:Activity
 	{
 		static String message_Path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
@@ -27,7 +30,7 @@ namespace Gdje_mi_je_auto1
 		public static bool update_inbox_messages=false;
 
 		/*
-		 * Puni listView s podacima u ListViewAdapter.
+		 * Puni listView s podacima .
 		 * */
 		public static void FillListWithData(List<string> itemsOpt,Activity context,ListView listView){
 			update_inbox_messages = false;

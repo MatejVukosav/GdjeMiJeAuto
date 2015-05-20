@@ -14,7 +14,10 @@ using Android.Widget;
 using Newtonsoft.Json;
 
 namespace Gdje_mi_je_auto1
-{
+{	
+	/*
+	 * Početni zaslon aplikacije.
+	 * */
 	[Activity (Label = "Gdje mi je auto?!",MainLauncher = true,ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]			
 	public class Start_Main : Activity
 	{
@@ -63,7 +66,7 @@ namespace Gdje_mi_je_auto1
 			Button startPAY = FindViewById<Button> (Resource.Id.startPay);
 			Button startMAP = FindViewById<Button> (Resource.Id.startMap);
 			Button startSETTINGS = FindViewById<Button> (Resource.Id.startSettings);
-			Button startALARM = FindViewById<Button> (Resource.Id.startAlarm);
+			//Button startALARM = FindViewById<Button> (Resource.Id.startAlarm);
 
 			startMAP.Click += delegate {
 				var activity_start_sms_main = new Intent (this, typeof(MapActivity));
@@ -76,10 +79,12 @@ namespace Gdje_mi_je_auto1
 				StartActivity (activity_start_sms_main);
 			};
 
+			/*
 			startALARM.Click += delegate {
 				var activity_alarmMain = new Intent (this, typeof(AlarmMain));
 				StartActivity (activity_alarmMain);
 			};
+			*/
 
 			startSETTINGS.Click += delegate {
 				var activity_start_sms_main = new Intent (this, typeof(Postavke));

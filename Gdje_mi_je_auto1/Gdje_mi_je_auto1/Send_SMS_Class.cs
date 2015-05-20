@@ -15,6 +15,9 @@ using Android.Graphics;
 
 namespace Gdje_mi_je_auto1
 {
+	/*
+	 * Testna klasa koja je sluzila za brzinsko slanje sms poruke.
+	 * */
 	public class Send_SMS_Class:Activity
 	{
 		Android.Telephony.SmsManager smsManager = Android.Telephony.SmsManager.Default;

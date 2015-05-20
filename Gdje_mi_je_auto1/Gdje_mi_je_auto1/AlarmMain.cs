@@ -15,6 +15,10 @@ using Android.Util;
 namespace Gdje_mi_je_auto1
 {
 	[Activity (Label = "Alarm",ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]		
+	/*
+	 * //TODO Klasa koja sluzi za prikaz svih trenutnih aktivnih alarma. Nije implementirana do kraja. Izbacena iz aplikacije.
+	 * 
+	 * */
 	public class AlarmMain : Activity
 	{
 		ListView listview;

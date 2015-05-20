@@ -22,7 +22,7 @@ namespace Gdje_mi_je_auto1
 		public static int idNovi;
 		public static int reqcode;
 		public static int idPostoji;
-		private static MediaPlayer mp;
+
 		private static ISharedPreferences prefsDict = Application.Context.GetSharedPreferences("MySharedPrefs", FileCreationMode.Private);
 		private static ISharedPreferences prefsidNovi = Application.Context.GetSharedPreferences("MySharedPrefs", FileCreationMode.Private);
 		private static ISharedPreferences prefsidPostoji = Application.Context.GetSharedPreferences("MySharedPrefs", FileCreationMode.Private);
@@ -52,7 +52,7 @@ namespace Gdje_mi_je_auto1
 				reqcode = idNovi;
 				idNovi = idNovi + 2;
 
-				//TODO ovdje dodati alarm u list view, id mu treba biti reqcode (ne idNovi!)
+				//TODO // Disabled ovdje dodati alarm u list view, id mu treba biti reqcode (ne idNovi!)
 			} else {
 				reqcode = idPostoji;										// ako alarm već postoji ali ga treba prebrisati s novim vremenom
 			}
@@ -83,11 +83,12 @@ namespace Gdje_mi_je_auto1
 			am.SetExact (AlarmType.RtcWakeup, cal.TimeInMillis, alarmPendingIntent);
 			am.SetExact (AlarmType.RtcWakeup, (cal.TimeInMillis)-((Convert.ToInt64(mindif))*60*1000), reminderPendingIntent);	// vrijeme remindera je mindif minuta prije alarma
 
-			Toast.MakeText (context, "Podsjetnik postavljen " + mindif + "min prije isteka alarma.", ToastLength.Long).Show ();
+			//Toast.MakeText (context, "Podsjetnik postavljen " + mindif + "min prije isteka alarma.", ToastLength.Long).Show ();
 	
 		}
 
-
+		// Disabled
+		/*
 		public static void playSound()
 		{
 			var alarmSound = RingtoneManager.GetDefaultUri (RingtoneType.Alarm);
@@ -105,6 +106,7 @@ namespace Gdje_mi_je_auto1
 			mp.Stop ();
 			mp.Release();
 		}
+		*/
 
 
 		// ovo radi novi kalendar na temelju proslijeđenih vrijednosti iz smsa,
@@ -123,6 +125,7 @@ namespace Gdje_mi_je_auto1
 			}
 			return cal;
 		}
+
 
 		//provjera da li se radi o istoj zoni i registraciji - ako da,
 		//ključ se ne mijenja te će se alarm (i reminder) prebrisati s novim vremenom
@@ -177,7 +180,7 @@ namespace Gdje_mi_je_auto1
 
 	
 
-		// TODO metodu deleteAlarm treba pozvati u klasi za broadcast
+		// Disabled
 		// briše pojedinačni alarm
 		public static void deleteAlarm(int idAlarma)
 		{
@@ -209,7 +212,7 @@ namespace Gdje_mi_je_auto1
 
 		}
 
-
+		// Disabled
 		// otkazuje (ne briše!) pojedinačni alarm i njegov reminder
 		public static void cancelAlarm(int idAlarma)
 		{
@@ -224,7 +227,7 @@ namespace Gdje_mi_je_auto1
 			alarmManager.Cancel (senderReminder);
 		}
 
-
+		// Disabled
 		// nastavlja (ne stvara!) pojedinačni alarm i njegov reminder
 		public static void resumeAlarm(int idAlarma)
 		{

@@ -18,7 +18,9 @@ using System.Runtime.InteropServices;
 
 namespace Gdje_mi_je_auto1
 {
-	
+	/*
+	 * Klasa u kojoj se provjerava ispravnost poruke.Tj dali je to poruka kojom se potvrduje placeni parking.
+	 * */
 	public class ParseSMS
 	{
 		
@@ -32,10 +34,12 @@ namespace Gdje_mi_je_auto1
 
 			char[] delimiterChars = {' ' , ','};
 			string[] words = smsBody.Split(delimiterChars);
-			foreach (String r in words)
-				Log.Debug ("poruka", r);
+//			foreach (String r in words)
+//				Log.Debug ("poruka", r);
 
 			String car_time = "";
+
+			if (words[0].Equals ("Kupili")) {
 
 			bool Do=false;
 			bool DoProsao = false;
@@ -43,7 +47,7 @@ namespace Gdje_mi_je_auto1
 			//int i = 0;
 
 			foreach (String str in words) {
-				Log.Debug ("rijec",str);
+				//Log.Debug ("rijec",str);
 
 				if (str.Equals ("do")) {
 					Do = true;
@@ -56,7 +60,7 @@ namespace Gdje_mi_je_auto1
 
 				if (DoProsao && (str.Count () > 7)) {
 					datumProsao = true;
-					Log.Debug ("Do prosao i str.count >7",Do.ToString ());
+					//Log.Debug ("Do prosao i str.count >7",Do.ToString ());
 				}
 
 				if (DoProsao && (str.Count () < 7)) {
@@ -78,15 +82,13 @@ namespace Gdje_mi_je_auto1
 			 Do=false;
 			 DoProsao = false;
 			 datumProsao = false;
-			//Log.Debug ("word",words[0].ToString ());
-				
-			if (words[0].Equals ("Kupili")) {
+
 				car_registration = words [6]; //registration
 				valid_check=true;
 			 
-				Log.Debug ("Kupili",car_registration);
-				Log.Debug ("Kupili",car_time);
-				Log.Debug ("Poruka je ispravna.","SMS is valid");
+//				Log.Debug ("Kupili",car_registration);
+//				Log.Debug ("Kupili",car_time);
+//				Log.Debug ("Poruka je ispravna.","SMS is valid");
 				//TODO disable zvuk dolazne poruke-tesko izvedivo/ne moguce
 				//TODO procitat poruku-tesko izvedivo/ne moguce
 			} 

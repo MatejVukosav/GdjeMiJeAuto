@@ -14,7 +14,9 @@ using Android.Util;
 
 namespace Gdje_mi_je_auto1
 {
-
+	/*
+	 * Adapter za postavke
+	 * */
 	public class SettingsAdapter : BaseAdapter<ListSection>
 		{
 			private const int TYPE_SECTION_HEADER = 0;
@@ -45,8 +47,9 @@ namespace Gdje_mi_je_auto1
 				get
 				{
 					int count = 0;
-					foreach(ListSection s in sections) 
+				foreach (ListSection s in sections) { 
 					count += s.Adapter.Count + 1;
+					}
 					return count;
 				}
 			}

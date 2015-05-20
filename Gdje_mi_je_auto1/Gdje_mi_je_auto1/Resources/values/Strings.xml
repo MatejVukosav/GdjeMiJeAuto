@@ -39,11 +39,11 @@
 	<string name="SpeedBetweenNodes">Odaberite brzinu prebacivanja između GPS i Internet dohvaćanja lokacije.</string>
 	<string name="speed_prompt">Map type</string>
     <string-array name="speed_array">
-   		<item>10 kmh</item>
-        <item>15 kmh</item>
-        <item>30 kmh</item>
-        <item>40 kmh</item>
-        <item>50 kmh</item>
+   		<item>10 km/h</item>
+        <item>15 km/h</item>
+        <item>30 km/h</item>
+        <item>40 km/h</item>
+        <item>50 km/h</item>
     </string-array>
 
 	<string name="ChangeRegistrationPictureMain">Odaberite sliku registracije.</string>

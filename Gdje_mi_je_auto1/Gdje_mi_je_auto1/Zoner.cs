@@ -7,15 +7,10 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using System.Threading.Tasks;
 using System.Net;
-using System.IO;
-using System.Collections.Generic;
 using System.Text.RegularExpressions;
-using System;
 using Android.App;
 using Android.Widget;
 using Android.OS;
-using Android.Gms.Maps;
-using Android.Gms.Maps.Model;
 using Android.Locations;
 using System.Json;
 
@@ -308,7 +303,7 @@ namespace Gdje_mi_je_auto1
 					poly.Add(p);
 				} 
 			}
-			catch (Exception ex)
+			catch (Exception )
 			{
 				//log
 			}

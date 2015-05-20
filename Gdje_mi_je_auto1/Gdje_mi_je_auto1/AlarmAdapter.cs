@@ -13,7 +13,9 @@ using Android.Util;
 
 namespace Gdje_mi_je_auto1
 {
-		
+		/*
+		 * Klasa koja puni listu trenutno aktivnih alarma.
+		 * */
 	public class AlarmAdapter : BaseAdapter<ListSection>
 	{
 		
