@@ -23,6 +23,7 @@ namespace Gdje_mi_je_auto1
 		private Spinner normalSpinner;
 		private Spinner denseSpinner;
 		private Button btnApply;
+		private Button toggleButton;
 		private SettingsRecord settings;
 		private string settingsFile;
 
@@ -36,6 +37,41 @@ namespace Gdje_mi_je_auto1
 			settingsFile = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
 			settingsFile = Path.Combine(settingsFile, "settings.txt");
 			settings = JsonConvert.DeserializeObject<SettingsRecord> (File.ReadLines (settingsFile).First());
+
+			//ZA DEBUG ISPIS LOCATIONS FILEA XAMARINU
+			//string locationsFile;
+			//locationsFile = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+			//locationsFile = Path.Combine(locationsFile, "locations.txt");
+			//foreach (string location in File.ReadLines(locationsFile)) {
+			//	Console.WriteLine (location);
+			//}
+			//ZAKOMENTIRATI
+
+			toggleButton = FindViewById<Button>(Resource.Id.btnUseLogging);
+			toggleButton.Text = isLoggerRunning ()?"Zapisivanje lokacija je uključeno":"Zapisivanje lokacija je isključeno";
+
+			toggleButton.Click += delegate {
+				if (toggleButton.Text == "Zapisivanje lokacija je isključeno"){
+					//pokreni snimanje lokaija ako već nije i updateaj settings file
+					if(!isLoggerRunning())
+						StartService (new Intent (this, typeof(LocationLogger)));
+					SettingsRecord currentSettings = JsonConvert.DeserializeObject<SettingsRecord> (File.ReadLines (settingsFile).First());
+					currentSettings.useLocationLogging = true;
+					using (TextWriter tw = new StreamWriter(settingsFile,false)){
+						tw.WriteLine (JsonConvert.SerializeObject (currentSettings));
+					}
+					toggleButton.Text = "Zapisivanje lokacija je uključeno";
+				} else {
+					//zaustavi pozadinsko zapisivanje i updateaj settings file
+					StopService (new Intent (this, typeof(LocationLogger)));
+					SettingsRecord currentSettings = JsonConvert.DeserializeObject<SettingsRecord> (File.ReadLines (settingsFile).First());
+					currentSettings.useLocationLogging = false;
+					using (TextWriter tw = new StreamWriter(settingsFile,false)){
+						tw.WriteLine (JsonConvert.SerializeObject (currentSettings));
+					}
+					toggleButton.Text = "Zapisivanje lokacija je isključeno";
+				}
+			};
 
 			normalSpinner = FindViewById<Spinner> (Resource.Id.normalSpinner);
 			normalSpinner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs> (normalSpinner_ItemSelected);

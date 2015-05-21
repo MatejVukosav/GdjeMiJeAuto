@@ -19,6 +19,7 @@
 	Češća mjerena povećavaju točnost izračuna lokacije, ali i potrošnju baterije.</string>
 	<string name="LocationUpdateDensityPrecise">Brzina osvježavanja lokacije precizno</string>
 	<string name="LocationUpdateDensityNormal">Brzina osvježavanja lokacije normalno</string>
+	<string name="UseLocationUpdates">Želite li koristiti zapisivanje lokacija u pozadini?</string>
 	 <string name="normal_density_prompt">Map type</string>
     <string-array name="normal_density_array">
         <item>Rijetko</item>

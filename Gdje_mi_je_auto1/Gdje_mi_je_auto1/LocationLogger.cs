@@ -23,6 +23,7 @@ namespace Gdje_mi_je_auto1
 		private bool denseUpdates = false;
 		private int slowMesurement = 0;
 		private bool sameProviders = true;
+		private int maxLineCount = 30000;
 
 		private long timeDifference;
 
@@ -53,6 +54,15 @@ namespace Gdje_mi_je_auto1
 				if (lines.Count > 0) {
 					lastRecord = JsonConvert.DeserializeObject<LocationRecord> (lines [lines.Count - 1]);
 				}
+
+//				if (lines.Count >= maxLineCount) {
+//					int i;
+//					StreamWriter sw = new StreamWriter (locationsFile, false);
+//					for (i = 2/3 * maxLineCount; i < lines.Count; i++) {
+//						sw.WriteLine (lines [i]);
+//					}
+//					sw.Close ();
+//				}
 			}
 		}
 
@@ -70,8 +80,16 @@ namespace Gdje_mi_je_auto1
 		public void OnLocationChanged (Location location)
 		{
 			StreamWriter sw;
-			if (File.Exists (locationsFile)) {
+			List<string> lines = new List<string> (File.ReadLines (locationsFile));
+
+			if (File.Exists (locationsFile) && lines.Count < maxLineCount) {
 				sw = File.AppendText (locationsFile);
+			} else if (File.Exists (locationsFile) && !(lines.Count < maxLineCount)){
+				sw = new StreamWriter (locationsFile, false);
+				int i;
+				for (i = lines.Count* 1/3; i < lines.Count; i++) {
+						sw.WriteLine (lines [i]);
+				}
 			} else {
 				sw = new StreamWriter(File.Create (locationsFile));
 			}

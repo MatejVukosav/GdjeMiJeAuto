@@ -1,5 +1,4 @@
 ﻿using System;
-using Java.Lang;
 using Android.App;
 using Android.Content;
 using Android.Runtime;
@@ -11,6 +10,16 @@ using System.Collections.Generic;
 using System.Linq;
 using Android.Media;
 using Android.Util;
+using System.Text;
+using Android.Util;
+using Android.Views;
+using Android.Widget;
+using Android.Net;
+using Android.Runtime;
+using System.Threading;
+using System.IO;
+using Android.Database;
+using System.Windows;
 
 namespace Gdje_mi_je_auto1	
 {
@@ -37,52 +46,69 @@ namespace Gdje_mi_je_auto1
 
 		public static void createAlarm(string hour, string minutes, string zona, string rega,Context context)
 		{
-			
-			//string dictString = prefsDict.GetString ("MyAktivniAlarmiPrefs", "");
-			//aktivniAlarmi = dictString.Split(';').Select(x => x.Trim().Split(':')).ToDictionary(x => Convert.ToInt32(x[0]), x => x[1]);
-
-
-
-			idNovi = prefsidNovi.GetInt ("MyIdNoviPrefs", idNovi);
-			idPostoji = prefsidPostoji.GetInt ("MyIdPostojiPrefs", idPostoji);
-			reqcode = prefsreqCode.GetInt ("MyReqCodePrefs", reqcode);
-
-			bool rezultat = provjera (hour, minutes, zona, rega);
-			if (!rezultat) {												// ako je novi alarm
-				reqcode = idNovi;
-				idNovi = idNovi + 2;
-
-				//TODO // Disabled ovdje dodati alarm u list view, id mu treba biti reqcode (ne idNovi!)
-			} else {
-				reqcode = idPostoji;										// ako alarm već postoji ali ga treba prebrisati s novim vremenom
+			int num = Convert.ToInt32 (minutes);
+			List<int> listOfInts = new List<int>();
+				while(num > 0)
+				{
+					listOfInts.Add(num % 10);
+					num = num / 10;
+				}
+				listOfInts.Reverse();
+		
+			if (listOfInts[0]==0) {
+				minutes = listOfInts[1].ToString ();
 			}
 
-			var prefsidPostojiEditor = prefsidPostoji.Edit ();
-			prefsidPostojiEditor.PutInt ("MyIdPostojiPrefs", idPostoji);
-			prefsidPostojiEditor.Commit ();
-
-			var prefsidNoviEditor = prefsidNovi.Edit ();
-			prefsidNoviEditor.PutInt ("MyIdNoviPrefs", idNovi);
-			prefsidNoviEditor.Commit ();
-
-			var prefsreqCodeEditor = prefsreqCode.Edit ();
-			prefsreqCodeEditor.PutInt ("MyReqCodePrefs", reqcode);
-			prefsreqCodeEditor.Commit ();
+//			try{
+				//				idNovi = prefsidNovi.GetInt ("MyIdNoviPrefs", 0);
+				//				idPostoji = prefsidPostoji.GetInt ("MyIdPostojiPrefs", 0);
+				//				reqcode = prefsreqCode.GetInt ("MyReqCodePrefs", 0);
+				//			}catch(System.Exception e){
+				//				Log.Debug ("alarm",e.ToString ());
+				//			}
+				//
+				//			bool rezultat = provjera (hour, minutes, zona, rega); //true ako postoji,false ako ne postoji
+				//			if (rezultat==true) {												// ako je novi alarm
+				//				reqcode = idNovi;
+				//				idNovi = idNovi + 2;
+				//
+				//				//TODO // Disabled ovdje dodati alarm u list view, id mu treba biti reqcode (ne idNovi!)
+				//			} else {
+				//				reqcode = idPostoji;										// ako alarm već postoji ali ga treba prebrisati s novim vremenom
+				//			}
+				//
+				//			var prefsidPostojiEditor = prefsidPostoji.Edit ();
+				//			prefsidPostojiEditor.PutInt ("MyIdPostojiPrefs", idPostoji);
+				//			prefsidPostojiEditor.Commit ();
+				//
+				//			var prefsidNoviEditor = prefsidNovi.Edit ();
+				//			prefsidNoviEditor.PutInt ("MyIdNoviPrefs", idNovi);
+				//			prefsidNoviEditor.Commit ();
+				//
+				//			var prefsreqCodeEditor = prefsreqCode.Edit ();
+				//			prefsreqCodeEditor.PutInt ("MyReqCodePrefs", reqcode);
+				//			prefsreqCodeEditor.Commit ();
+				//
 
 			//mindif = prefsmindif.GetInt ("MyMindifPrefs", 0);
+
+			int requestCode = 0;
 
 			Java.Util.Calendar cal = setCalendars (hour, minutes);
 			Intent intentAlarm = new Intent (context, typeof(NotifAlarmBroadcast));
 			Intent intentReminder = new Intent (context, typeof(NotifReminderBroadcast));
-
-			PendingIntent alarmPendingIntent = PendingIntent.GetBroadcast (context, reqcode, intentAlarm, PendingIntentFlags.UpdateCurrent);
+			PendingIntent alarmPendingIntent;
+			PendingIntent reminderPendingIntent;
+			try{
+				alarmPendingIntent = PendingIntent.GetBroadcast (Application.Context, requestCode, intentAlarm, PendingIntentFlags.UpdateCurrent);
 			// reminder vezan za neki alarm uvijek ima identifikator za +1 veći od tog alarma, time najlakše pratimo par alarm-reminder
-			PendingIntent reminderPendingIntent = PendingIntent.GetBroadcast (context, reqcode + 1, intentReminder, PendingIntentFlags.UpdateCurrent);
-
+				reminderPendingIntent = PendingIntent.GetBroadcast (Application.Context, requestCode + 1, intentReminder, PendingIntentFlags.UpdateCurrent);
 			AlarmManager am = (AlarmManager)Application.Context.ApplicationContext.GetSystemService (Context.AlarmService);
 			am.SetExact (AlarmType.RtcWakeup, cal.TimeInMillis, alarmPendingIntent);
 			am.SetExact (AlarmType.RtcWakeup, (cal.TimeInMillis)-((Convert.ToInt64(mindif))*60*1000), reminderPendingIntent);	// vrijeme remindera je mindif minuta prije alarma
-
+			}catch(System.Exception e){
+				Log.Debug ("alarm2 ne radi",e.ToString ());
+			}
 			//Toast.MakeText (context, "Podsjetnik postavljen " + mindif + "min prije isteka alarma.", ToastLength.Long).Show ();
 	
 		}
@@ -139,14 +165,14 @@ namespace Gdje_mi_je_auto1
 			{
 
 				string[] split = entry.Value.Split ('&');
-				if ((split [2] == zona) && (split [3] == rega)) {		// ako postoji:
+				if (((split [2]).Equals (zona)) && ((split [3]).Equals (rega))) {		// ako postoji:
 					prebrisi = true;
 					idPostoji = entry.Key;			// idPostoji dohvaća ključ zapisa, koji je ujedno identifikator tog alarma i intenta koji šaljemo
 				}
 			}
 
 
-			if (!prebrisi)													// ako ne postoji:
+			if (prebrisi==true)													// ako ne postoji:
 			{
 				var sb = new System.Text.StringBuilder ();					// napravi string builder (odnosno string) oblika sat&minute&zona&rega
 				sb.Append (hour);
@@ -166,8 +192,7 @@ namespace Gdje_mi_je_auto1
 				prefsDictEditor.Remove ("MyAktivniAlarmiPrefs").Commit ();
 
 				string dictAlarmi = string.Join (";", aktivniAlarmi.Select (x => x.Key.ToString() + ":" + x.Value).ToArray ());
-				prefsDictEditor.PutString ("MyAktivniAlarmiPrefs", dictAlarmi);
-				prefsDictEditor.Commit ();
+				prefsDictEditor.PutString ("MyAktivniAlarmiPrefs", dictAlarmi).Commit ();
 
 				foreach (KeyValuePair<string,string>pair in AlarmMain.AlarmiDictionary) {
 					Log.Debug ("kljuc,vrijednost", pair.Key + pair.Value);

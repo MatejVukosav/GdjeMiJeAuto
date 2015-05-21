@@ -48,6 +48,25 @@
         android:layout_height="1dp"
         android:background="#808080"
         android:layout_marginTop="5dp" />
+    <TextView
+        android:text="@string/UseLocationUpdates"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/LocationUpdateDensityPrecise" />
+    <Button
+        android:text="Zapisivanje lokacija je uključeno"
+        android:background="@drawable/collor_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnUseLogging"
+        android:gravity="center"
+        android:layout_gravity="center" />
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#808080"
+        android:layout_marginTop="5dp" />
     <Button
         android:text="Apply"
         android:background="@drawable/collor_button"

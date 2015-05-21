@@ -1,6 +1,6 @@
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\bin\Debug\Gdje_mi_je_auto1.dll
-C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\packages\Xamarin.GooglePlayServices.22.0.0.0\lib\MonoAndroid41\GooglePlayServicesLib.dll
+C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\bin\Debug\GooglePlayServicesLib.dll
 C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll
-C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\packages\Xamarin.Android.Support.v4.21.0.3.0\lib\MonoAndroid10\Xamarin.Android.Support.v4.dll
-C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\packages\Xamarin.Android.Support.v7.AppCompat.21.0.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll
-C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\packages\Xamarin.Android.Support.v7.MediaRouter.21.0.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.MediaRouter.dll
+C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\bin\Debug\Xamarin.Android.Support.v4.dll
+C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\bin\Debug\Xamarin.Android.Support.v7.AppCompat.dll
+C:\Users\Matej\Documents\GitHub\Gdje_mi_je_auto1\Gdje_mi_je_auto1\bin\Debug\Xamarin.Android.Support.v7.MediaRouter.dll

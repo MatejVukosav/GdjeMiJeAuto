@@ -13,7 +13,7 @@ namespace Gdje_mi_je_auto1
 		private static string locationsFile;
 		private static int millisBefore = 3*60*1000;
 		private static int millisAfter = 5*60*1000;
-		private static double speedLimit = 30/3.6;
+		private static double speedLimit = 20/3.6;
 		private static int ignoreSlows = 8;
 
 
@@ -58,7 +58,7 @@ namespace Gdje_mi_je_auto1
 						long slowTime = -( records[i].unixTime - records[i+slows].unixTime );
 
 
-						if (fastTime > millisBefore && slowTime > millisAfter)
+						if (fastTime > millisBefore && slowTime > millisAfter && (DateTime.Now - records[i].time).TotalDays < 3)
 						{
 							MarkerOptions options = new MarkerOptions ();
 							options.SetPosition (new LatLng (records[i].latitude, records[i].longitude));

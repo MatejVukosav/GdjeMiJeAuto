@@ -89,9 +89,9 @@ namespace Gdje_mi_je_auto1
 
 			try{
 				messageEditText.Text = prefs.GetString ("MyRegistrationDefaultPrefs", "");
-				Log.Debug ("defaultna rega",messageEditText.Text);
+				//Log.Debug ("defaultna rega",messageEditText.Text);
 			}catch(Exception e){
-				Log.Debug ("Nema registracija na izbor",e.ToString ());
+				Log.Debug ("Nema registracije na izbor",e.ToString ());
 			}
 
 			#region Ucitava podatke iz datoteke svaki put kad se otvori layout Pay_SMS_Main
@@ -234,7 +234,7 @@ namespace Gdje_mi_je_auto1
 
 				if(zona30==true){
 					zona30=false;
-					//zone_number="700101"; //prepravka da salje na pravi broj //TODO 
+					zone_number="700101"; //TODO  prepravka da salje na pravi broj //sa komentarom salje na vuki broj, bez salje dobro.
 					sms_message=messageEditText.Text+"#30";
 				}else{
 					sms_message=messageEditText.Text;
@@ -347,11 +347,11 @@ namespace Gdje_mi_je_auto1
 			String min = minAlarm ;
 			String zona = zonaAlarm ;
 			String rega = regaAlarm ;
-//			Log.Debug ("sat",hour);
-//			Log.Debug ("min",min);
-//			Log.Debug ("zona",zona);
-//			Log.Debug ("rega",rega);
-			Log.Debug ("Upaljen alarm za sms","Pokrenut u Pay_SMS_Main");
+//			Log.Debug ("sat activate",hour);
+//			Log.Debug ("min activate",min);
+//			Log.Debug ("zona activate",zona);
+//			Log.Debug ("rega activate",rega);
+//			Log.Debug ("Upaljen alarm za sms","Postavljen!");
 			Alarms.createAlarm(hour, min, zona,rega,this);
 
 		}
@@ -369,13 +369,6 @@ namespace Gdje_mi_je_auto1
 			string smsTimeOD=satDO[0];
 			int smsTimeODInt=Int32.Parse (satDO[0]);
 
-//			if (smsTimeOD.Equals ("00")) {
-//				smsTimeOD = "23";
-//			} else {
-//				smsTimeOD=string.Format("{0:D2}",(smsTimeODInt-1));
-//			}
-
-
 			var prefs = Application.Context.GetSharedPreferences ("MySharedPrefs", FileCreationMode.Private);
 			var valid_Alarm=prefs.GetBoolean ("MyAlarmValue", true);
 
@@ -387,10 +380,7 @@ namespace Gdje_mi_je_auto1
 				ActivatedAlarmOnSMS ();
 			}
 
-
-
 			return editedDate+"  "+DetermineZone (smsSender)+ " < "+smsTime+" - "+smsTimePaying+" > "+ " [" +smsBody +"]"; 
-			//return editedDate+"  "+DetermineZone(smsSender)+ " OD "+smsTime+" DO "+smsTimeDO+" "+ " [ " +smsBody +" ]"; 
 		}
 
 		/*
