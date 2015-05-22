@@ -6,6 +6,7 @@ using Android.Content;
 using Android.Locations;
 using Newtonsoft.Json;
 using System.Collections.Generic;
+using Android.Util;
 
 namespace Gdje_mi_je_auto1
 {
@@ -79,6 +80,7 @@ namespace Gdje_mi_je_auto1
 
 		public void OnLocationChanged (Location location)
 		{
+			try{
 			StreamWriter sw;
 			List<string> lines = new List<string> (File.ReadLines (locationsFile));
 
@@ -142,8 +144,11 @@ namespace Gdje_mi_je_auto1
 			}
 
 			sw.Close ();
+			}catch(Exception e){
+					//Log.Debug ("File created","first time");
+					
+				}
 
-			//}
 		}
 
 		double calculateSpeed (long unixTime, double latitude, double longitude)

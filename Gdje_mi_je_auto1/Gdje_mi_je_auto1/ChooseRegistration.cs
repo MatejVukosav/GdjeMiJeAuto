@@ -41,7 +41,7 @@ namespace Gdje_mi_je_auto1
 					regText.Add (reg);
 				}
 			}catch(Exception e){
-				Log.Debug ("Ucitavanje registracijske oznake neuspijelo.",e.ToString ());
+				//Log.Debug ("Ucitavanje registracijske oznake neuspijelo.Nema nijedne ponudene",e.ToString ());
 			}
 			
 			try{
