@@ -7,7 +7,7 @@ Izgled i korištenje aplikacije
 Početni zaslon
 Ovo je početni zaslon naše aplikacije, na njemu korisnik odabire jednu od sljedećih funkcionalnosti aplikacije:
 
-<a href="http://tinypic.com?ref=dqrvbq" target="_blank" height="30" width="10"><img src="http://i61.tinypic.com/dqrvbq.jpg" border="0" ></a>
+<a href="http://tinypic.com?ref=dqrvbq" target="_blank" height="30px" width="10px"><img src="http://i61.tinypic.com/dqrvbq.jpg" border="0" ></a>
 
 •	Gdje mi je auto – Google karta sa opcijama za pronaženje auta
 •	Plaćanje – Plačanje parkinga
